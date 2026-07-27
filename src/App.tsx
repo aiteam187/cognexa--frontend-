@@ -24,6 +24,24 @@ function ScrollToTop() {
   return null;
 }
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+function AnalyticsPageView() {
+  const location = useLocation();
+  useEffect(() => {
+    window.gtag?.("event", "page_view", {
+      page_path: location.pathname + location.search,
+      page_title: document.title,
+      page_location: window.location.href,
+    });
+  }, [location]);
+  return null;
+}
+
 function App() {
   const { pathname } = useLocation();
 
@@ -31,6 +49,7 @@ function App() {
     <div className="app bg-white">
       <Header />
       <ScrollToTop />
+      <AnalyticsPageView />
 
       <div key={pathname} className="page-fade-in">
         <Suspense fallback={null}>

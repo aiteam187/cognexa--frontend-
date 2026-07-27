@@ -32,6 +32,17 @@
       content="Cognexa builds AI automation solutions for business: Extracto for invoice data extraction, Vision IQ for computer vision monitoring, Cognexa Agent for real-time voice AI, plus analytics and RPA."
     />
     <meta name="twitter:image" content="https://www.cognexa.co.in/home1.webp" />
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX", { send_page_view: false });
+    </script>
   </head>
   <body>
     <div id="root"></div>
