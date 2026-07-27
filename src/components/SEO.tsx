@@ -7,6 +7,8 @@ interface SEOProps {
   image?: string;
   /** Root-relative path, e.g. "/vision-iq". Defaults to the current path. */
   path?: string;
+  /** Use title as-is instead of appending " | Cognexa". For the homepage's brand tagline. */
+  exactTitle?: boolean;
 }
 
 const SITE_NAME = "Cognexa";
@@ -33,9 +35,15 @@ function upsertLink(rel: string, href: string) {
   el.setAttribute("href", href);
 }
 
-function SEO({ title, description, image = DEFAULT_IMAGE, path }: SEOProps) {
+function SEO({
+  title,
+  description,
+  image = DEFAULT_IMAGE,
+  path,
+  exactTitle = false,
+}: SEOProps) {
   useEffect(() => {
-    const fullTitle = `${title} | ${SITE_NAME}`;
+    const fullTitle = exactTitle ? title : `${title} | ${SITE_NAME}`;
     const url = SITE_URL + (path ?? window.location.pathname);
     const absoluteImage = image.startsWith("http") ? image : SITE_URL + image;
 
@@ -55,7 +63,7 @@ function SEO({ title, description, image = DEFAULT_IMAGE, path }: SEOProps) {
     upsertMeta("name", "twitter:title", fullTitle);
     upsertMeta("name", "twitter:description", description);
     upsertMeta("name", "twitter:image", absoluteImage);
-  }, [title, description, image, path]);
+  }, [title, description, image, path, exactTitle]);
 
   return null;
 }

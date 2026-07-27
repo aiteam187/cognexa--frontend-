@@ -132,9 +132,10 @@ function Home() {
   return (
     <>
       <SEO
-        title="AI-First Business Automation"
-        description="Cognexa builds AI-first automation for business: Extracto for invoice data extraction, Vision IQ for computer vision monitoring, Cognexa Agent for real-time voice AI, plus analytics and RPA."
+        title="Cognexa – AI Automation Solutions"
+        description="Cognexa builds AI automation solutions for business: Extracto for invoice data extraction, Vision IQ for computer vision monitoring, Cognexa Agent for real-time voice AI, plus analytics and RPA."
         path="/"
+        exactTitle
       />
       {/* Hero */}
       <Hero />
