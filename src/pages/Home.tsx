@@ -660,7 +660,8 @@ function Home() {
                 <img
                   src={helpdeskImg}
                   alt="Superpower your agents with a contextual and intuitive helpdesk"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="low"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -729,7 +730,8 @@ function Home() {
                 <img
                   src={itSupportImg}
                   alt="Streamline IT support to improve employee experience"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="low"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -753,7 +755,8 @@ function Home() {
                 <img
                   src={analyticsImg}
                   alt="Real-time, data-driven AI analytics for enterprises"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="low"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -810,7 +813,8 @@ function Home() {
                 <img
                   src={analytics2Img}
                   alt="Turn every conversation into an insight"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="low"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -856,7 +860,8 @@ function Home() {
                 <img
                   src={rpaImg}
                   alt="Robotic Process Automation Features"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="low"
                   className="mx-auto rounded-xl transition-transform duration-500"
                 />
               </div>
