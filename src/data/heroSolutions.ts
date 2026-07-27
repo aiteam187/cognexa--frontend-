@@ -13,19 +13,19 @@ export const heroSolutions: HeroSolution[] = [
     title: "Extracto",
     description: "AI-powered invoice data extraction",
     icon: Receipt,
-    href: "/extracto",
+    href: "#aiAgent",
   },
   {
     title: "Vision IQ",
     description: "Smart image and video analysis",
     icon: MessageCircle,
-    href: "/vision-iq",
+    href: "#visionIQ",
   },
   {
     title: "Cognexa Agent",
     description: "Real-time voice AI assistant",
     icon: Users,
-    href: "/cognexa-agent",
+    href: "#cognexa-agent",
   },
   {
     title: "AI analytics",
