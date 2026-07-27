@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import type { Dispatch, SetStateAction } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
-import { ChevronDown } from "lucide-react";
 
 interface Position {
   left: number;
@@ -80,15 +79,12 @@ const DropdownTab = ({
     >
       <button
         type="button"
-        className={`relative z-10 flex items-center gap-1 px-4 py-2 text-sm font-semibold transition-colors duration-200 ${
+        className={`relative z-10 px-4 py-2 text-sm font-semibold transition-colors duration-200 ${
           active ? "text-[#0E8FFB]" : "text-gray-900 hover:text-[#0E8FFB]"
         }`}
         aria-expanded={open}
       >
         {item.label}
-        <ChevronDown
-          className={`h-3.5 w-3.5 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
-        />
       </button>
 
       <AnimatePresence>
