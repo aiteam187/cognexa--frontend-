@@ -1,0 +1,427 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+a,
+button {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 25s linear infinite;
+}
+
+/* Scroll-reveal (used by <Reveal>) */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.reveal-visible {
+  animation: fade-up 0.7s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    animation: none !important;
+  }
+}
+
+/* Hover-lift utility for cards */
+.hover-lift {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -12px rgb(0 0 0 / 0.15);
+}
+
+/* Underline sweep for nav links */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #0e8ffb;
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Scale + blur reveal for the RPA diagram */
+@keyframes scale-blur-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+.rpa-diagram.reveal {
+  opacity: 0;
+}
+
+.rpa-diagram.reveal.reveal-visible {
+  animation: scale-blur-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.rpa-diagram:hover img {
+  transform: scale(1.015) rotate(-0.3deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rpa-diagram.reveal {
+    opacity: 1;
+    animation: none !important;
+  }
+  .rpa-diagram:hover img {
+    transform: none;
+  }
+}
+
+/* Hero banner ambient motion */
+@keyframes hero-ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+
+.hero-banner-img {
+  animation: hero-ken-burns 22s ease-in-out infinite alternate;
+}
+
+@keyframes hero-heading-in {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-heading {
+  animation: hero-heading-in 0.8s ease-out 0.2s both;
+}
+
+@keyframes hero-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero-card {
+  animation: hero-card-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-banner-img {
+    animation: none;
+  }
+  .hero-heading,
+  .hero-card {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Required by AIGradientBorder for the inner glow spill effect */
+.ai-glow-spill-mask {
+  mask-image: radial-gradient(
+    ellipse 100% 100% at 50% 50%,
+    transparent 50%,
+    black 100%
+  );
+}
+
+/* Live detection dashboard (Vision IQ) */
+@keyframes dash-scan {
+  0% {
+    top: -8%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 104%;
+    opacity: 0;
+  }
+}
+
+.dash-scanline {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(56 189 248 / 0.9),
+    transparent
+  );
+  box-shadow: 0 0 12px 2px rgb(56 189 248 / 0.5);
+  animation: dash-scan 3.5s linear infinite;
+}
+
+.dash-feed:nth-child(2) .dash-scanline {
+  animation-delay: 0.9s;
+}
+.dash-feed:nth-child(3) .dash-scanline {
+  animation-delay: 1.7s;
+}
+.dash-feed:nth-child(4) .dash-scanline {
+  animation-delay: 2.6s;
+}
+
+@keyframes dash-box-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.dash-box {
+  animation: dash-box-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes dash-alert-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.dash-alert-new {
+  animation: dash-alert-in 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dash-scanline,
+  .dash-box,
+  .dash-alert-new {
+    animation: none !important;
+  }
+  .dash-scanline {
+    opacity: 0;
+  }
+}
+
+/* Modern circuit-trace flow over the hero image */
+.hero-trace-base {
+  fill: none;
+  stroke: rgb(255 255 255 / 0.08);
+  stroke-width: 0.35;
+}
+
+.hero-trace-flow {
+  fill: none;
+  stroke-width: 0.5;
+  stroke-linecap: round;
+  stroke-dasharray: 6 34;
+  animation: hero-trace-dash 2.6s linear infinite;
+}
+
+.hero-trace-flow-blue {
+  filter: drop-shadow(0 0 1.5px #38bdf8);
+}
+
+.hero-trace-flow-orange {
+  filter: drop-shadow(0 0 1.5px #fb923c);
+}
+
+@keyframes hero-trace-dash {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.hero-trace-node {
+  fill: #7dd3fc;
+  animation: hero-node-pulse 2.4s ease-in-out infinite;
+  filter: drop-shadow(0 0 2px #38bdf8);
+}
+
+@keyframes hero-node-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    r: 0.5;
+  }
+  50% {
+    opacity: 1;
+    r: 0.9;
+  }
+}
+
+.hero-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+
+.hero-core-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 130px;
+  height: 130px;
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgb(253 230 138 / 0.5) 0%,
+    rgb(56 189 248 / 0.25) 45%,
+    transparent 75%
+  );
+  filter: blur(8px);
+  animation: hero-core-pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes hero-core-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}
+
+.hero-core-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 9999px;
+  border: 1px solid rgb(125 211 252 / 0.55);
+  transform: translate(-50%, -50%);
+}
+
+.hero-core-ring-a {
+  width: 70px;
+  height: 70px;
+  border-style: dashed;
+  animation: hero-ring-spin 9s linear infinite;
+}
+
+.hero-core-ring-b {
+  width: 100px;
+  height: 100px;
+  border-color: rgb(251 191 36 / 0.4);
+  animation: hero-ring-spin-reverse 14s linear infinite;
+}
+
+@keyframes hero-ring-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes hero-ring-spin-reverse {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-trace-flow,
+  .hero-trace-node,
+  .hero-core-glow,
+  .hero-core-ring-a,
+  .hero-core-ring-b {
+    animation: none !important;
+  }
+}
+
+/* Fade-in for route/page transitions */
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-fade-in {
+  animation: page-fade-in 0.4s ease-out;
+}

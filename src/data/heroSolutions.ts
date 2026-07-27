@@ -1,0 +1,42 @@
+import { Receipt, Users, BarChart3, Bot, MessageCircle } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
+export interface HeroSolution {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  href: string;
+}
+
+export const heroSolutions: HeroSolution[] = [
+  {
+    title: "Extracto",
+    description: "AI-powered invoice data extraction",
+    icon: Receipt,
+    href: "#aiAgent",
+  },
+  {
+    title: "AI assistants",
+    description: "Omnichannel Agent Assist",
+    icon: Users,
+    href: "#aiAnalytics",
+  },
+  {
+    title: "AI analytics",
+    description: "Real-time reports and dashboards",
+    icon: BarChart3,
+    href: "#dashboardID",
+  },
+  {
+    title: "Robotic Process Automation (RPA)",
+    description: "Uses robots to automate repetitive tasks",
+    icon: Bot,
+    href: "#rpaCard",
+  },
+  {
+    title: "Vision IQ",
+    description: "Smart image and video analysis",
+    icon: MessageCircle,
+    href: "/vision-iq",
+  },
+];

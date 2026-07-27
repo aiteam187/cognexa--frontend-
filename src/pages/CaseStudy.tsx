@@ -1,0 +1,163 @@
+import { Check } from "lucide-react";
+import Reveal from "../components/Reveal";
+import { AIGradientBorder } from "../components/AIGradientBorder";
+import DrawOutlineButton from "../components/DrawOutlineButton";
+import ExtractoSection from "../components/ExtractoSection";
+import heroImg from "../assets/case-study/hero.png";
+
+function CheckItem({ children }: { children: React.ReactNode }) {
+  return (
+    <li className="flex items-start gap-2 text-gray-600">
+      <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#0E8FFB]" />
+      <span>{children}</span>
+    </li>
+  );
+}
+
+function CaseStudy() {
+  return (
+    <>
+      {/* Hero intro */}
+      <section className="relative flex h-80 items-center justify-center overflow-hidden bg-gray-950 text-center text-white sm:h-[560px]">
+        <img
+          src="/case-hero.png"
+          alt=""
+          aria-hidden
+          className="hero-banner-img absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-950/50 via-[#0c6fd0]/20 to-gray-950/70" />
+
+        <div className="hero-heading relative mx-auto max-w-3xl px-5">
+          <span className="inline-block rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold tracking-wide uppercase backdrop-blur-sm">
+            Case Studies
+          </span>
+          <h1 className="mt-5 text-4xl font-bold sm:text-5xl">
+            Real results, powered by Cognexa
+          </h1>
+          <p className="mx-auto mt-5 max-w-xl text-lg text-white/85">
+            See how businesses use our AI and automation solutions to cut costs,
+            speed up support, and delight customers.
+          </p>
+        </div>
+      </section>
+
+      {/* Real-time product availability */}
+      <section className="py-20">
+        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-14 px-5">
+          <Reveal className="hover-lift flex-1 basis-100">
+            <AIGradientBorder className="rounded-2xl" tone="brand">
+              <img
+                src={heroImg}
+                alt="Real-time product availability"
+                className="rounded-2xl shadow-lg"
+              />
+            </AIGradientBorder>
+          </Reveal>
+          <Reveal delay={120} className="flex-1 basis-100">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+              Retail
+            </span>
+            <h3 className="mt-4 text-2xl font-bold text-gray-900">
+              Real-time product availability
+            </h3>
+            <p className="mt-3 text-gray-500">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus maiores est dolorem aliquid explicabo eos delectus
+              natus laudantium minus, praesentium nobis! Est sapiente quisquam
+              commodi.
+            </p>
+            <ul className="mt-5 space-y-2.5">
+              <CheckItem>
+                Human-like conversations via chat &amp; email
+              </CheckItem>
+              <CheckItem>Speed and accuracy through in-house LLMs</CheckItem>
+              <CheckItem>
+                Refer knowledge base for relevant resolutions
+              </CheckItem>
+              <CheckItem>
+                150+ plug-and-play integrations to go live faster
+              </CheckItem>
+              <CheckItem>Transfer to agent for complex use cases</CheckItem>
+            </ul>
+            <a
+              href="/contacts"
+              className="mt-6 inline-block rounded-md bg-[#0E8FFB] px-6 py-3 font-semibold text-white uppercase shadow-md transition duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-lg"
+            >
+              Book a demo
+            </a>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Go live 2X faster */}
+      <Reveal as="section" className="bg-[#0E8FFB] py-16 text-center">
+        <div className="mx-auto max-w-[1400px] px-5">
+          <h3 className="text-2xl font-bold text-white">
+            Go live 2X faster with pre-built template
+          </h3>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a
+              href="/contacts"
+              className="rounded-md bg-white px-6 py-3 font-semibold text-gray-900 shadow-md transition duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-lg"
+            >
+              Get Started
+            </a>
+            <a
+              href="/solution"
+              className="rounded-md border border-white px-6 py-3 font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-white hover:text-[#0E8FFB]"
+            >
+              Explore for more
+            </a>
+          </div>
+        </div>
+      </Reveal>
+
+      {/* Extracto — Invoice Extractor */}
+      <ExtractoSection />
+
+      {/* Contact CTA */}
+      <Reveal as="section" className="bg-gray-50/60 py-20 text-center">
+        <div className="mx-auto max-w-[1400px] px-5">
+          <h3 className="text-lg font-semibold text-[#0E8FFB]">
+            Let's get started
+          </h3>
+          <h2 className="mx-auto mt-2 max-w-2xl text-3xl font-bold text-gray-900 sm:text-4xl">
+            We will help you overcome your technology challenges
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-gray-500">
+            Call us on{" "}
+            <a href="tel:+919975459600" className="font-medium text-[#0E8FFB]">
+              +91 99754 59600
+            </a>{" "}
+            or email us at{" "}
+            <a
+              href="mailto:contact@cognexa.com"
+              className="font-medium text-[#0E8FFB]"
+            >
+              contact@cognexa.com
+            </a>{" "}
+            or fill out the following form to start the conversation.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <DrawOutlineButton
+              href="/contacts"
+              lineClassName="bg-white"
+              className="rounded-md bg-[#0E8FFB] px-6 py-3 font-semibold text-white uppercase shadow-md transition duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-lg"
+            >
+              Start with a free assessment
+            </DrawOutlineButton>
+            <DrawOutlineButton
+              href="/solution"
+              lineClassName="bg-[#0E8FFB]"
+              className="rounded-md border border-[#0E8FFB] px-6 py-3 font-semibold text-[#0E8FFB] transition duration-200 hover:-translate-y-0.5 hover:bg-[#0E8FFB] hover:text-white"
+            >
+              Find your solutions
+            </DrawOutlineButton>
+          </div>
+        </div>
+      </Reveal>
+    </>
+  );
+}
+
+export default CaseStudy;
