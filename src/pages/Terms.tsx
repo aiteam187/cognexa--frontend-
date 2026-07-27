@@ -3,75 +3,63 @@ import SEO from "../components/SEO";
 const sections = [
   {
     title: "1. Acceptance of Terms",
-    body: "By accessing or using BussinessMoj, you agree to comply with and be bound by these Terms and Conditions. If you are under the age of 13 (or the legal age in your jurisdiction), you may not use this App. If you are using this App on behalf of a company or organization, you represent that you are authorized to bind that entity to these Terms and Conditions.",
+    body: "By accessing or using the Cognexa website or any of its services (Extracto, Vision IQ, Cognexa Agent, and related products), you agree to comply with and be bound by these Terms and Conditions. If you are using our services on behalf of a company or organization, you represent that you are authorized to bind that entity to these Terms.",
   },
   {
-    title: "2. User Registration",
-    body: "To access certain features of the App, you may need to create an account. You agree to:",
+    title: "2. Description of Services",
+    body: "Cognexa provides AI-powered business automation services, including invoice data extraction, computer vision monitoring, real-time voice AI, analytics, and robotic process automation. Features, availability, and pricing may vary by engagement and are subject to change.",
+  },
+  {
+    title: "3. Requesting a Demo or Contacting Us",
+    body: "When you submit a form on our website (for example, to request a demo or ask a question), you agree to:",
     list: [
-      "Provide accurate, current, and complete information during the registration process.",
-      "Maintain the confidentiality of your account information and password.",
-      "Notify us immediately if you suspect any unauthorized use of your account. You are responsible for all activities that occur under your account.",
+      "Provide accurate, current, and complete information.",
+      "Use the contact and demo request forms only for genuine business inquiries.",
+      "Not use automated means to submit forms or extract data from the website.",
     ],
   },
   {
-    title: "3. Use of the App",
-    body: "You agree to use the App solely for lawful purposes and in accordance with these Terms. You agree not to:",
+    title: "4. Acceptable Use",
+    body: "You agree to use our website and services solely for lawful purposes. You agree not to:",
     list: [
-      "Violate any laws or regulations.",
-      "Use the App for any fraudulent, unlawful, or harmful purposes.",
-      "Harass, abuse, or harm other users or violate their rights.",
-      "Distribute viruses or other harmful software.",
-      "Impersonate others or provide false information.",
-    ],
-  },
-  {
-    title: "4. Content Sharing and Communication",
-    body: "You are solely responsible for the content you send, share, or post through the App, including text, images, videos, and other media (\"User Content\"). By sharing User Content, you grant UT MESSENGER a non-exclusive, royalty-free, worldwide license to use, display, and distribute your content through the App and related services.",
-    extra:
-      "BussinessMoj reserves the right to remove any content that violates these Terms or is deemed inappropriate, at its sole discretion.",
-    list: [
-      "Is defamatory, offensive, or discriminatory.",
-      "Contains hate speech, harassment, or explicit material.",
-      "Infringes upon the intellectual property or privacy rights of others.",
+      "Violate any applicable laws or regulations.",
+      "Use our website or services for any fraudulent, unlawful, or harmful purpose.",
+      "Attempt to gain unauthorized access to our systems or interfere with the operation of our website.",
+      "Distribute viruses or other harmful software through our website.",
+      "Impersonate any person or entity or misrepresent your affiliation with any person or entity.",
     ],
   },
   {
     title: "5. Privacy and Data Collection",
-    body: "We respect your privacy and handle your personal data in accordance with our [Privacy Policy]. By using the App, you consent to our collection, use, and sharing of your personal data as described in the Privacy Policy.",
+    body: "We respect your privacy and handle your personal data in accordance with our Privacy Policy. By using our website, you consent to our collection, use, and handling of your data as described there.",
   },
   {
-    title: "6. Restrictions and Prohibited Activities",
-    body: "You agree not to:",
-    list: [
-      "Reverse engineer, decompile, or attempt to extract the source code of the App.",
-      "Use the App to create a competing service.",
-      "Interfere with or disrupt the App's functionality, or other users' ability to enjoy the App.",
-    ],
+    title: "6. Intellectual Property",
+    body: "All content on this website, including but not limited to text, graphics, logos, product names, and software, is the property of Cognexa or its licensors and is protected by copyright, trademark, and other intellectual property laws. You may not use, reproduce, or distribute such content without our prior written authorization.",
   },
   {
-    title: "7. Intellectual Property",
-    body: "All content provided through the App, including but not limited to text, graphics, logos, and software, is the property of BussinessMoj or its licensors and is protected by copyright, trademark, and other intellectual property laws. You may not use, reproduce, or distribute such content without proper authorization.",
+    title: "7. Third-Party Links",
+    body: "Our website may contain links to third-party websites or services. These are provided for your convenience, and we do not endorse or take responsibility for the content, products, or services provided by third parties.",
   },
   {
-    title: "8. Third-Party Links",
-    body: "The App may contain links to third-party websites, services, or advertisements. These are provided for your convenience, and we do not endorse or take responsibility for the content, products, or services provided by third parties.",
+    title: "8. Disclaimer and Limitation of Liability",
+    body: "Our website and services are provided \"as is\" without warranties of any kind, express or implied. To the fullest extent permitted by law, Cognexa and its affiliates are not liable for any indirect, incidental, or consequential damages arising from your use of, or inability to use, our website or services. We do not guarantee that our website will be error-free or uninterrupted.",
   },
   {
-    title: "9. Limitation of Liability",
-    body: "To the fullest extent permitted by law, BussinessMoj and its affiliates are not liable for any damages arising from your use or inability to use the App, including but not limited to indirect, incidental, or punitive damages. We do not guarantee that the App will be error-free or uninterrupted.",
+    title: "9. Indemnification",
+    body: "You agree to indemnify and hold harmless Cognexa, its affiliates, employees, and agents from any claims, damages, or liabilities arising from your misuse of our website or services, or your violation of these Terms.",
   },
   {
-    title: "10. Indemnification",
-    body: "You agree to indemnify, defend, and hold harmless BussinessMoj, its affiliates, employees, and agents from any claims, damages, or liabilities arising from your use of the App, including any violation of these Terms or any User Content you submit.",
+    title: "10. Governing Law",
+    body: "These Terms are governed by the laws of India, without regard to conflict of law principles. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts of Pune, Maharashtra.",
   },
   {
-    title: "11. Termination",
-    body: "BussinessMoj reserves the right to suspend or terminate your access to the App at any time, without notice, for any reason, including if you violate these Terms or engage in harmful activities.",
+    title: "11. Changes to These Terms",
+    body: "We may update these Terms from time to time. Any changes will be posted on this page with an updated revision date. Your continued use of our website after changes are posted constitutes your acceptance of the updated Terms.",
   },
   {
-    title: "12. Amendments to the Terms",
-    body: "We may update or modify these Terms at any time. Any changes will be effective when posted in the App or on our website. Your continued use of the App after any changes constitutes your acceptance of the updated Terms.",
+    title: "12. Contact Us",
+    body: "If you have any questions about these Terms, please contact us at contact@cognexa.com.",
   },
 ];
 
@@ -90,16 +78,15 @@ function Terms() {
         </h1>
         <p className="mt-6 font-semibold text-gray-900">Terms and Conditions</p>
         <p className="mt-1 text-base text-gray-500 italic">
-          Last Updated: [24-11-2024]
+          Last Updated: 27-07-2026
         </p>
         <p className="mt-4 text-gray-600">
           These Terms and Conditions ("Agreement") govern your use of the
-          BussinessMoj mobile application and any related services, features,
-          or content ("CHATING AND CALLING") provided by BussinessMoj,
-          ("BussinessMoj"). By downloading, accessing, or using the App, User
-          agree to be bound by these Terms and Conditions, our Privacy
-          Policy, and any other applicable policies or guidelines. If you do
-          not agree with these terms, you should not use the App.
+          Cognexa website and any related services provided by Cognexa
+          ("Cognexa", "we", "us", or "our"). By accessing or using our
+          website, you agree to be bound by these Terms and Conditions, our
+          Privacy Policy, and any other applicable policies. If you do not
+          agree with these terms, please do not use our website.
         </p>
 
         {sections.map((section) => (
@@ -112,9 +99,6 @@ function Terms() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-            )}
-            {section.extra && (
-              <p className="mt-2 text-gray-600">{section.extra}</p>
             )}
           </div>
         ))}
