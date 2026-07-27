@@ -12,9 +12,10 @@ function Contact() {
     <>
       <section className="relative flex h-80 items-center justify-center overflow-hidden bg-gray-950 text-center text-white sm:h-[560px]">
         <img
-          src="/contact-hero.png"
+          src="/contact-hero.webp"
           alt=""
           aria-hidden
+          fetchPriority="high"
           className="hero-banner-img absolute inset-0 h-full w-full object-cover"
           style={{ objectPosition: "70% 30%" }}
         />

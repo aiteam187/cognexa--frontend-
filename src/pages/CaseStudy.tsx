@@ -3,7 +3,7 @@ import Reveal from "../components/Reveal";
 import { AIGradientBorder } from "../components/AIGradientBorder";
 import DrawOutlineButton from "../components/DrawOutlineButton";
 import ExtractoSection from "../components/ExtractoSection";
-import heroImg from "../assets/case-study/hero.png";
+import heroImg from "../assets/case-study/hero.webp";
 
 function CheckItem({ children }: { children: React.ReactNode }) {
   return (
@@ -20,9 +20,10 @@ function CaseStudy() {
       {/* Hero intro */}
       <section className="relative flex h-80 items-center justify-center overflow-hidden bg-gray-950 text-center text-white sm:h-[560px]">
         <img
-          src="/case-hero.png"
+          src="/case-hero.webp"
           alt=""
           aria-hidden
+          fetchPriority="high"
           className="hero-banner-img absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-gray-950/50 via-[#0c6fd0]/20 to-gray-950/70" />
@@ -48,6 +49,7 @@ function CaseStudy() {
             <AIGradientBorder className="rounded-2xl" tone="brand">
               <img
                 src={heroImg}
+                loading="lazy"
                 alt="Real-time product availability"
                 className="rounded-2xl shadow-lg"
               />

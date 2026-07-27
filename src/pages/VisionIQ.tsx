@@ -62,7 +62,7 @@ const pipeline = [
 
 const detections = [
   {
-    src: "/det1.png",
+    src: "/det1.webp",
     alt: "Vision IQ detecting vehicles, pedestrians, and traffic signals on a busy street",
     title: "Vehicle & Pedestrian Detection",
     description:
@@ -76,14 +76,14 @@ const detections = [
       "Flags animals near restricted or hazardous zones before they become a safety issue.",
   },
   {
-    src: "/det3.png",
+    src: "/det3.webp",
     alt: "Vision IQ verifying a worker's helmet, goggles, gloves, and safety vest",
     title: "PPE Kit Compliance Detection",
     description:
       "Checks helmets, goggles, gloves, and safety vests against site rules in real time.",
   },
   {
-    src: "/det4.jpeg",
+    src: "/det4.webp",
     alt: "Vision IQ detecting a fire hazard inside a building",
     title: "Fire Hazard Detection",
     description:
@@ -100,6 +100,7 @@ function VisionIQ() {
           src="/visionhero.webp"
           alt=""
           aria-hidden
+          fetchPriority="high"
           className="hero-banner-img absolute inset-0 h-full w-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/80 to-gray-950/30" />
@@ -246,6 +247,7 @@ function VisionIQ() {
                       <img
                         src={item.src}
                         alt={item.alt}
+                        loading="lazy"
                         className="h-56 w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-72"
                       />
                     </div>
@@ -332,7 +334,8 @@ function VisionIQ() {
             <AIGradientBorder className="rounded-2xl" tone="brand" duration={5}>
               <div className="rounded-2xl bg-white p-4 shadow-lg sm:p-6">
                 <img
-                  src="/visioniq.png"
+                  src="/visioniq.webp"
+                  loading="lazy"
                   alt="How Cognexa AI Vision IQ works: CCTV cameras feed into the AI processing engine, which detects intruders, crowds, PPE compliance, fire hazards, vehicles, and more, then analyzes and sends real-time alerts"
                   className="mx-auto rounded-xl transition-transform duration-500"
                 />

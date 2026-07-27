@@ -28,20 +28,20 @@ import CognexaInterviewerPreview from "../components/CognexaInterviewerPreview";
 import CognexaInterviewerDashboard from "../components/CognexaInterviewerDashboard";
 import { reasonsToPartner } from "../data/reasonsToPartner";
 
-import interviewerHeroImg from "../assets/home/brand-voice.png";
+import interviewerHeroImg from "../assets/home/brand-voice.webp";
 
-import invoiceScanImg from "../assets/extracto/invoice-scan.jpg";
-import emailUnderstandingImg from "../assets/home/live/email-understanding.png";
+import invoiceScanImg from "../assets/extracto/invoice-scan.webp";
+import emailUnderstandingImg from "../assets/home/live/email-understanding.webp";
 import emailSetupImg from "../assets/home/live/email-setup.png";
-import helpdeskImg from "../assets/home/live/helpdesk.png";
-import itSupportImg from "../assets/home/live/it-support.png";
-import analyticsImg from "../assets/home/live/analytics.jpg";
-import analytics2Img from "../assets/home/live/analytics2.png";
-import rpaImg from "../assets/home/live/rpa.png";
+import helpdeskImg from "../assets/home/live/helpdesk.webp";
+import itSupportImg from "../assets/home/live/it-support.webp";
+import analyticsImg from "../assets/home/live/analytics.webp";
+import analytics2Img from "../assets/home/live/analytics2.webp";
+import rpaImg from "../assets/home/live/rpa.webp";
 import partnerAzure from "../assets/home/live/partner-1.png";
 import partnerAmp from "../assets/home/live/partner-2.png";
 import partnerBash from "../assets/home/live/partner-3.png";
-import partnerBot from "../assets/home/live/partner-4.jpg";
+import partnerBot from "../assets/home/live/partner-4.webp";
 
 const partnerLogos = [partnerAzure, partnerAmp, partnerBash, partnerBot];
 
@@ -160,6 +160,7 @@ function Home() {
                 <img
                   src={invoiceScanImg}
                   alt="AI extracting structured data from a scanned invoice"
+                  loading="lazy"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -271,8 +272,9 @@ function Home() {
             <Reveal className="hover-lift flex-1 basis-100">
               <AIGradientBorder className="rounded-2xl" tone="brand">
                 <img
-                  src="/det1.png"
+                  src="/det1.webp"
                   alt="Vision IQ detecting vehicles and pedestrians on a busy street"
+                  loading="lazy"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -337,8 +339,9 @@ function Home() {
             >
               <AIGradientBorder className="rounded-2xl" tone="brand">
                 <img
-                  src="/det3.png"
+                  src="/det3.webp"
                   alt="Vision IQ verifying PPE compliance on a work site"
+                  loading="lazy"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -436,6 +439,7 @@ function Home() {
                 <img
                   src={interviewerHeroImg}
                   alt="Candidate talking with Cognexa Interviewer, Cognexa's real-time AI hiring agent"
+                  loading="lazy"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -594,6 +598,7 @@ function Home() {
                 <img
                   src={emailUnderstandingImg}
                   alt="Advanced email understanding"
+                  loading="lazy"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -606,6 +611,7 @@ function Home() {
                 <img
                   src={emailSetupImg}
                   alt="Achieve faster time to value with quick setup"
+                  loading="lazy"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -654,6 +660,7 @@ function Home() {
                 <img
                   src={helpdeskImg}
                   alt="Superpower your agents with a contextual and intuitive helpdesk"
+                  loading="lazy"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -722,6 +729,7 @@ function Home() {
                 <img
                   src={itSupportImg}
                   alt="Streamline IT support to improve employee experience"
+                  loading="lazy"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -745,6 +753,7 @@ function Home() {
                 <img
                   src={analyticsImg}
                   alt="Real-time, data-driven AI analytics for enterprises"
+                  loading="lazy"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -801,6 +810,7 @@ function Home() {
                 <img
                   src={analytics2Img}
                   alt="Turn every conversation into an insight"
+                  loading="lazy"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -846,6 +856,7 @@ function Home() {
                 <img
                   src={rpaImg}
                   alt="Robotic Process Automation Features"
+                  loading="lazy"
                   className="mx-auto rounded-xl transition-transform duration-500"
                 />
               </div>

@@ -6,7 +6,7 @@ import DrawOutlineButton from "../components/DrawOutlineButton";
 import partnerAzure from "../assets/home/live/partner-1.png";
 import partnerAmp from "../assets/home/live/partner-2.png";
 import partnerBash from "../assets/home/live/partner-3.png";
-import partnerBot from "../assets/home/live/partner-4.jpg";
+import partnerBot from "../assets/home/live/partner-4.webp";
 
 const partnerLogos = [partnerAzure, partnerAmp, partnerBash, partnerBot];
 
@@ -46,6 +46,7 @@ function About() {
           src="/aiimg1.avif"
           alt=""
           aria-hidden
+          fetchPriority="high"
           className="hero-banner-img absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-gray-950/60 via-[#0c6fd0]/30 to-gray-950/80" />

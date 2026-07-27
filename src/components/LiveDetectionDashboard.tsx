@@ -24,7 +24,7 @@ interface Feed {
 
 const feeds: Feed[] = [
   {
-    src: "/det1.png",
+    src: "/det1.webp",
     label: "CAM 01",
     zone: "Main Street Gate",
     box: { top: "62%", left: "38%", width: "14%", height: "30%" },
@@ -40,7 +40,7 @@ const feeds: Feed[] = [
     severity: "medium",
   },
   {
-    src: "/det3.png",
+    src: "/det3.webp",
     label: "CAM 03",
     zone: "Assembly Line A",
     box: { top: "8%", left: "42%", width: "22%", height: "30%" },
@@ -48,7 +48,7 @@ const feeds: Feed[] = [
     severity: "medium",
   },
   {
-    src: "/det4.jpeg",
+    src: "/det4.webp",
     label: "CAM 04",
     zone: "Warehouse Atrium",
     box: { top: "34%", left: "40%", width: "22%", height: "36%" },
@@ -186,6 +186,7 @@ function LiveDetectionDashboard() {
               <img
                 src={feed.src}
                 alt={`${feed.label} — ${feed.zone}`}
+                loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
               />
 

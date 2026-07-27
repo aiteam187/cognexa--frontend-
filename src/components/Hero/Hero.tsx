@@ -8,7 +8,7 @@ function Hero() {
       <div className="relative h-80 w-full overflow-hidden sm:h-[560px]">
         <div
           className="hero-banner-img absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url(/home1.png)" }}
+          style={{ backgroundImage: "url(/home1.webp)" }}
         />
         {/* Flowing current along the circuit traces */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">

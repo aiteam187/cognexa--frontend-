@@ -54,8 +54,9 @@ function CameraFeed({ analyzed }: { analyzed: boolean }) {
         <div className="p-3">
           <div className="relative aspect-video overflow-hidden rounded-lg bg-gray-800">
             <img
-              src="/det3.png"
+              src="/det3.webp"
               alt="Worker on an assembly line viewed through a site camera"
+              loading="lazy"
               className="absolute inset-0 h-full w-full object-cover"
             />
 

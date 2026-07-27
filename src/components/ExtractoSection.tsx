@@ -4,7 +4,7 @@ import { AIGradientBorder } from "./AIGradientBorder";
 import InvoiceExtractPreview from "./InvoiceExtractPreview";
 import ExtractoDashboardPreview from "./ExtractoDashboardPreview";
 import TabletCaptureShowcase from "./TabletCaptureShowcase";
-import invoiceScanImg from "../assets/extracto/invoice-scan.jpg";
+import invoiceScanImg from "../assets/extracto/invoice-scan.webp";
 
 function FeaturePoint({
   icon: Icon,
@@ -56,6 +56,7 @@ function ExtractoSection() {
             <AIGradientBorder className="rounded-2xl" tone="brand">
               <img
                 src={invoiceScanImg}
+                loading="lazy"
                 alt="AI extracting structured data from a scanned invoice"
                 className="rounded-2xl shadow-lg"
               />

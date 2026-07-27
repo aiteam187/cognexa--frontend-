@@ -4,7 +4,7 @@ import { AIGradientBorder } from "../components/AIGradientBorder";
 import DrawOutlineButton from "../components/DrawOutlineButton";
 import CountUp from "../components/CountUp";
 import ExtractoSection from "../components/ExtractoSection";
-import heroImg from "../assets/case-study/detail-hero.png";
+import heroImg from "../assets/case-study/detail-hero.webp";
 
 function CheckItem({ children }: { children: React.ReactNode }) {
   return (
@@ -32,6 +32,7 @@ function CaseStudyDetail() {
             <AIGradientBorder className="rounded-2xl" tone="brand">
               <img
                 src={heroImg}
+                loading="lazy"
                 alt="Slash operational costs by 60% with AI-first customer service automation"
                 className="rounded-2xl shadow-lg"
               />
