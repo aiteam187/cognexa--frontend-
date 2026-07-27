@@ -9,6 +9,10 @@ import {
   Mic,
   CalendarCheck,
   Star,
+  Bot,
+  TrendingUp,
+  Headset,
+  AlarmClock,
 } from "lucide-react";
 import Hero from "../components/Hero/Hero";
 import Reveal from "../components/Reveal";
@@ -40,6 +44,39 @@ import partnerBash from "../assets/home/live/partner-3.png";
 import partnerBot from "../assets/home/live/partner-4.jpg";
 
 const partnerLogos = [partnerAzure, partnerAmp, partnerBash, partnerBot];
+
+const agentCapabilities = [
+  {
+    icon: TrendingUp,
+    title: "Lead Generation",
+    description:
+      "Qualifies inbound leads with a natural conversation and hands off warm prospects to sales.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Arrange Meetings",
+    description:
+      "Finds a slot that works for everyone and books it straight into the calendar.",
+  },
+  {
+    icon: Mic,
+    title: "Interviews",
+    description:
+      "Runs real-time voice interviews and shortlists candidates automatically.",
+  },
+  {
+    icon: Headset,
+    title: "Customer Support",
+    description:
+      "Resolves common questions instantly and escalates the rest to the right team.",
+  },
+  {
+    icon: AlarmClock,
+    title: "Enquiry & Reminder Agent",
+    description:
+      "Answers product enquiries and follows up with timely reminders, so nothing slips through.",
+  },
+];
 
 function CheckItem({ children }: { children: React.ReactNode }) {
   return (
@@ -342,21 +379,54 @@ function Home() {
         </div>
       </section>
 
-      {/* cognexa-interviewer — voice AI agent that interviews and schedules meetings */}
-      <section id="cognexa-interviewer" className="bg-white py-20">
+      {/* cognexa-agent — voice AI agent for lead gen, meetings, interviews, support & reminders */}
+      <section id="cognexa-agent" className="bg-white py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
-              <Mic className="h-4 w-4" />
-              Cognexa Interviewer
+              <Bot className="h-4 w-4" />
+              Cognexa Agent
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
-              Cognexa Interviewer — an AI that interviews like a real person
+              Cognexa Agent — one AI for every conversation your business has
             </h2>
             <p className="mt-4 text-gray-500">
-              A voice-based AI agent that speaks naturally with every
-              candidate in real time, runs the first round of interviews, and
-              books the next meeting straight into your team's calendar.
+              A real-time voice AI that talks like a real person, not a
+              script. It generates and qualifies leads, arranges meetings,
+              supports customers, runs interviews, and follows up on
+              enquiries and reminders, all from one platform.
+            </p>
+          </Reveal>
+
+          <ul className="mt-14 grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5">
+            {agentCapabilities.map((cap) => (
+              <Reveal
+                key={cap.title}
+                as="li"
+                className="hover-lift rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm transition duration-200 hover:-translate-y-1 hover:border-[#0E8FFB]/30 hover:shadow-lg"
+              >
+                <span className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0E8FFB]/10">
+                  <cap.icon className="h-6 w-6 text-[#0E8FFB]" strokeWidth={1.5} />
+                </span>
+                <h4 className="font-semibold text-gray-900">{cap.title}</h4>
+                <p className="mt-2 text-sm leading-relaxed text-gray-500">
+                  {cap.description}
+                </p>
+              </Reveal>
+            ))}
+          </ul>
+
+          <Reveal delay={100} className="mx-auto mt-20 max-w-2xl text-center">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+              A closer look
+            </span>
+            <h3 className="mt-4 text-2xl font-bold text-gray-900">
+              One capability in detail: real-time interviews
+            </h3>
+            <p className="mt-3 text-gray-500">
+              Every conversation Cognexa Agent runs works the same way, live
+              and natural. Here's what that looks like for interviews, one of
+              its five capabilities.
             </p>
           </Reveal>
 
