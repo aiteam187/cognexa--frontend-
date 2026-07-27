@@ -548,13 +548,20 @@ function Home() {
             </AIGradientBorder>
           </Reveal>
 
-          <div className="mt-14 text-center">
+          <div className="mt-14 flex flex-wrap justify-center gap-4">
             <DrawOutlineButton
               href="/contacts"
               lineClassName="bg-[#0E8FFB]"
               className="rounded-md bg-[#0E8FFB] px-6 py-3 font-semibold text-white uppercase shadow-md transition duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-lg"
             >
               Book a demo
+            </DrawOutlineButton>
+            <DrawOutlineButton
+              href="/cognexa-agent"
+              lineClassName="bg-[#0E8FFB]"
+              className="rounded-md border border-[#0E8FFB]/30 px-6 py-3 font-semibold text-[#0E8FFB] transition duration-200 hover:-translate-y-0.5 hover:bg-[#0E8FFB]/10"
+            >
+              Explore Cognexa Agent
             </DrawOutlineButton>
           </div>
         </div>
