@@ -11,20 +11,24 @@ const productLinks = [
   { label: "Cognexa Agent", to: "/cognexa-agent" },
 ];
 
+const companyLinks = [
+  { label: "About Us", to: "/about-us" },
+  { label: "Contact", to: "/contacts" },
+  { label: "Careers", to: "/careers" },
+];
+
 const navLinks = [
   { label: "Home", to: "/" },
   { label: "Products", children: productLinks },
   { label: "Solutions", to: "/solution" },
-  { label: "About", to: "/about-us" },
-  { label: "Contact", to: "/contacts" },
+  { label: "Company", children: companyLinks },
 ];
 
 const mobileNavLinks = [
   { label: "Home", to: "/" },
   ...productLinks,
   { label: "Solutions", to: "/solution" },
-  { label: "About us", to: "/about-us" },
-  { label: "Contact Us", to: "/contacts" },
+  ...companyLinks,
 ];
 
 function Header() {
@@ -70,15 +74,24 @@ function Header() {
               <NavSlideTabs items={navLinks} />
             </nav>
 
-            <DrawOutlineButton
-              href="https://ashishnalhe2025.github.io/A2N-AI-Demo/"
-              target="_blank"
-              rel="noopener noreferrer"
-              lineClassName="bg-white"
-              className="shrink-0 rounded-md bg-[#0E8FFB] px-5 py-2.5 font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-md"
-            >
-              Existing Customer
-            </DrawOutlineButton>
+            <div className="flex shrink-0 items-center gap-3">
+              <DrawOutlineButton
+                href="https://ashishnalhe2025.github.io/A2N-AI-Demo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                lineClassName="bg-[#0E8FFB]"
+                className="rounded-md border border-[#0E8FFB]/30 px-5 py-2.5 font-semibold text-[#0E8FFB] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0E8FFB]/10"
+              >
+                Existing Customer
+              </DrawOutlineButton>
+              <DrawOutlineButton
+                href="/contacts"
+                lineClassName="bg-white"
+                className="rounded-md bg-[#0E8FFB] px-5 py-2.5 font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-md"
+              >
+                Book a Demo
+              </DrawOutlineButton>
+            </div>
           </div>
 
           <button
@@ -114,6 +127,25 @@ function Header() {
                 </li>
               ))}
             </ul>
+
+            <div className="mt-8 space-y-3 border-t border-white/10 pt-6">
+              <Link
+                to="/contacts"
+                onClick={() => setMobileOpen(false)}
+                className="block rounded-md bg-[#0E8FFB] px-5 py-2.5 text-center font-semibold text-white"
+              >
+                Book a Demo
+              </Link>
+              <a
+                href="https://ashishnalhe2025.github.io/A2N-AI-Demo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="block rounded-md border border-[#0E8FFB]/40 px-5 py-2.5 text-center font-semibold text-[#0E8FFB]"
+              >
+                Existing Customer
+              </a>
+            </div>
           </div>
         </div>
       )}
