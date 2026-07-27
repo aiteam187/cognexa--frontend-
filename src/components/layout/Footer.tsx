@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
 import cognexaLogoLight from "../../assets/cognexa-logo-light.png";
 
-const companyLinks = [
-  { label: "About Us", to: "/about-us" },
-  { label: "Case Studies", to: "/case-study" },
-];
+const companyLinks = [{ label: "About Us", to: "/about-us" }];
 
 const supportLinks = [
   { label: "Contact Us", to: "/contacts" },

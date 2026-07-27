@@ -14,14 +14,12 @@ const solutionCards = [
     description: "Automate & personalize customer support",
     image: customerServiceImg,
     cta: "Find out more",
-    id: 1,
   },
   {
     title: "Employee Experience",
     description: "Enrich & elevate employee experience",
     image: employeeExperienceImg,
     cta: "See all consultancy",
-    id: 2,
   },
   {
     title: "Banking, Financial Services, and Insurance (BFSI)",
@@ -29,28 +27,24 @@ const solutionCards = [
       "Solutions for banking, financial services & insurance industry",
     image: bfsiImg,
     cta: "Protect your business",
-    id: 3,
   },
   {
     title: "Healthcare",
     description: "Solutions for healthcare and pharmaceuticals industry",
     image: healthcareImg,
     cta: "Explore our services",
-    id: 4,
   },
   {
     title: "Utilities",
     description: "Solutions for oil, gas and utility industry",
     image: utilitiesImg,
     cta: "Stay up and running",
-    id: 5,
   },
   {
     title: "Retail",
     description: "Solutions for retail and e-commerce industry",
     image: retailImg,
     cta: "Defend your data",
-    id: 6,
   },
 ];
 
@@ -129,7 +123,7 @@ function Solutions() {
                 </p>
                 <div className="mt-6">
                   <Link
-                    to={`/get-case-study/${card.id}`}
+                    to="/contacts"
                     className="text-base font-semibold text-[#0E8FFB] hover:underline"
                   >
                     {card.cta} &rarr;
