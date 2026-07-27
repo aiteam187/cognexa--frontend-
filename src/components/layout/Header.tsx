@@ -76,15 +76,6 @@ function Header() {
 
             <div className="flex shrink-0 items-center gap-3">
               <DrawOutlineButton
-                href="https://ashishnalhe2025.github.io/A2N-AI-Demo/"
-                target="_blank"
-                rel="noopener noreferrer"
-                lineClassName="bg-[#0E8FFB]"
-                className="rounded-md border border-[#0E8FFB]/30 px-5 py-2.5 font-semibold text-[#0E8FFB] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0E8FFB]/10"
-              >
-                Existing Customer
-              </DrawOutlineButton>
-              <DrawOutlineButton
                 href="/contacts"
                 lineClassName="bg-white"
                 className="rounded-md bg-[#0E8FFB] px-5 py-2.5 font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-md"
@@ -136,15 +127,6 @@ function Header() {
               >
                 Book a Demo
               </Link>
-              <a
-                href="https://ashishnalhe2025.github.io/A2N-AI-Demo/"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setMobileOpen(false)}
-                className="block rounded-md border border-[#0E8FFB]/40 px-5 py-2.5 text-center font-semibold text-[#0E8FFB]"
-              >
-                Existing Customer
-              </a>
             </div>
           </div>
         </div>
