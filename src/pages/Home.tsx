@@ -248,6 +248,16 @@ function Home() {
               <ExtractoDashboardPreview />
             </AIGradientBorder>
           </Reveal>
+
+          <div className="mt-14 text-center">
+            <DrawOutlineButton
+              href="/extracto"
+              lineClassName="bg-[#0E8FFB]"
+              className="rounded-md border border-[#0E8FFB]/30 px-6 py-3 font-semibold text-[#0E8FFB] transition duration-200 hover:-translate-y-0.5 hover:bg-[#0E8FFB]/10"
+            >
+              Explore Extracto
+            </DrawOutlineButton>
+          </div>
         </div>
       </section>
 

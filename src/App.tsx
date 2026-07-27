@@ -13,6 +13,7 @@ const Terms = lazy(() => import("./pages/Terms"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const HelpTopic = lazy(() => import("./pages/HelpTopic"));
 const VisionIQ = lazy(() => import("./pages/VisionIQ"));
+const Extracto = lazy(() => import("./pages/Extracto"));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -43,6 +44,7 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/help-topic" element={<HelpTopic />} />
             <Route path="/vision-iq" element={<VisionIQ />} />
+            <Route path="/extracto" element={<Extracto />} />
           </Routes>
         </Suspense>
       </div>
