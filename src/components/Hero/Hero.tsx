@@ -27,7 +27,7 @@ function Hero() {
       <div className="mx-auto max-w-[1400px] px-5">
         <div className="hero-heading -mt-10 mb-2.5 flex items-center justify-center gap-5 sm:-mt-24">
           <span className="hidden h-px w-24 bg-white/40 sm:block" />
-          <h1 className="text-center text-xl font-semibold text-white sm:text-2xl">
+          <h1 className="mx-auto max-w-xs rounded-full bg-gray-950/70 px-5 py-2 text-center text-xl font-semibold text-white backdrop-blur-sm sm:max-w-none sm:bg-transparent sm:px-0 sm:py-0 sm:text-2xl sm:backdrop-blur-none">
             Custom IT services and solutions for your business
           </h1>
           <span className="hidden h-px w-24 bg-white/40 sm:block" />
