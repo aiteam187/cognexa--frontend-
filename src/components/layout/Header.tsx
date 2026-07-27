@@ -5,19 +5,27 @@ import cognexaLogo from "../../assets/cognexa-logo-dark.png";
 import NavSlideTabs from "./NavSlideTabs";
 import DrawOutlineButton from "../DrawOutlineButton";
 
+const productLinks = [
+  { label: "Vision IQ", to: "/vision-iq" },
+  { label: "Extracto", to: "/extracto" },
+  { label: "Cognexa Agent", to: "/cognexa-agent" },
+];
+
 const navLinks = [
   { label: "Home", to: "/" },
-  { label: "About", to: "/about-us" },
+  { label: "Products", children: productLinks },
   { label: "Solutions", to: "/solution" },
   { label: "Case Studies", to: "/case-study" },
+  { label: "About", to: "/about-us" },
   { label: "Contact", to: "/contacts" },
 ];
 
 const mobileNavLinks = [
   { label: "Home", to: "/" },
-  { label: "About us", to: "/about-us" },
+  ...productLinks,
   { label: "Solutions", to: "/solution" },
   { label: "Case Studies", to: "/case-study" },
+  { label: "About us", to: "/about-us" },
   { label: "Contact Us", to: "/contacts" },
 ];
 
