@@ -1,18 +1,5 @@
-import { Check } from "lucide-react";
 import Reveal from "../components/Reveal";
-import { AIGradientBorder } from "../components/AIGradientBorder";
 import DrawOutlineButton from "../components/DrawOutlineButton";
-import ExtractoSection from "../components/ExtractoSection";
-import heroImg from "../assets/case-study/hero.webp";
-
-function CheckItem({ children }: { children: React.ReactNode }) {
-  return (
-    <li className="flex items-start gap-2 text-gray-600">
-      <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#0E8FFB]" />
-      <span>{children}</span>
-    </li>
-  );
-}
 
 function CaseStudy() {
   return (
@@ -42,56 +29,6 @@ function CaseStudy() {
         </div>
       </section>
 
-      {/* Real-time product availability */}
-      <section className="py-20">
-        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-14 px-5">
-          <Reveal className="hover-lift flex-1 basis-100">
-            <AIGradientBorder className="rounded-2xl" tone="brand">
-              <img
-                src={heroImg}
-                loading="eager"
-                fetchPriority="low"
-                alt="Real-time product availability"
-                className="rounded-2xl shadow-lg"
-              />
-            </AIGradientBorder>
-          </Reveal>
-          <Reveal delay={120} className="flex-1 basis-100">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
-              Retail
-            </span>
-            <h3 className="mt-4 text-2xl font-bold text-gray-900">
-              Real-time product availability
-            </h3>
-            <p className="mt-3 text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus maiores est dolorem aliquid explicabo eos delectus
-              natus laudantium minus, praesentium nobis! Est sapiente quisquam
-              commodi.
-            </p>
-            <ul className="mt-5 space-y-2.5">
-              <CheckItem>
-                Human-like conversations via chat &amp; email
-              </CheckItem>
-              <CheckItem>Speed and accuracy through in-house LLMs</CheckItem>
-              <CheckItem>
-                Refer knowledge base for relevant resolutions
-              </CheckItem>
-              <CheckItem>
-                150+ plug-and-play integrations to go live faster
-              </CheckItem>
-              <CheckItem>Transfer to agent for complex use cases</CheckItem>
-            </ul>
-            <a
-              href="/contacts"
-              className="mt-6 inline-block rounded-md bg-[#0E8FFB] px-6 py-3 font-semibold text-white uppercase shadow-md transition duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-lg"
-            >
-              Book a demo
-            </a>
-          </Reveal>
-        </div>
-      </section>
-
       {/* Go live 2X faster */}
       <Reveal as="section" className="bg-[#0E8FFB] py-16 text-center">
         <div className="mx-auto max-w-[1400px] px-5">
@@ -114,9 +51,6 @@ function CaseStudy() {
           </div>
         </div>
       </Reveal>
-
-      {/* Extracto — Invoice Extractor */}
-      <ExtractoSection />
 
       {/* Contact CTA */}
       <Reveal as="section" className="bg-gray-50/60 py-20 text-center">

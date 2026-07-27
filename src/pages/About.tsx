@@ -141,7 +141,7 @@ function About() {
 
       {/* Our best leaders */}
       <section className="py-20">
-        <div className="mx-auto max-w-[350 px] px-5">
+        <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
               Leadership
@@ -181,7 +181,7 @@ function About() {
 
       {/* Why partner with us */}
       <section className="bg-gray-50/60 py-20">
-        <div className="mx-auto max-w-[350 px] px-5">
+        <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
               Why choose us
@@ -214,7 +214,7 @@ function About() {
 
       {/* Contact CTA */}
       <Reveal as="section" className="py-20 text-center">
-        <div className="mx-auto max-w-[350] px-5">
+        <div className="mx-auto max-w-[1400px] px-5">
           <h3 className="text-lg font-semibold text-[#0E8FFB]">
             Let's get started
           </h3>
