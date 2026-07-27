@@ -160,7 +160,8 @@ function Home() {
                 <img
                   src={invoiceScanImg}
                   alt="AI extracting structured data from a scanned invoice"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="low"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -274,7 +275,8 @@ function Home() {
                 <img
                   src="/det1.webp"
                   alt="Vision IQ detecting vehicles and pedestrians on a busy street"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="low"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -341,7 +343,8 @@ function Home() {
                 <img
                   src="/det3.webp"
                   alt="Vision IQ verifying PPE compliance on a work site"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="low"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -439,7 +442,8 @@ function Home() {
                 <img
                   src={interviewerHeroImg}
                   alt="Candidate talking with Cognexa Interviewer, Cognexa's real-time AI hiring agent"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="low"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -598,7 +602,8 @@ function Home() {
                 <img
                   src={emailUnderstandingImg}
                   alt="Advanced email understanding"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="low"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -611,7 +616,8 @@ function Home() {
                 <img
                   src={emailSetupImg}
                   alt="Achieve faster time to value with quick setup"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="low"
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>

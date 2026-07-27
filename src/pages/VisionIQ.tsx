@@ -247,7 +247,8 @@ function VisionIQ() {
                       <img
                         src={item.src}
                         alt={item.alt}
-                        loading="lazy"
+                        loading="eager"
+                        fetchPriority="low"
                         className="h-56 w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-72"
                       />
                     </div>
@@ -335,7 +336,8 @@ function VisionIQ() {
               <div className="rounded-2xl bg-white p-4 shadow-lg sm:p-6">
                 <img
                   src="/visioniq.webp"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="low"
                   alt="How Cognexa AI Vision IQ works: CCTV cameras feed into the AI processing engine, which detects intruders, crowds, PPE compliance, fire hazards, vehicles, and more, then analyzes and sends real-time alerts"
                   className="mx-auto rounded-xl transition-transform duration-500"
                 />

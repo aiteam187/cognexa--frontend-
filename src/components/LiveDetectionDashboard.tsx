@@ -186,7 +186,8 @@ function LiveDetectionDashboard() {
               <img
                 src={feed.src}
                 alt={`${feed.label} — ${feed.zone}`}
-                loading="lazy"
+                loading="eager"
+                fetchPriority="low"
                 className="absolute inset-0 h-full w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
               />
 

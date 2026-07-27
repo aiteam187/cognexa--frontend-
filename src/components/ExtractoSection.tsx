@@ -56,7 +56,8 @@ function ExtractoSection() {
             <AIGradientBorder className="rounded-2xl" tone="brand">
               <img
                 src={invoiceScanImg}
-                loading="lazy"
+                loading="eager"
+                fetchPriority="low"
                 alt="AI extracting structured data from a scanned invoice"
                 className="rounded-2xl shadow-lg"
               />

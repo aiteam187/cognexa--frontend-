@@ -56,7 +56,8 @@ function CameraFeed({ analyzed }: { analyzed: boolean }) {
             <img
               src="/det3.webp"
               alt="Worker on an assembly line viewed through a site camera"
-              loading="lazy"
+              loading="eager"
+              fetchPriority="low"
               className="absolute inset-0 h-full w-full object-cover"
             />
 

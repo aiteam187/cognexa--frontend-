@@ -32,7 +32,8 @@ function CaseStudyDetail() {
             <AIGradientBorder className="rounded-2xl" tone="brand">
               <img
                 src={heroImg}
-                loading="lazy"
+                loading="eager"
+                fetchPriority="low"
                 alt="Slash operational costs by 60% with AI-first customer service automation"
                 className="rounded-2xl shadow-lg"
               />

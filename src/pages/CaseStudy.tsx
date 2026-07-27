@@ -49,7 +49,8 @@ function CaseStudy() {
             <AIGradientBorder className="rounded-2xl" tone="brand">
               <img
                 src={heroImg}
-                loading="lazy"
+                loading="eager"
+                fetchPriority="low"
                 alt="Real-time product availability"
                 className="rounded-2xl shadow-lg"
               />
