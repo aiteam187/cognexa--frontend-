@@ -1,6 +1,7 @@
 import { Heart, Rocket, Sparkles, Users } from "lucide-react";
 import Reveal from "../components/Reveal";
 import DrawOutlineButton from "../components/DrawOutlineButton";
+import SEO from "../components/SEO";
 
 const values = [
   {
@@ -32,6 +33,11 @@ const values = [
 function Careers() {
   return (
     <>
+      <SEO
+        title="Careers"
+        description="Help us build the future of intelligent automation. We're a small, fast-moving team building AI that businesses put into production."
+        path="/careers"
+      />
       {/* Hero */}
       <section className="relative flex h-80 items-center justify-center overflow-hidden bg-gray-950 text-center text-white sm:h-[560px]">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-[#0c1b33] to-gray-950" />

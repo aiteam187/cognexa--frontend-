@@ -15,6 +15,7 @@ import {
   AlarmClock,
 } from "lucide-react";
 import Hero from "../components/Hero/Hero";
+import SEO from "../components/SEO";
 import Reveal from "../components/Reveal";
 import { AIGradientBorder } from "../components/AIGradientBorder";
 import DrawOutlineButton from "../components/DrawOutlineButton";
@@ -130,6 +131,11 @@ function FeaturePointDark({
 function Home() {
   return (
     <>
+      <SEO
+        title="AI-First Business Automation"
+        description="Cognexa builds AI-first automation for business: Extracto for invoice data extraction, Vision IQ for computer vision monitoring, Cognexa Agent for real-time voice AI, plus analytics and RPA."
+        path="/"
+      />
       {/* Hero */}
       <Hero />
 

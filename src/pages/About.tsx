@@ -3,6 +3,7 @@ import { reasonsToPartner } from "../data/reasonsToPartner";
 import { teamMembers } from "../data/teamMembers";
 import Reveal from "../components/Reveal";
 import DrawOutlineButton from "../components/DrawOutlineButton";
+import SEO from "../components/SEO";
 import partnerAzure from "../assets/home/live/partner-1.png";
 import partnerAmp from "../assets/home/live/partner-2.png";
 import partnerBash from "../assets/home/live/partner-3.png";
@@ -40,6 +41,11 @@ const capabilities = [
 function About() {
   return (
     <>
+      <SEO
+        title="About Us"
+        description="Cognexa leads in industrial solutions, extending beyond RPA to provide seamless IoT, AI, and ML services, empowering clients to move faster in a dynamic digital landscape."
+        path="/about-us"
+      />
       {/* Hero */}
       <section className="relative flex h-80 items-center justify-center overflow-hidden bg-gray-950 text-center text-white sm:h-[560px]">
         <img

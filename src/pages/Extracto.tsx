@@ -11,6 +11,7 @@ import {
 import Reveal from "../components/Reveal";
 import { AIGradientBorder } from "../components/AIGradientBorder";
 import DrawOutlineButton from "../components/DrawOutlineButton";
+import SEO from "../components/SEO";
 import InvoiceExtractPreview from "../components/InvoiceExtractPreview";
 import ExtractoDashboardPreview from "../components/ExtractoDashboardPreview";
 import TabletCaptureShowcase from "../components/TabletCaptureShowcase";
@@ -86,6 +87,12 @@ const pipeline = [
 function Extracto() {
   return (
     <>
+      <SEO
+        title="Extracto — AI Invoice Data Extraction"
+        description="Cognexa's Extracto reads any invoice, PDF, scan, or email attachment and turns it into clean, structured data your accounting systems can act on instantly."
+        path="/extracto"
+        image={invoiceScanImg}
+      />
       {/* Hero — dark, product-focused */}
       <section className="relative overflow-hidden bg-gray-950">
         <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/80 to-gray-950/30" />

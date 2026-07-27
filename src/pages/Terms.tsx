@@ -1,3 +1,5 @@
+import SEO from "../components/SEO";
+
 const sections = [
   {
     title: "1. Acceptance of Terms",
@@ -75,7 +77,13 @@ const sections = [
 
 function Terms() {
   return (
-    <section className="py-20">
+    <>
+      <SEO
+        title="Terms and Conditions"
+        description="Terms and conditions for using Cognexa's products and services."
+        path="/terms"
+      />
+      <section className="py-20">
       <div className="mx-auto max-w-3xl px-5">
         <h1 className="text-center text-4xl font-bold text-gray-900">
           Terms and Conditions
@@ -111,7 +119,8 @@ function Terms() {
           </div>
         ))}
       </div>
-    </section>
+      </section>
+    </>
   );
 }
 

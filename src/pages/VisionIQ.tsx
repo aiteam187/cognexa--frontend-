@@ -12,6 +12,7 @@ import {
 import Reveal from "../components/Reveal";
 import { AIGradientBorder } from "../components/AIGradientBorder";
 import DrawOutlineButton from "../components/DrawOutlineButton";
+import SEO from "../components/SEO";
 import LiveDetectionDashboard from "../components/LiveDetectionDashboard";
 import TabletVisionShowcase from "../components/TabletVisionShowcase";
 import CountUp from "../components/CountUp";
@@ -94,6 +95,12 @@ const detections = [
 function VisionIQ() {
   return (
     <>
+      <SEO
+        title="Vision IQ — AI Computer Vision"
+        description="Turn your existing CCTV cameras into an intelligent AI-powered monitoring system. Vision IQ detects safety risks, security threats, and operational issues in real time."
+        path="/vision-iq"
+        image="/visionhero.webp"
+      />
       {/* Hero — dark, product-focused */}
       <section className="relative overflow-hidden bg-gray-950">
         <img

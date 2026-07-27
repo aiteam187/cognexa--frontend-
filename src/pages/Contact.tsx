@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import Reveal from "../components/Reveal";
+import SEO from "../components/SEO";
 
 const highlights = [
   "Slash operational costs by 60%",
@@ -10,6 +11,11 @@ const highlights = [
 function Contact() {
   return (
     <>
+      <SEO
+        title="Contact Us"
+        description="Tell us a bit about your business and we'll show you how Cognexa fits in. Book a demo or reach out to start your automation roadmap."
+        path="/contacts"
+      />
       <section className="relative flex h-80 items-center justify-center overflow-hidden bg-gray-950 text-center text-white sm:h-[560px]">
         <img
           src="/contact-hero.webp"

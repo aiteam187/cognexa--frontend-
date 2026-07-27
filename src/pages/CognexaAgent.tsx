@@ -11,6 +11,7 @@ import {
 import Reveal from "../components/Reveal";
 import { AIGradientBorder } from "../components/AIGradientBorder";
 import DrawOutlineButton from "../components/DrawOutlineButton";
+import SEO from "../components/SEO";
 import CognexaInterviewCall from "../components/CognexaInterviewCall";
 import CognexaInterviewerPreview from "../components/CognexaInterviewerPreview";
 import CognexaInterviewerDashboard from "../components/CognexaInterviewerDashboard";
@@ -91,6 +92,12 @@ const agentCapabilities = [
 function CognexaAgent() {
   return (
     <>
+      <SEO
+        title="Cognexa Agent — Real-Time Voice AI"
+        description="A real-time voice AI that generates and qualifies leads, arranges meetings, supports customers, runs interviews, and follows up on enquiries, all from one platform."
+        path="/cognexa-agent"
+        image={interviewerHeroImg}
+      />
       {/* Hero — dark, product-focused */}
       <section className="relative overflow-hidden bg-gray-950">
         <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/80 to-gray-950/30" />

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
 import DrawOutlineButton from "../components/DrawOutlineButton";
+import SEO from "../components/SEO";
 import customerServiceImg from "../assets/solutions/customer-service.png";
 import employeeExperienceImg from "../assets/solutions/employee-experience.png";
 import bfsiImg from "../assets/solutions/bfsi.png";
@@ -51,6 +52,11 @@ const solutionCards = [
 function Solutions() {
   return (
     <>
+      <SEO
+        title="Solutions by Industry"
+        description="IT solutions built for every industry: customer service, employee experience, BFSI, healthcare, utilities, and retail. Explore how Cognexa adapts across industries."
+        path="/solution"
+      />
       {/* Hero */}
       <section className="relative flex h-80 items-center justify-center overflow-hidden bg-gray-950 text-center text-white sm:h-[560px]">
         <img

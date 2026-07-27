@@ -1,3 +1,5 @@
+import SEO from "../components/SEO";
+
 const sections = [
   {
     title: "1. Information We Collect",
@@ -64,7 +66,13 @@ const sections = [
 
 function PrivacyPolicy() {
   return (
-    <section className="py-20">
+    <>
+      <SEO
+        title="Privacy Policy"
+        description="How Cognexa collects, uses, and protects your data."
+        path="/privacy-policy"
+      />
+      <section className="py-20">
       <div className="mx-auto max-w-3xl px-5">
         <h1 className="text-center text-4xl font-bold text-gray-900">
           Privacy Policy
@@ -107,7 +115,8 @@ function PrivacyPolicy() {
           </div>
         ))}
       </div>
-    </section>
+      </section>
+    </>
   );
 }
 

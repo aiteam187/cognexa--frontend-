@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import SEO from "../components/SEO";
 
 const faqs = [
   {
@@ -49,6 +50,11 @@ function HelpTopic() {
 
   return (
     <>
+      <SEO
+        title="FAQ & Help"
+        description="Find answers to common questions about Cognexa's AI automation products and services."
+        path="/help-topic"
+      />
       <div className="bg-[#0c1b33] py-20 text-center">
         <div className="mx-auto max-w-3xl px-5">
           <h1 className="text-4xl font-bold text-white">
