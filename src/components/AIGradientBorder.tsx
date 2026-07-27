@@ -5,7 +5,7 @@ import {
   useMotionValue,
 } from "motion/react";
 import type { MotionValue } from "motion/react";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import { FiChevronDown, FiLoader } from "react-icons/fi";
 import { twMerge } from "tailwind-merge";
@@ -59,20 +59,38 @@ export const AIGradientBorder = ({
 }) => {
   const ownTurn = useMotionValue(0);
   const turn = sharedTurn ?? ownTurn;
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
 
   useEffect(() => {
-    if (sharedTurn) return;
-    animate(ownTurn, 1, {
+    const node = containerRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin: "100px" },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (sharedTurn || !inView) return;
+    const controls = animate(ownTurn, 1, {
       ease: "linear",
       duration,
       repeat: Infinity,
     });
-  }, [duration, ownTurn, sharedTurn]);
+    return () => controls.stop();
+  }, [duration, ownTurn, sharedTurn, inView]);
 
   const gradient = useMotionTemplate`conic-gradient(from ${turn}turn, ${TONE_STOPS[tone]})`;
 
   return (
-    <div className={twMerge("relative rounded-[inherit] p-px", className)}>
+    <div
+      ref={containerRef}
+      className={twMerge("relative rounded-[inherit] p-px", className)}
+    >
       <motion.div
         style={{ backgroundImage: gradient }}
         className="absolute inset-0 rounded-[inherit]"
