@@ -13,6 +13,9 @@ import {
   TrendingUp,
   Headset,
   AlarmClock,
+  Car,
+  Database,
+  Ticket,
 } from "lucide-react";
 import Hero from "../components/Hero/Hero";
 import SEO from "../components/SEO";
@@ -27,7 +30,10 @@ import LiveDetectionDashboard from "../components/LiveDetectionDashboard";
 import CognexaInterviewCall from "../components/CognexaInterviewCall";
 import CognexaInterviewerPreview from "../components/CognexaInterviewerPreview";
 import CognexaInterviewerDashboard from "../components/CognexaInterviewerDashboard";
+import ANPRCaptureShowcase from "../components/ANPRCaptureShowcase";
+import ANPRLiveDashboard from "../components/ANPRLiveDashboard";
 import { reasonsToPartner } from "../data/reasonsToPartner";
+import { anprImages } from "../data/anprLanes";
 
 import interviewerHeroImg from "../assets/home/brand-voice.webp";
 
@@ -393,6 +399,131 @@ function Home() {
               className="rounded-md border border-white/30 px-6 py-3 font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:border-[#38bdf8] hover:text-[#38bdf8]"
             >
               Explore Vision IQ
+            </DrawOutlineButton>
+          </div>
+        </div>
+      </section>
+
+      {/* anpr — Automatic number plate recognition for gates, lanes & toll points */}
+      <section id="anpr" className="bg-white py-20">
+        <div className="mx-auto max-w-[1400px] px-5">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+              <Car className="h-4 w-4" />
+              ANPR
+            </span>
+            <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+              Automatic number plate recognition for every gate and lane
+            </h2>
+            <p className="mt-4 text-gray-500">
+              ANPR reads vehicle plates at entry, exit, and toll points in
+              real time, matches them against watchlists, and automates
+              access decisions before incidents or bottlenecks build up.
+            </p>
+          </Reveal>
+
+          <div className="mt-16 flex flex-wrap items-center gap-14">
+            <Reveal className="hover-lift flex-1 basis-100">
+              <AIGradientBorder className="rounded-2xl" tone="brand">
+                <img
+                  src={anprImages.cameraHW.src}
+                  alt={anprImages.cameraHW.alt}
+                  loading="eager"
+                  fetchPriority="low"
+                  className="rounded-2xl shadow-lg transition-transform duration-700 hover:scale-105"
+                />
+              </AIGradientBorder>
+            </Reveal>
+            <Reveal delay={120} className="flex-1 basis-100">
+              <h3 className="text-2xl font-bold text-gray-900">
+                Works with the cameras you already have at the gate
+              </h3>
+              <p className="mt-3 text-gray-500">
+                No new hardware required. Point ANPR at your existing entry,
+                exit, or toll lane cameras and it starts reading plates
+                immediately, in any light or weather.
+              </p>
+              <ul className="mt-5 space-y-2.5">
+                <CheckItem>Works with your existing lane & toll cameras</CheckItem>
+                <CheckItem>Reads plates in low light and bad weather</CheckItem>
+                <CheckItem>Matches every plate against watchlists instantly</CheckItem>
+              </ul>
+            </Reveal>
+          </div>
+
+          <div className="mt-16 flex flex-wrap items-center gap-14">
+            <Reveal className="order-2 flex-1 basis-100 md:order-1">
+              <h3 className="text-2xl font-bold text-gray-900">
+                From plate read to gate decision in seconds
+              </h3>
+              <p className="mt-3 text-gray-500">
+                Every plate is read, matched, and acted on automatically, so
+                barriers open for authorized vehicles and your team is
+                alerted the moment a watchlist match comes through.
+              </p>
+              <ul className="mt-6 space-y-3">
+                <FeaturePoint
+                  icon={Database}
+                  title="Watchlist matching"
+                  description="Checks every plate against blacklists and whitelists in real time."
+                />
+                <FeaturePoint
+                  icon={ShieldCheck}
+                  title="Automatic barrier control"
+                  description="Opens gates for authorized vehicles with no manual check required."
+                />
+                <FeaturePoint
+                  icon={Ticket}
+                  title="Visitor pass automation"
+                  description="Generates visitor passes and logs entries as vehicles arrive."
+                />
+              </ul>
+            </Reveal>
+            <Reveal
+              delay={120}
+              className="hover-lift order-1 flex-1 basis-100 md:order-2"
+            >
+              <AIGradientBorder className="rounded-2xl" tone="brand">
+                <img
+                  src={anprImages.inAction.src}
+                  alt={anprImages.inAction.alt}
+                  loading="eager"
+                  fetchPriority="low"
+                  className="rounded-2xl shadow-lg transition-transform duration-700 hover:scale-105"
+                />
+              </AIGradientBorder>
+            </Reveal>
+          </div>
+
+          <div className="mt-20 rounded-2xl bg-gray-950 px-4 py-16 sm:px-8">
+            <ANPRCaptureShowcase />
+          </div>
+
+          <Reveal delay={100} className="mt-20 text-center">
+            <h3 className="text-2xl font-bold text-gray-900">
+              Your live gate &amp; lane dashboard
+            </h3>
+            <p className="mx-auto mt-3 max-w-2xl text-gray-500">
+              Every lane, every plate, every decision, on one screen, updating
+              in real time.
+            </p>
+          </Reveal>
+          <Reveal
+            delay={150}
+            className="hover-lift mx-auto mt-10 max-w-6xl transition-all duration-500"
+          >
+            <AIGradientBorder className="rounded-2xl" tone="brand" duration={5}>
+              <ANPRLiveDashboard />
+            </AIGradientBorder>
+          </Reveal>
+
+          <div className="mt-14 text-center">
+            <DrawOutlineButton
+              href="/anpr"
+              lineClassName="bg-[#0E8FFB]"
+              className="rounded-md border border-[#0E8FFB]/30 px-6 py-3 font-semibold text-[#0E8FFB] transition duration-200 hover:-translate-y-0.5 hover:bg-[#0E8FFB]/10"
+            >
+              Explore ANPR
             </DrawOutlineButton>
           </div>
         </div>

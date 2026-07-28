@@ -9,6 +9,7 @@ const productLinks = [
   { label: "Vision IQ", to: "/vision-iq" },
   { label: "Extracto", to: "/extracto" },
   { label: "Cognexa Agent", to: "/cognexa-agent" },
+  { label: "ANPR", to: "/anpr" },
 ];
 
 const companyLinks = [

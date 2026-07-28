@@ -13,6 +13,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const HelpTopic = lazy(() => import("./pages/HelpTopic"));
 const VisionIQ = lazy(() => import("./pages/VisionIQ"));
 const Extracto = lazy(() => import("./pages/Extracto"));
+const ANPR = lazy(() => import("./pages/ANPR"));
 const CognexaAgent = lazy(() => import("./pages/CognexaAgent"));
 const Careers = lazy(() => import("./pages/Careers"));
 
@@ -64,6 +65,7 @@ function App() {
             <Route path="/help-topic" element={<HelpTopic />} />
             <Route path="/vision-iq" element={<VisionIQ />} />
             <Route path="/extracto" element={<Extracto />} />
+            <Route path="/anpr" element={<ANPR />} />
             <Route path="/cognexa-agent" element={<CognexaAgent />} />
             <Route path="/careers" element={<Careers />} />
           </Routes>

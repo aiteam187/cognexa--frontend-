@@ -17,6 +17,10 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.cognexa.co.in/anpr</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.cognexa.co.in/solution</loc>
     <priority>0.8</priority>
   </url>

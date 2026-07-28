@@ -1,4 +1,4 @@
-import { Receipt, Users, BarChart3, Bot, MessageCircle } from "lucide-react";
+import { Receipt, Users, BarChart3, Bot, MessageCircle, Car } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export interface HeroSolution {
@@ -38,5 +38,11 @@ export const heroSolutions: HeroSolution[] = [
     description: "Uses robots to automate repetitive tasks",
     icon: Bot,
     href: "#rpaCard",
+  },
+  {
+    title: "ANPR",
+    description: "Automatic number plate recognition & tracking",
+    icon: Car,
+    href: "#anpr",
   },
 ];
