@@ -58,13 +58,13 @@ function About() {
         <div className="absolute inset-0 bg-gradient-to-b from-gray-950/60 via-[#0c6fd0]/30 to-gray-950/80" />
 
         <div className="hero-heading relative mx-auto max-w-3xl px-5">
-          <span className="inline-block rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold tracking-wide uppercase backdrop-blur-sm">
+          <span className="inline-block rounded-full bg-white/15 px-5 py-2 text-base font-bold tracking-wide uppercase backdrop-blur-sm">
             About Cognexa
           </span>
           <h1 className="mt-5 text-4xl font-bold sm:text-5xl">
             Building the future of intelligent automation
           </h1>
-          <p className="mt-5 text-lg text-white/85">
+          <p className="mx-auto mt-5 max-w-md text-lg text-white/85">
             Cognexa leads in industrial solutions, extending beyond RPA to
             provide seamless IoT, AI, and ML services, empowering clients to
             move faster in a dynamic digital landscape.
@@ -76,7 +76,7 @@ function About() {
       <section className="py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
               Leadership
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -117,11 +117,11 @@ function About() {
       </section>
 
       {/* Mission / capabilities */}
-      <section className="py-20">
+      <section className="bg-gray-50 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <div className="flex flex-wrap items-start gap-14">
             <Reveal className="flex-1 basis-100">
-              <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+              <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
                 Our mission
               </span>
               <h2 className="mt-4 text-3xl font-bold text-gray-900">
@@ -146,9 +146,9 @@ function About() {
                   <Reveal
                     key={title}
                     delay={i * 100}
-                    className="hover-lift rounded-xl border border-gray-100 bg-gray-50/60 p-5 transition duration-200 hover:border-[#0E8FFB]/30 hover:bg-white hover:shadow-md"
+                    className="group rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-[#0E8FFB]/30 hover:shadow-md"
                   >
-                    <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#0E8FFB]/10">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#0E8FFB]/10 transition-transform duration-300 group-hover:scale-110">
                       <Icon
                         className="h-5 w-5 text-[#0E8FFB]"
                         strokeWidth={2}
@@ -167,7 +167,7 @@ function About() {
       </section>
 
       {/* Partners marquee */}
-      <Reveal as="section" className="bg-[#0E8FFB] py-14">
+      <Reveal as="section" className="bg-gray-950 py-14">
         <h3 className="text-center text-2xl font-bold tracking-wide text-white uppercase">
           Our Associated Partners
         </h3>
@@ -176,7 +176,7 @@ function About() {
             {[...partnerLogos, ...partnerLogos].map((logo, i) => (
               <div
                 key={i}
-                className="hover-lift flex h-28 w-56 shrink-0 items-center justify-center rounded-xl bg-white p-3 shadow-md"
+                className="hover-lift flex h-28 w-56 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white p-3 shadow-md"
               >
                 <img
                   src={logo}
@@ -192,32 +192,32 @@ function About() {
       </Reveal>
 
       {/* Why partner with us */}
-      <section className="bg-gray-50/60 py-20">
+      <section className="bg-white py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
               Why choose us
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
-              10 Reasons to Partner With Us
+              Reasons to Partner With Us
             </h2>
           </Reveal>
 
-          <ul className="mx-auto mt-14 grid max-w-4xl grid-cols-1 gap-x-10 gap-y-6 sm:grid-cols-2">
+          <ul className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {reasonsToPartner.map(({ title, description, icon: Icon }, i) => (
               <Reveal
                 key={title}
                 as="li"
-                delay={(i % 6) * 80}
-                className="flex items-start gap-4"
+                delay={i * 80}
+                className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-[#0E8FFB]/30 hover:shadow-lg"
               >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0E8FFB]/10">
-                  <Icon className="h-5 w-5 text-[#0E8FFB]" strokeWidth={2} />
+                <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0E8FFB]/10 transition-transform duration-300 group-hover:scale-110">
+                  <Icon className="h-6 w-6 text-[#0E8FFB]" strokeWidth={1.5} />
                 </span>
-                <div>
-                  <h4 className="font-semibold text-gray-900">{title}</h4>
-                  <p className="mt-0.5 text-sm text-gray-500">{description}</p>
-                </div>
+                <h4 className="mb-2 font-semibold text-gray-900">{title}</h4>
+                <p className="text-sm leading-relaxed text-gray-500">
+                  {description}
+                </p>
               </Reveal>
             ))}
           </ul>

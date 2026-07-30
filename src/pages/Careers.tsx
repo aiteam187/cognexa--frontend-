@@ -60,7 +60,7 @@ function Careers() {
       <section className="py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
               Why Cognexa
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -73,9 +73,9 @@ function Careers() {
               <Reveal
                 key={title}
                 delay={i * 100}
-                className="hover-lift rounded-xl border border-gray-100 bg-gray-50/60 p-6 transition duration-200 hover:border-[#0E8FFB]/30 hover:bg-white hover:shadow-md"
+                className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-[#0E8FFB]/30 hover:shadow-lg"
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#0E8FFB]/10">
+                <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#0E8FFB]/10 transition-transform duration-300 group-hover:scale-110">
                   <Icon className="h-5 w-5 text-[#0E8FFB]" strokeWidth={2} />
                 </span>
                 <h4 className="mt-3 font-semibold text-gray-900">{title}</h4>
@@ -87,7 +87,7 @@ function Careers() {
       </section>
 
       {/* No open roles / get in touch */}
-      <Reveal as="section" className="bg-gray-50/60 py-20 text-center">
+      <Reveal as="section" className="bg-gray-50 py-20 text-center">
         <div className="mx-auto max-w-[1400px] px-5">
           <h3 className="text-lg font-semibold text-[#0E8FFB]">
             No open roles right now

@@ -1,4 +1,5 @@
 ﻿import { Link } from "react-router-dom";
+import { Check } from "lucide-react";
 import Reveal from "../components/Reveal";
 import DrawOutlineButton from "../components/DrawOutlineButton";
 import SEO from "../components/SEO";
@@ -8,6 +9,12 @@ import bfsiImg from "../assets/solutions/bfsi.png";
 import healthcareImg from "../assets/solutions/healthcare.png";
 import utilitiesImg from "../assets/solutions/utilities.png";
 import retailImg from "../assets/solutions/retail.png";
+
+const highlights = [
+  "Slash operational costs by 60%",
+  "Automate across 35+ channels and a range of global languages and dialects",
+  "Deploy faster with 100+ plug & play integrations",
+];
 
 const solutionCards = [
   {
@@ -91,11 +98,30 @@ function Solutions() {
         </div>
       </section>
 
+      {/* Highlights strip */}
+      <section className="border-b border-gray-100 bg-white py-10">
+        <div className="mx-auto max-w-[1400px] px-5">
+          <ul className="flex flex-col flex-wrap items-center justify-center gap-x-10 gap-y-3 sm:flex-row">
+            {highlights.map((item, i) => (
+              <Reveal
+                as="li"
+                key={item}
+                delay={i * 100}
+                className="flex items-center gap-2 text-center font-medium text-gray-700 sm:text-left"
+              >
+                <Check className="h-4 w-4 shrink-0 text-[#0E8FFB]" />
+                <span>{item}</span>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* Solutions grid */}
-      <section className="py-20">
+      <section className="bg-gray-50 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
               By industry
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -112,9 +138,9 @@ function Solutions() {
               <Reveal
                 key={card.title}
                 delay={(i % 6) * 100}
-                className="hover-lift flex flex-col rounded-2xl border border-gray-100 bg-gray-50/60 p-8 transition duration-200 hover:border-[#0E8FFB]/30 hover:bg-white hover:shadow-lg sm:p-10"
+                className="group flex flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-[#0E8FFB]/30 hover:shadow-lg sm:p-10"
               >
-                <span className="mb-6 flex h-20 w-20 items-center justify-center rounded-xl bg-[#0E8FFB]/10">
+                <span className="mb-6 flex h-20 w-20 items-center justify-center rounded-xl bg-[#0E8FFB]/10 transition-transform duration-300 group-hover:scale-110">
                   <img
                     src={card.image}
                     alt={card.title}
@@ -127,13 +153,16 @@ function Solutions() {
                 <p className="mt-2 text-base text-gray-500">
                   {card.description}
                 </p>
-                <div className="mt-6">
+                <div className="mt-6 flex items-center gap-1.5 text-base font-semibold text-[#0E8FFB]">
                   <Link
                     to="/contacts"
-                    className="text-base font-semibold text-[#0E8FFB] hover:underline"
+                    className="transition-all duration-200 group-hover:underline"
                   >
-                    {card.cta} &rarr;
+                    {card.cta}
                   </Link>
+                  <span className="transition-transform duration-300 group-hover:translate-x-1">
+                    &rarr;
+                  </span>
                 </div>
               </Reveal>
             ))}
@@ -142,7 +171,7 @@ function Solutions() {
       </section>
 
       {/* Contact CTA */}
-      <Reveal as="section" className="bg-gray-50/60 py-20 text-center">
+      <Reveal as="section" className="bg-white py-20 text-center">
         <div className="mx-auto max-w-[1400px] px-5">
           <h3 className="text-lg font-semibold text-[#0E8FFB]">
             Let's get started
@@ -173,7 +202,7 @@ function Solutions() {
               Start with a free assessment
             </DrawOutlineButton>
             <DrawOutlineButton
-              href="/about"
+              href="/about-us"
               lineClassName="bg-[#0E8FFB]"
               className="rounded-md border border-[#0E8FFB] px-6 py-3 font-semibold text-[#0E8FFB] transition duration-200 hover:-translate-y-0.5 hover:bg-[#0E8FFB] hover:text-white"
             >

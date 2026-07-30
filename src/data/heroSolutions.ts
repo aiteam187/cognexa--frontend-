@@ -22,6 +22,12 @@ export const heroSolutions: HeroSolution[] = [
     href: "#visionIQ",
   },
   {
+    title: "ANPR",
+    description: "Automatic number plate recognition & tracking",
+    icon: Car,
+    href: "#anpr",
+  },
+  {
     title: "Cognexa Agent",
     description: "Real-time voice AI assistant",
     icon: Users,
@@ -38,11 +44,5 @@ export const heroSolutions: HeroSolution[] = [
     description: "Uses robots to automate repetitive tasks",
     icon: Bot,
     href: "#rpaCard",
-  },
-  {
-    title: "ANPR",
-    description: "Automatic number plate recognition & tracking",
-    icon: Car,
-    href: "#anpr",
   },
 ];

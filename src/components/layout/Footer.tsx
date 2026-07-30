@@ -101,13 +101,16 @@ function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://www.google.com/maps?q=Baner,Pune"
+                  href="https://maps.app.goo.gl/9P8FYwYJNYivCEdX9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-2.5 text-gray-400 transition-colors duration-200 hover:text-[#0E8FFB]"
                 >
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#0E8FFB]" />
-                  <span>Baner, Pune</span>
+                  <span>
+                    Office No. 6, SR. No. 1/1A/1/7/2 &amp; 3, Revati Arcade
+                    II, Baner, Pune, Maharashtra 411069
+                  </span>
                 </a>
               </li>
               <li className="flex items-start gap-2.5 text-gray-400">
@@ -133,7 +136,7 @@ function Footer() {
             <div className="mt-5 overflow-hidden rounded-lg border border-white/10">
               <iframe
                 title="Cognexa office location, Baner, Pune"
-                src="https://www.google.com/maps?q=Baner,Pune&output=embed"
+                src="https://www.google.com/maps?q=DAccess+Security+Systems+Pvt.+Ltd,18.5583791,73.791428&output=embed"
                 width="100%"
                 height="130"
                 loading="lazy"

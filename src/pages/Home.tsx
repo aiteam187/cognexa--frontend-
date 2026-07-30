@@ -104,8 +104,8 @@ function FeaturePoint({
   description: string;
 }) {
   return (
-    <li className="flex items-start gap-3.5 rounded-xl border border-gray-100 bg-gray-50/60 p-4 transition duration-200 hover:border-[#0E8FFB]/30 hover:bg-white hover:shadow-md">
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#0E8FFB]/10">
+    <li className="group flex items-start gap-3.5 rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition duration-200 hover:border-[#0E8FFB]/30 hover:shadow-md">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#0E8FFB]/10 transition-transform duration-300 group-hover:scale-110">
         <Icon className="h-5 w-5 text-[#0E8FFB]" strokeWidth={2} />
       </span>
       <div>
@@ -126,8 +126,8 @@ function FeaturePointDark({
   description: string;
 }) {
   return (
-    <li className="flex items-start gap-3.5 rounded-xl border border-white/10 bg-white/5 p-4 transition duration-200 hover:border-[#38bdf8]/30 hover:bg-white/10">
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#0E8FFB]/15">
+    <li className="group flex items-start gap-3.5 rounded-xl border border-white/10 bg-white/5 p-4 transition duration-200 hover:border-[#38bdf8]/30 hover:bg-white/10">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#0E8FFB]/15 transition-transform duration-300 group-hover:scale-110">
         <Icon className="h-5 w-5 text-[#38bdf8]" strokeWidth={2} />
       </span>
       <div>
@@ -410,7 +410,7 @@ function Home() {
       </section>
 
       {/* anpr — Automatic number plate recognition for gates, lanes & toll points */}
-      <section id="anpr" className="bg-white py-20">
+      <section id="anpr" className="bg-gray-50 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
@@ -435,7 +435,7 @@ function Home() {
                   alt={anprImages.cameraHW.alt}
                   loading="eager"
                   fetchPriority="low"
-                  className="rounded-2xl shadow-lg transition-transform duration-700 hover:scale-105"
+                  className="aspect-[4/3] w-full rounded-2xl object-cover shadow-lg transition-transform duration-700 hover:scale-105"
                 />
               </AIGradientBorder>
             </Reveal>
@@ -554,13 +554,14 @@ function Home() {
           </Reveal>
 
           <ul className="mt-14 grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5">
-            {agentCapabilities.map((cap) => (
+            {agentCapabilities.map((cap, i) => (
               <Reveal
                 key={cap.title}
                 as="li"
-                className="hover-lift rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm transition duration-200 hover:-translate-y-1 hover:border-[#0E8FFB]/30 hover:shadow-lg"
+                delay={i * 80}
+                className="group rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm transition duration-200 hover:-translate-y-1 hover:border-[#0E8FFB]/30 hover:shadow-lg"
               >
-                <span className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0E8FFB]/10">
+                <span className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0E8FFB]/10 transition-transform duration-300 group-hover:scale-110">
                   <cap.icon className="h-6 w-6 text-[#0E8FFB]" strokeWidth={1.5} />
                 </span>
                 <h4 className="font-semibold text-gray-900">{cap.title}</h4>
@@ -687,14 +688,7 @@ function Home() {
             </AIGradientBorder>
           </Reveal>
 
-          <div className="mt-14 flex flex-wrap justify-center gap-4">
-            <DrawOutlineButton
-              href="/contacts"
-              lineClassName="bg-[#0E8FFB]"
-              className="rounded-md bg-[#0E8FFB] px-6 py-3 font-semibold text-white uppercase shadow-md transition duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-lg"
-            >
-              Book a demo
-            </DrawOutlineButton>
+          <div className="mt-14 text-center">
             <DrawOutlineButton
               href="/cognexa-agent"
               lineClassName="bg-[#0E8FFB]"
@@ -707,7 +701,7 @@ function Home() {
       </section>
 
       {/* Partners marquee */}
-      <Reveal as="section" className="bg-[#0E8FFB] py-14">
+      <Reveal as="section" className="bg-gray-950 py-14">
         <h2 className="text-center text-2xl font-bold tracking-wide text-white uppercase">
           OUR Associated Partners
         </h2>
@@ -716,7 +710,7 @@ function Home() {
             {[...partnerLogos, ...partnerLogos].map((logo, i) => (
               <div
                 key={i}
-                className="hover-lift flex h-28 w-56 shrink-0 items-center justify-center rounded-xl bg-white p-3 shadow-md"
+                className="hover-lift flex h-28 w-56 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white p-3 shadow-md"
               >
                 <img
                   src={logo}
@@ -730,7 +724,7 @@ function Home() {
       </Reveal>
 
       {/* dashboardID — Real-time, data-driven AI analytics */}
-      <section id="dashboardID" className="bg-white py-20">
+      <section id="dashboardID" className="bg-gray-50 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
@@ -817,7 +811,7 @@ function Home() {
       </section>
 
       {/* rpaCard — Robotic Process Automation Features */}
-      <section id="rpaCard" className="bg-gray-50 py-20 text-center">
+      <section id="rpaCard" className="bg-white py-20 text-center">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
@@ -864,27 +858,27 @@ function Home() {
         </div>
       </section>
 
-      {/* 10 reasons */}
-      <section id="why" className="bg-gray-50/60 py-20">
+      {/* Reasons to partner */}
+      <section id="why" className="bg-gray-50 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
               Why choose us
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
-              10 Reasons to Partner With Us
+              Reasons to Partner With Us
             </h2>
           </Reveal>
 
-          <ul className="mt-14 grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-6">
+          <ul className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {reasonsToPartner.map(({ title, description, icon: Icon }, i) => (
               <Reveal
                 key={title}
                 as="li"
-                delay={(i % 6) * 80}
-                className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-[#0E8FFB]/30 hover:shadow-lg"
+                delay={i * 80}
+                className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-[#0E8FFB]/30 hover:shadow-lg"
               >
-                <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0E8FFB]/10">
+                <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0E8FFB]/10 transition-transform duration-300 group-hover:scale-110">
                   <Icon className="h-6 w-6 text-[#0E8FFB]" strokeWidth={1.5} />
                 </span>
                 <h4 className="mb-2 font-semibold text-gray-900">{title}</h4>
