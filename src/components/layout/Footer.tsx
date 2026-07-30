@@ -91,9 +91,27 @@ function Footer() {
           <div>
             <h5 className="mb-4 font-semibold text-white">Get in touch</h5>
             <ul className="space-y-3 text-gray-400">
-              <li className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#0E8FFB]" />
-                <span>Baner, Pune</span>
+              <li>
+                <a
+                  href="https://www.google.com/maps?q=Baner,Pune"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mb-3 flex items-start gap-2.5 transition-colors duration-200 hover:text-[#0E8FFB]"
+                >
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#0E8FFB]" />
+                  <span>Baner, Pune</span>
+                </a>
+                <div className="overflow-hidden rounded-lg border border-white/10">
+                  <iframe
+                    title="Cognexa office location, Baner, Pune"
+                    src="https://www.google.com/maps?q=Baner,Pune&output=embed"
+                    width="100%"
+                    height="140"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="block grayscale-[40%]"
+                  />
+                </div>
               </li>
               <li className="flex items-start gap-2.5">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-[#0E8FFB]" />
