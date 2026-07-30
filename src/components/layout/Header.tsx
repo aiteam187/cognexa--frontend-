@@ -46,10 +46,10 @@ function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 border-b transition-all duration-300 ${
+        className={`sticky top-0 z-50 border-b bg-white transition-all duration-300 ${
           scrolled
-            ? "border-gray-200/70 bg-white/80 shadow-sm backdrop-blur-md"
-            : "border-transparent bg-white shadow-none"
+            ? "border-gray-200/70 shadow-sm"
+            : "border-transparent shadow-none"
         }`}
       >
         <div
