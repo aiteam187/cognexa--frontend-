@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import BackToTopButton from "./components/BackToTopButton";
+import PageLoader from "./components/PageLoader";
 import Home from "./pages/Home";
 
 const About = lazy(() => import("./pages/About"));
@@ -54,7 +55,7 @@ function App() {
       <AnalyticsPageView />
 
       <div key={pathname} className="page-fade-in">
-        <Suspense fallback={null}>
+        <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<About />} />
