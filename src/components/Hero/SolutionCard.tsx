@@ -72,21 +72,10 @@ function SolutionCard({ solution, delay = 0, index }: SolutionCardProps) {
     mouseY.set(0.5);
   };
 
-  const cardClassName = `group relative flex h-full min-h-[260px] flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white p-7 shadow-[0_1px_2px_rgb(0_0_0_/_0.04)] transition-[border-color,box-shadow] duration-300 ${accent.ring} ${accent.glow}`;
+  const cardClassName = `group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 shadow-[0_1px_2px_rgb(0_0_0_/_0.04)] transition-[border-color,box-shadow] duration-300 ${accent.ring} ${accent.glow}`;
 
   const content = (
     <>
-      {/* Faint circuit-dot texture, matching the hero image */}
-      <span
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.5]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, #e0f2fe 1.5px, transparent 1.5px)",
-          backgroundSize: "18px 18px",
-        }}
-      />
-
       {/* Spotlight glare that follows the cursor */}
       <motion.span
         aria-hidden
@@ -97,31 +86,33 @@ function SolutionCard({ solution, delay = 0, index }: SolutionCardProps) {
       {/* Top accent line that draws in on hover */}
       <span className="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-gradient-to-r from-[#0E8FFB] to-[#fb923c] transition-transform duration-300 group-hover:scale-x-100" />
 
-      <span
-        className={`absolute top-5 right-6 font-mono text-xs font-semibold text-gray-200 transition-colors duration-300 ${accent.number}`}
-      >
-        0{index + 1}
-      </span>
+      <div className="mb-4 flex items-start justify-between">
+        <span
+          className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${accent.iconBg} ${accent.iconShadow} transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}
+          style={{ transform: "translateZ(30px)" }}
+        >
+          <Icon className="h-6 w-6 text-white" strokeWidth={1.5} />
+        </span>
 
-      <span
-        className={`mb-6 flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${accent.iconBg} ${accent.iconShadow} transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}
-        style={{ transform: "translateZ(30px)" }}
-      >
-        <Icon className="h-7 w-7 text-white" strokeWidth={1.5} />
-      </span>
+        <span
+          className={`font-mono text-xs font-semibold text-gray-200 transition-colors duration-300 ${accent.number}`}
+        >
+          0{index + 1}
+        </span>
+      </div>
 
       <h4
-        className="mb-2 text-lg leading-snug font-semibold text-gray-900"
+        className="mb-1.5 text-base leading-snug font-semibold text-gray-900"
         style={{ transform: "translateZ(20px)" }}
       >
         {title}
       </h4>
-      <p className="flex-1 text-sm leading-relaxed text-gray-500">
+      <p className="text-sm leading-relaxed text-gray-500">
         {description}
       </p>
 
       <span
-        className={`mt-5 flex items-center gap-1.5 text-sm font-semibold opacity-0 transition-all duration-300 group-hover:opacity-100 ${accent.tone}`}
+        className={`mt-4 flex items-center gap-1.5 text-sm font-semibold opacity-0 transition-all duration-300 group-hover:opacity-100 ${accent.tone}`}
       >
         Explore
         <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
