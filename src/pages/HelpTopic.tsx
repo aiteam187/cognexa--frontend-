@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import SEO from "../components/SEO";
 
@@ -65,7 +65,7 @@ function HelpTopic() {
             an answer, contact us and we will be happy to help.
           </p>
           <p className="mt-6 text-base text-white/90">
-            Please call our office at +91 98765 43210 or email us with your
+            Please call our office at +91 91 7557 6999 or email us with your
             question
           </p>
         </div>

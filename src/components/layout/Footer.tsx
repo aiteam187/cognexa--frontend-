@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import cognexaLogoLight from "../../assets/cognexa-logo-light.png";
 
 const companyLinks = [{ label: "About Us", to: "/about-us" }];
@@ -87,15 +87,15 @@ function Footer() {
           <p>Baner, Pune</p>
           <p className="mt-2">
             Phone:{" "}
-            <a href="tel:+919975459600" className="hover:text-[#0E8FFB]">
-              +91 99754 59600
+            <a href="tel:+917557576999" className="hover:text-[#0E8FFB]">
+              +91 91 7557 6999
             </a>{" "}
             | Mail:{" "}
             <a
-              href="mailto:contact@cognexa.com"
+              href="mailto:support@cognexa.co.in"
               className="hover:text-[#0E8FFB]"
             >
-              contact@cognexa.com
+              support@cognexa.co.in
             </a>
           </p>
           <p className="mt-4 text-xs text-gray-500">

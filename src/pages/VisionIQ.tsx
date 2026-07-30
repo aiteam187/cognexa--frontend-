@@ -1,4 +1,4 @@
-import {
+﻿import {
   BarChart3,
   Bell,
   Brain,
@@ -434,15 +434,15 @@ function VisionIQ() {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-500">
             Call us on{" "}
-            <a href="tel:+919975459600" className="font-medium text-[#0E8FFB]">
-              +91 99754 59600
+            <a href="tel:+917557576999" className="font-medium text-[#0E8FFB]">
+              +91 91 7557 6999
             </a>{" "}
             or email us at{" "}
             <a
-              href="mailto:contact@cognexa.com"
+              href="mailto:support@cognexa.co.in"
               className="font-medium text-[#0E8FFB]"
             >
-              contact@cognexa.com
+              support@cognexa.co.in
             </a>{" "}
             or fill out the following form to start the conversation.
           </p>

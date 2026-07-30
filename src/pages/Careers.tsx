@@ -1,4 +1,4 @@
-import { Heart, Rocket, Sparkles, Users } from "lucide-react";
+﻿import { Heart, Rocket, Sparkles, Users } from "lucide-react";
 import Reveal from "../components/Reveal";
 import DrawOutlineButton from "../components/DrawOutlineButton";
 import SEO from "../components/SEO";
@@ -100,16 +100,16 @@ function Careers() {
             a great fit for a team building AI-first automation, send us your
             resume at{" "}
             <a
-              href="mailto:contact@cognexa.com"
+              href="mailto:support@cognexa.co.in"
               className="font-medium text-[#0E8FFB]"
             >
-              contact@cognexa.com
+              support@cognexa.co.in
             </a>{" "}
             and tell us what you'd want to work on.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <DrawOutlineButton
-              href="mailto:contact@cognexa.com"
+              href="mailto:support@cognexa.co.in"
               lineClassName="bg-white"
               className="rounded-md bg-[#0E8FFB] px-6 py-3 font-semibold text-white uppercase shadow-md transition duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-lg"
             >

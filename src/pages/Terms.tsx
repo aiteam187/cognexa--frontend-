@@ -1,4 +1,4 @@
-import SEO from "../components/SEO";
+﻿import SEO from "../components/SEO";
 
 const sections = [
   {
@@ -59,7 +59,7 @@ const sections = [
   },
   {
     title: "12. Contact Us",
-    body: "If you have any questions about these Terms, please contact us at contact@cognexa.com.",
+    body: "If you have any questions about these Terms, please contact us at support@cognexa.co.in.",
   },
 ];
 

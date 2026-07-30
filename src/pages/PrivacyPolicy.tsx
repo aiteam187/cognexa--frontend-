@@ -1,4 +1,4 @@
-import SEO from "../components/SEO";
+﻿import SEO from "../components/SEO";
 
 const sections = [
   {
@@ -61,7 +61,7 @@ const sections = [
   },
   {
     title: "7. Contact Us",
-    body: "If you have any questions about this Privacy Policy or wish to exercise your rights over your personal data, please contact us at contact@cognexa.com.",
+    body: "If you have any questions about this Privacy Policy or wish to exercise your rights over your personal data, please contact us at support@cognexa.co.in.",
   },
 ];
 

@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+﻿import { Check } from "lucide-react";
 import Reveal from "../components/Reveal";
 import SEO from "../components/SEO";
 
@@ -70,17 +70,17 @@ function Contact() {
               <p className="mt-2">
                 Phone:{" "}
                 <a
-                  href="tel:+919975459600"
+                  href="tel:+917557576999"
                   className="font-medium text-[#0E8FFB]"
                 >
-                  +91 99754 59600
+                  +91 91 7557 6999
                 </a>{" "}
                 | Mail:{" "}
                 <a
-                  href="mailto:contact@cognexa.com"
+                  href="mailto:support@cognexa.co.in"
                   className="font-medium text-[#0E8FFB]"
                 >
-                  contact@cognexa.com
+                  support@cognexa.co.in
                 </a>
               </p>
             </div>
