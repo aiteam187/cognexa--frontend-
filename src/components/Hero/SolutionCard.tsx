@@ -86,18 +86,12 @@ function SolutionCard({ solution, delay = 0, index }: SolutionCardProps) {
       {/* Top accent line that draws in on hover */}
       <span className="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-gradient-to-r from-[#0E8FFB] to-[#fb923c] transition-transform duration-300 group-hover:scale-x-100" />
 
-      <div className="mb-4 flex items-start justify-between">
+      <div className="mb-4 flex items-start">
         <span
           className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${accent.iconBg} ${accent.iconShadow} transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}
           style={{ transform: "translateZ(30px)" }}
         >
           <Icon className="h-6 w-6 text-white" strokeWidth={1.5} />
-        </span>
-
-        <span
-          className={`font-mono text-xs font-semibold text-gray-200 transition-colors duration-300 ${accent.number}`}
-        >
-          0{index + 1}
         </span>
       </div>
 
