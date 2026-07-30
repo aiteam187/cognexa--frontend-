@@ -3,44 +3,52 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import cognexaLogoLight from "../../assets/cognexa-logo-light.png";
 
-const companyLinks = [{ label: "About Us", to: "/about-us" }];
-
-const supportLinks = [
+const exploreLinks = [
+  { label: "About Us", to: "/about-us" },
+  { label: "Solutions", to: "/solution" },
   { label: "Contact Us", to: "/contacts" },
+  { label: "Careers", to: "/careers" },
+];
+
+const legalLinks = [
   { label: "Terms & Conditions", to: "/terms" },
   { label: "Privacy Policy", to: "/privacy-policy" },
   { label: "FAQ", to: "/help-topic" },
 ];
 
 const socialLinks = [
-  {
-    label: "Facebook",
-    href: "https://www.facebook.com/",
-    icon: FaFacebookF,
-  },
+  { label: "Facebook", href: "https://www.facebook.com/", icon: FaFacebookF },
   { label: "Twitter", href: "https://www.twitter.com/", icon: FaTwitter },
   { label: "Linkedin", href: "https://www.linkedin.com/", icon: FaLinkedinIn },
   { label: "Youtube", href: "https://www.youtube.com/", icon: FaYoutube },
 ];
 
+function FooterHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <h5 className="mb-5 text-xs font-semibold tracking-wider text-white uppercase">
+      {children}
+    </h5>
+  );
+}
+
 function Footer() {
   return (
     <footer className="border-t border-white/5 bg-[#080b0f] pt-16 pb-8 text-sm text-gray-300">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-10">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4">
-          <div>
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12">
+          <div className="lg:col-span-4">
             <Link to="/" className="inline-block">
               <img
                 src={cognexaLogoLight}
                 alt="Cognexa"
-                className="mb-3 h-8 w-auto"
+                className="mb-4 h-8 w-auto"
               />
             </Link>
-            <p className="max-w-xs text-gray-400">
+            <p className="max-w-xs leading-relaxed text-gray-400">
               AI automation products for invoices, cameras, calls, and
               reports, built to run your business on autopilot.
             </p>
-            <div className="mt-5 flex items-center gap-3">
+            <div className="mt-6 flex items-center gap-3">
               {socialLinks.map(({ label, href, icon: Icon }) => (
                 <a
                   key={label}
@@ -56,10 +64,10 @@ function Footer() {
             </div>
           </div>
 
-          <div>
-            <h5 className="mb-4 font-semibold text-white">Company</h5>
-            <ul className="space-y-2.5">
-              {companyLinks.map((item) => (
+          <div className="lg:col-span-2">
+            <FooterHeading>Explore</FooterHeading>
+            <ul className="space-y-3">
+              {exploreLinks.map((item) => (
                 <li key={item.to}>
                   <Link
                     to={item.to}
@@ -72,10 +80,10 @@ function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h5 className="mb-4 font-semibold text-white">Support</h5>
-            <ul className="space-y-2.5">
-              {supportLinks.map((item) => (
+          <div className="lg:col-span-2">
+            <FooterHeading>Legal</FooterHeading>
+            <ul className="space-y-3">
+              {legalLinks.map((item) => (
                 <li key={item.to}>
                   <Link
                     to={item.to}
@@ -88,32 +96,21 @@ function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h5 className="mb-4 font-semibold text-white">Get in touch</h5>
-            <ul className="space-y-3 text-gray-400">
+          <div className="lg:col-span-4">
+            <FooterHeading>Get in touch</FooterHeading>
+            <ul className="space-y-3">
               <li>
                 <a
                   href="https://www.google.com/maps?q=Baner,Pune"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mb-3 flex items-start gap-2.5 transition-colors duration-200 hover:text-[#0E8FFB]"
+                  className="flex items-start gap-2.5 text-gray-400 transition-colors duration-200 hover:text-[#0E8FFB]"
                 >
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#0E8FFB]" />
                   <span>Baner, Pune</span>
                 </a>
-                <div className="overflow-hidden rounded-lg border border-white/10">
-                  <iframe
-                    title="Cognexa office location, Baner, Pune"
-                    src="https://www.google.com/maps?q=Baner,Pune&output=embed"
-                    width="100%"
-                    height="140"
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="block grayscale-[40%]"
-                  />
-                </div>
               </li>
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-2.5 text-gray-400">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-[#0E8FFB]" />
                 <a
                   href="tel:+917557576999"
@@ -122,7 +119,7 @@ function Footer() {
                   +91 91 7557 6999
                 </a>
               </li>
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-2.5 text-gray-400">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-[#0E8FFB]" />
                 <a
                   href="mailto:support@cognexa.co.in"
@@ -132,10 +129,22 @@ function Footer() {
                 </a>
               </li>
             </ul>
+
+            <div className="mt-5 overflow-hidden rounded-lg border border-white/10">
+              <iframe
+                title="Cognexa office location, Baner, Pune"
+                src="https://www.google.com/maps?q=Baner,Pune&output=embed"
+                width="100%"
+                height="130"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="block grayscale-[40%]"
+              />
+            </div>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-gray-800 pt-6 text-xs text-gray-500 sm:flex-row">
+        <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-gray-500 sm:flex-row">
           <p>© Cognexa. Copyright 2026</p>
           <p>Made with care, in Pune.</p>
         </div>
