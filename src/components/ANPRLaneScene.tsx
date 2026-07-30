@@ -24,8 +24,8 @@ interface ANPRLaneSceneProps {
 const defaultBox: Box = { top: "68%", left: "38%", width: "24%", height: "8%" };
 
 const decisionStyles = {
-  granted: "border-emerald-500/40 bg-emerald-500/15 text-emerald-300",
-  denied: "border-red-500/40 bg-red-500/15 text-red-400",
+  granted: "border-emerald-500/50 bg-gray-950/90 text-emerald-400",
+  denied: "border-red-500/50 bg-gray-950/90 text-red-400",
 };
 
 function ANPRLaneScene({
@@ -85,7 +85,7 @@ function ANPRLaneScene({
 
       {decision && (
         <div
-          className={`absolute right-2 bottom-2 flex items-center gap-1 rounded-full border px-2 py-1 font-mono text-[10px] font-semibold uppercase ${decisionStyles[decision]}`}
+          className={`absolute right-2 bottom-2 flex items-center gap-1 rounded-full border px-2 py-1 font-mono text-[10px] font-semibold whitespace-nowrap uppercase shadow-lg ${decisionStyles[decision]}`}
         >
           {decision === "granted" ? (
             <CheckCircle2 className="h-3 w-3 shrink-0" />

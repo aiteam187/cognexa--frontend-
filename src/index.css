@@ -160,6 +160,41 @@ button {
   animation: hero-ken-burns 22s ease-in-out infinite alternate;
 }
 
+@keyframes hero-orb-float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(1.08);
+  }
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(60px);
+  opacity: 0.35;
+  animation: hero-orb-float 12s ease-in-out infinite;
+}
+
+.hero-orb-a {
+  top: 10%;
+  left: 8%;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, #0e8ffb, transparent 70%);
+}
+
+.hero-orb-b {
+  right: 6%;
+  bottom: 8%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, #fb923c, transparent 70%);
+  animation-delay: -6s;
+}
+
 @keyframes hero-heading-in {
   from {
     opacity: 0;
@@ -191,7 +226,8 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-banner-img {
+  .hero-banner-img,
+  .hero-orb {
     animation: none;
   }
   .hero-heading,

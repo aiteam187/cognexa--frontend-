@@ -2,6 +2,7 @@ import { Suspense, lazy, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+import BackToTopButton from "./components/BackToTopButton";
 import Home from "./pages/Home";
 
 const About = lazy(() => import("./pages/About"));
@@ -73,6 +74,7 @@ function App() {
       </div>
 
       <Footer />
+      <BackToTopButton />
     </div>
   );
 }

@@ -72,7 +72,7 @@ function SolutionCard({ solution, delay = 0, index }: SolutionCardProps) {
     mouseY.set(0.5);
   };
 
-  const cardClassName = `group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 shadow-[0_1px_2px_rgb(0_0_0_/_0.04)] transition-[border-color,box-shadow] duration-300 ${accent.ring} ${accent.glow}`;
+  const cardClassName = `group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 shadow-[0_4px_16px_-4px_rgb(0_0_0_/_0.08)] transition-[border-color,box-shadow] duration-300 ${accent.ring} ${accent.glow}`;
 
   const content = (
     <>

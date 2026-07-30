@@ -1,4 +1,6 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import cognexaLogoLight from "../../assets/cognexa-logo-light.png";
 
 const companyLinks = [{ label: "About Us", to: "/about-us" }];
@@ -10,21 +12,22 @@ const supportLinks = [
   { label: "FAQ", to: "/help-topic" },
 ];
 
-const followLinks = [
+const socialLinks = [
   {
     label: "Facebook",
-    href: "https://copilot.microsoft.com/chats/DQcYCk89jzdQuAcLq4ZT5",
+    href: "https://www.facebook.com/",
+    icon: FaFacebookF,
   },
-  { label: "Twitter", href: "https://www.twitter.com/123" },
-  { label: "Linkedin", href: "https://www.linkedin.com/" },
-  { label: "Youtube", href: "https://www.youtube.com/watch?v=n5t0z4JhiWk" },
+  { label: "Twitter", href: "https://www.twitter.com/", icon: FaTwitter },
+  { label: "Linkedin", href: "https://www.linkedin.com/", icon: FaLinkedinIn },
+  { label: "Youtube", href: "https://www.youtube.com/", icon: FaYoutube },
 ];
 
 function Footer() {
   return (
-    <footer className="bg-[#080b0f] pt-16 pb-6 text-sm text-gray-300">
+    <footer className="border-t border-white/5 bg-[#080b0f] pt-16 pb-8 text-sm text-gray-300">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-10">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4">
           <div>
             <Link to="/" className="inline-block">
               <img
@@ -32,75 +35,91 @@ function Footer() {
                 alt="Cognexa"
                 className="mb-3 h-8 w-auto"
               />
-              <p className="text-gray-400">Learn the AI, Know the Future</p>
             </Link>
+            <p className="max-w-xs text-gray-400">
+              AI automation products for invoices, cameras, calls, and
+              reports, built to run your business on autopilot.
+            </p>
+            <div className="mt-5 flex items-center gap-3">
+              {socialLinks.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-gray-300 transition-colors duration-200 hover:border-[#0E8FFB] hover:text-[#0E8FFB]"
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
           </div>
 
-          <div className="col-span-2 grid grid-cols-3 gap-8">
-            <div>
-              <h5 className="mb-4 font-semibold text-white">Company</h5>
-              <ul className="space-y-2">
-                {companyLinks.map((item) => (
-                  <li key={item.to}>
-                    <Link to={item.to} className="hover:text-[#0E8FFB]">
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div>
+            <h5 className="mb-4 font-semibold text-white">Company</h5>
+            <ul className="space-y-2.5">
+              {companyLinks.map((item) => (
+                <li key={item.to}>
+                  <Link
+                    to={item.to}
+                    className="transition-colors duration-200 hover:text-[#0E8FFB]"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-            <div>
-              <h5 className="mb-4 font-semibold text-white">Support</h5>
-              <ul className="space-y-2">
-                {supportLinks.map((item) => (
-                  <li key={item.to}>
-                    <Link to={item.to} className="hover:text-[#0E8FFB]">
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div>
+            <h5 className="mb-4 font-semibold text-white">Support</h5>
+            <ul className="space-y-2.5">
+              {supportLinks.map((item) => (
+                <li key={item.to}>
+                  <Link
+                    to={item.to}
+                    className="transition-colors duration-200 hover:text-[#0E8FFB]"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-            <div>
-              <h5 className="mb-4 font-semibold text-white">Follow Us</h5>
-              <ul className="space-y-2">
-                {followLinks.map((item) => (
-                  <li key={item.label}>
-                    <a
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-[#0E8FFB]"
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div>
+            <h5 className="mb-4 font-semibold text-white">Get in touch</h5>
+            <ul className="space-y-3 text-gray-400">
+              <li className="flex items-start gap-2.5">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#0E8FFB]" />
+                <span>Baner, Pune</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-[#0E8FFB]" />
+                <a
+                  href="tel:+917557576999"
+                  className="transition-colors duration-200 hover:text-[#0E8FFB]"
+                >
+                  +91 91 7557 6999
+                </a>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-[#0E8FFB]" />
+                <a
+                  href="mailto:support@cognexa.co.in"
+                  className="transition-colors duration-200 hover:text-[#0E8FFB]"
+                >
+                  support@cognexa.co.in
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="mt-10 border-t border-gray-800 pt-6 text-gray-400">
-          <p>Baner, Pune</p>
-          <p className="mt-2">
-            Phone:{" "}
-            <a href="tel:+917557576999" className="hover:text-[#0E8FFB]">
-              +91 91 7557 6999
-            </a>{" "}
-            | Mail:{" "}
-            <a
-              href="mailto:support@cognexa.co.in"
-              className="hover:text-[#0E8FFB]"
-            >
-              support@cognexa.co.in
-            </a>
-          </p>
-          <p className="mt-4 text-xs text-gray-500">
-            © Cognexa. Copyright 2026
-          </p>
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-gray-800 pt-6 text-xs text-gray-500 sm:flex-row">
+          <p>© Cognexa. Copyright 2026</p>
+          <p>Made with care, in Pune.</p>
         </div>
       </div>
     </footer>

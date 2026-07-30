@@ -16,10 +16,14 @@
   Car,
   Database,
   Ticket,
+  Receipt,
+  BarChart3,
 } from "lucide-react";
 import Hero from "../components/Hero/Hero";
 import SEO from "../components/SEO";
 import Reveal from "../components/Reveal";
+import FAQAccordion from "../components/FAQAccordion";
+import { homeFaqs } from "../data/faqs";
 import { AIGradientBorder } from "../components/AIGradientBorder";
 import DrawOutlineButton from "../components/DrawOutlineButton";
 import InvoiceExtractPreview from "../components/InvoiceExtractPreview";
@@ -150,7 +154,8 @@ function Home() {
       <section id="aiAgent" className="bg-white py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
+              <Receipt className="h-5 w-5" />
               Extracto
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -274,8 +279,8 @@ function Home() {
       <section id="visionIQ" className="bg-gray-950 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/15 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#38bdf8] uppercase">
-              <ScanEye className="h-4 w-4" />
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/15 px-5 py-2 text-base font-bold tracking-wide text-[#38bdf8] uppercase">
+              <ScanEye className="h-5 w-5" />
               Vision IQ
             </span>
             <h2 className="mt-4 text-3xl font-bold text-white sm:text-4xl">
@@ -408,8 +413,8 @@ function Home() {
       <section id="anpr" className="bg-white py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
-              <Car className="h-4 w-4" />
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
+              <Car className="h-5 w-5" />
               ANPR
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -533,8 +538,8 @@ function Home() {
       <section id="cognexa-agent" className="bg-white py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
-              <Bot className="h-4 w-4" />
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
+              <Bot className="h-5 w-5" />
               Cognexa Agent
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -728,9 +733,13 @@ function Home() {
       <section id="dashboardID" className="bg-white py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
-              Analytics
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
+              <BarChart3 className="h-5 w-5" />
+              AI Analytics
             </span>
+            <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+              Real-time, data-driven AI analytics
+            </h2>
           </Reveal>
 
           <div className="mt-8 flex flex-wrap items-center gap-14">
@@ -747,7 +756,7 @@ function Home() {
             </Reveal>
             <Reveal delay={120} className="flex-1 basis-100">
               <h3 className="text-2xl font-bold text-gray-900">
-                Real-time, data-driven AI analytics for enterprises
+                Built for enterprise-scale decision making
               </h3>
               <p className="mt-3 text-gray-500">
                 Derive valuable customer insights from essential conversational
@@ -811,7 +820,8 @@ function Home() {
       <section id="rpaCard" className="bg-gray-50 py-20 text-center">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal>
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
+              <Zap className="h-5 w-5" />
               Automation
             </span>
             <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -858,7 +868,7 @@ function Home() {
       <section id="why" className="bg-gray-50/60 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
               Why choose us
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -884,6 +894,24 @@ function Home() {
               </Reveal>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="bg-white py-20">
+        <div className="mx-auto max-w-[1400px] px-5">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
+              FAQ
+            </span>
+            <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+              Frequently asked questions
+            </h2>
+          </Reveal>
+
+          <Reveal delay={100} className="mt-12">
+            <FAQAccordion faqs={homeFaqs} />
+          </Reveal>
         </div>
       </section>
 

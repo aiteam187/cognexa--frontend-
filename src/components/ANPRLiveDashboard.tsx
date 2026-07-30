@@ -24,7 +24,7 @@ const lanes: Lane[] = [
     camLabel: "GATE 02",
     zone: "Main Entry Lane",
     ...anprImages.composite,
-    decision: "granted",
+    decision: "denied",
   },
   {
     camLabel: "GATE 03",
@@ -37,7 +37,6 @@ const lanes: Lane[] = [
     camLabel: "GATE 04",
     zone: "Parking Garage",
     ...anprImages.illustration,
-    decision: "denied",
   },
 ];
 
@@ -70,10 +69,10 @@ const alertPool: Omit<AlertItem, "id" | "time">[] = [
     severity: "low",
   },
   {
-    icon: Car,
-    text: "Entry logged, barrier auto-opened",
+    icon: ShieldAlert,
+    text: "Plate mismatch, entry denied",
     cam: "GATE 02",
-    severity: "low",
+    severity: "medium",
   },
   {
     icon: Gauge,
