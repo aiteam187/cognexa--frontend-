@@ -168,11 +168,13 @@ function About() {
                 delay={i * 120}
                 className="hover-lift rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm transition duration-200 hover:border-[#0E8FFB]/30 hover:shadow-lg"
               >
-                <img
-                  src={member.photo}
-                  alt={member.name}
-                  className="mx-auto mb-4 h-28 w-28 rounded-full object-cover ring-4 ring-[#0E8FFB]/10"
-                />
+                <div className="mx-auto mb-4 h-28 w-28 overflow-hidden rounded-full ring-4 ring-[#0E8FFB]/10">
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
                 <h3 className="text-lg font-semibold text-gray-900">
                   {member.name}
                 </h3>
