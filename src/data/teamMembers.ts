@@ -8,21 +8,21 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Ashish Nalhe",
     role: "Founder & CEO",
-    photo: "/ashish-nalhe.png",
+    photo: "/ashish-nalhe.webp",
   },
   {
     name: "Amit Pawar",
     role: "Co-Founder & COO",
-    photo: "/amit-pawar.png",
+    photo: "/amit-pawar.webp",
   },
   {
     name: "Namrata Pawar",
     role: "Co-Founder & CTO",
-    photo: "/namrata-pawar.png",
+    photo: "/namrata-pawar.webp",
   },
   {
     name: "Dhananjay Sonawane",
     role: "Marketing Head",
-    photo: "/dhananjay-sonawane.png",
+    photo: "/dhananjay-sonawane.webp",
   },
 ];

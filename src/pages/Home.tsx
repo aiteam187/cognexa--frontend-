@@ -494,7 +494,7 @@ function Home() {
                   alt={anprImages.inAction.alt}
                   loading="eager"
                   fetchPriority="low"
-                  className="rounded-2xl shadow-lg transition-transform duration-700 hover:scale-105"
+                  className="block h-auto w-full rounded-2xl object-cover shadow-lg transition-transform duration-700 hover:scale-105"
                 />
               </AIGradientBorder>
             </Reveal>

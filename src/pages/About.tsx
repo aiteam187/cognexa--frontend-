@@ -72,6 +72,50 @@ function About() {
         </div>
       </section>
 
+      {/* Our best leaders */}
+      <section className="py-20">
+        <div className="mx-auto max-w-[1400px] px-5">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+              Leadership
+            </span>
+            <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+              Meet the people behind Cognexa
+            </h2>
+            <p className="mt-4 text-gray-500">
+              Deep industry experience across engineering, product, and customer
+              success, focused on getting automation right.
+            </p>
+          </Reveal>
+
+          <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {teamMembers.map((member, i) => (
+              <Reveal
+                key={member.name}
+                delay={i * 120}
+                className="hover-lift rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm transition duration-200 hover:border-[#0E8FFB]/30 hover:shadow-lg"
+              >
+                <div className="mx-auto mb-4 h-28 w-28 overflow-hidden rounded-full ring-4 ring-[#0E8FFB]/10">
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900">
+                  {member.name}
+                </h3>
+                <p className="mt-1 text-sm font-medium tracking-wide text-[#0E8FFB] uppercase">
+                  {member.role}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Mission / capabilities */}
       <section className="py-20">
         <div className="mx-auto max-w-[1400px] px-5">
@@ -137,6 +181,8 @@ function About() {
                 <img
                   src={logo}
                   alt=""
+                  loading="lazy"
+                  decoding="async"
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
@@ -144,48 +190,6 @@ function About() {
           </div>
         </div>
       </Reveal>
-
-      {/* Our best leaders */}
-      <section className="py-20">
-        <div className="mx-auto max-w-[1400px] px-5">
-          <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
-              Leadership
-            </span>
-            <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
-              Meet the people behind Cognexa
-            </h2>
-            <p className="mt-4 text-gray-500">
-              Deep industry experience across engineering, product, and customer
-              success, focused on getting automation right.
-            </p>
-          </Reveal>
-
-          <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {teamMembers.map((member, i) => (
-              <Reveal
-                key={member.name}
-                delay={i * 120}
-                className="hover-lift rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm transition duration-200 hover:border-[#0E8FFB]/30 hover:shadow-lg"
-              >
-                <div className="mx-auto mb-4 h-28 w-28 overflow-hidden rounded-full ring-4 ring-[#0E8FFB]/10">
-                  <img
-                    src={member.photo}
-                    alt={member.name}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900">
-                  {member.name}
-                </h3>
-                <p className="mt-1 text-sm font-medium tracking-wide text-[#0E8FFB] uppercase">
-                  {member.role}
-                </p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Why partner with us */}
       <section className="bg-gray-50/60 py-20">
