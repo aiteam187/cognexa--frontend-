@@ -4,8 +4,11 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import BackToTopButton from "./components/BackToTopButton";
 import PageLoader from "./components/PageLoader";
+import CookieConsent from "./components/CookieConsent";
+import { isAnalyticsLoaded } from "./lib/analytics";
 import Home from "./pages/Home";
 
+const NotFound = lazy(() => import("./pages/NotFound"));
 const About = lazy(() => import("./pages/About"));
 const Solutions = lazy(() => import("./pages/Solutions"));
 const CaseStudy = lazy(() => import("./pages/CaseStudy"));
@@ -36,6 +39,7 @@ declare global {
 function AnalyticsPageView() {
   const location = useLocation();
   useEffect(() => {
+    if (!isAnalyticsLoaded()) return;
     window.gtag?.("event", "page_view", {
       page_path: location.pathname + location.search,
       page_title: document.title,
@@ -50,11 +54,18 @@ function App() {
 
   return (
     <div className="app bg-white">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-md focus:bg-[#0E8FFB] focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg"
+      >
+        Skip to main content
+      </a>
+
       <Header />
       <ScrollToTop />
       <AnalyticsPageView />
 
-      <div key={pathname} className="page-fade-in">
+      <main id="main-content" key={pathname} className="page-fade-in">
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -70,12 +81,14 @@ function App() {
             <Route path="/anpr" element={<ANPR />} />
             <Route path="/cognexa-agent" element={<CognexaAgent />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
-      </div>
+      </main>
 
       <Footer />
       <BackToTopButton />
+      <CookieConsent />
     </div>
   );
 }

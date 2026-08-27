@@ -25,9 +25,9 @@ const socialLinks = [
 
 function FooterHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h5 className="mb-5 text-xs font-semibold tracking-wider text-white uppercase">
+    <h3 className="mb-5 text-xs font-semibold tracking-wider text-white uppercase">
       {children}
-    </h5>
+    </h3>
   );
 }
 
@@ -138,7 +138,7 @@ function Footer() {
                 title="Cognexa office location, Baner, Pune"
                 src="https://www.google.com/maps?q=DAccess+Security+Systems+Pvt.+Ltd,18.5583791,73.791428&output=embed"
                 width="100%"
-                height="130"
+                height="190"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="block grayscale-[40%]"
@@ -147,7 +147,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-gray-500 sm:flex-row">
+        <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-6 text-xs text-gray-500 sm:flex-row sm:items-center">
           <p>© Cognexa. Copyright 2026</p>
           <p>Made with care, in Pune.</p>
         </div>

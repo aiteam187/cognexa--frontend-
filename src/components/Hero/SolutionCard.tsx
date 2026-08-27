@@ -95,12 +95,12 @@ function SolutionCard({ solution, delay = 0, index }: SolutionCardProps) {
         </span>
       </div>
 
-      <h4
+      <h3
         className="mb-1.5 text-base leading-snug font-semibold text-gray-900"
         style={{ transform: "translateZ(20px)" }}
       >
         {title}
-      </h4>
+      </h3>
       <p className="text-sm leading-relaxed text-gray-500">
         {description}
       </p>

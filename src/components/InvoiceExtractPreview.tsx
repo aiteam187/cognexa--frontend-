@@ -137,7 +137,7 @@ function InvoiceExtractPreview() {
             </div>
             <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 p-3">
               <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-400" />
-              <span className="text-[11px] text-gray-300">
+              <span className="text-xs text-gray-300">
                 Synced to accounting system
               </span>
             </div>

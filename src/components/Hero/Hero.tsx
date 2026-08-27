@@ -41,6 +41,7 @@ function Hero() {
         </div>
       </div>
 
+      <h2 className="sr-only">Our AI automation solutions</h2>
       <ul className="mt-4 grid w-full grid-cols-2 gap-4 bg-gray-50 px-6 pb-10 sm:grid-cols-3 sm:px-16 md:px-24 lg:grid-cols-6 lg:px-16">
         {heroSolutions.map((solution, index) => (
           <SolutionCard

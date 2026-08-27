@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 .env
+.lighthouseci
 
 # Editor directories and files
 .vscode/*

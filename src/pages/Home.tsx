@@ -153,12 +153,14 @@ function Home() {
       {/* aiAgent — Extracto: AI-powered invoice extraction */}
       <section id="aiAgent" className="bg-white py-20">
         <div className="mx-auto max-w-[1400px] px-5">
-          <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
+          <div className="sticky top-16 z-10 mb-4 flex justify-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#0E8FFB]/20 bg-white/95 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase shadow-md backdrop-blur-sm">
               <Receipt className="h-5 w-5" />
               Extracto
             </span>
-            <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+          </div>
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
               Extracto — AI-powered invoice extraction
             </h2>
             <p className="mt-4 text-gray-500">
@@ -176,6 +178,8 @@ function Home() {
                   alt="AI extracting structured data from a scanned invoice"
                   loading="eager"
                   fetchPriority="low"
+                  width={1000}
+                  height={750}
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -278,12 +282,14 @@ function Home() {
       {/* visionIQ — Turn cameras into a 24x7 AI inspector */}
       <section id="visionIQ" className="bg-gray-950 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
-          <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/15 px-5 py-2 text-base font-bold tracking-wide text-[#38bdf8] uppercase">
+          <div className="sticky top-16 z-10 mb-4 flex justify-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#38bdf8]/20 bg-gray-950/95 px-5 py-2 text-base font-bold tracking-wide text-[#38bdf8] uppercase shadow-md backdrop-blur-sm">
               <ScanEye className="h-5 w-5" />
               Vision IQ
             </span>
-            <h2 className="mt-4 text-3xl font-bold text-white sm:text-4xl">
+          </div>
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl">
               Turn your cameras into a 24x7 AI inspector
             </h2>
             <p className="mt-4 text-gray-400">
@@ -301,6 +307,8 @@ function Home() {
                   alt="Vision IQ detecting vehicles and pedestrians on a busy street"
                   loading="eager"
                   fetchPriority="low"
+                  width={1000}
+                  height={1000}
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -369,6 +377,8 @@ function Home() {
                   alt="Vision IQ verifying PPE compliance on a work site"
                   loading="eager"
                   fetchPriority="low"
+                  width={1000}
+                  height={563}
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -412,12 +422,14 @@ function Home() {
       {/* anpr — Automatic number plate recognition for gates, lanes & toll points */}
       <section id="anpr" className="bg-gray-50 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
-          <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
+          <div className="sticky top-16 z-10 mb-4 flex justify-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#0E8FFB]/20 bg-gray-50/95 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase shadow-md backdrop-blur-sm">
               <Car className="h-5 w-5" />
               ANPR
             </span>
-            <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+          </div>
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
               Automatic number plate recognition for every gate and lane
             </h2>
             <p className="mt-4 text-gray-500">
@@ -537,12 +549,14 @@ function Home() {
       {/* cognexa-agent — voice AI agent for lead gen, meetings, interviews, support & reminders */}
       <section id="cognexa-agent" className="bg-white py-20">
         <div className="mx-auto max-w-[1400px] px-5">
-          <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
+          <div className="sticky top-16 z-10 mb-4 flex justify-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#0E8FFB]/20 bg-white/95 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase shadow-md backdrop-blur-sm">
               <Bot className="h-5 w-5" />
               Cognexa Agent
             </span>
-            <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+          </div>
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
               Cognexa Agent — one AI for every conversation your business has
             </h2>
             <p className="mt-4 text-gray-500">
@@ -564,7 +578,7 @@ function Home() {
                 <span className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0E8FFB]/10 transition-transform duration-300 group-hover:scale-110">
                   <cap.icon className="h-6 w-6 text-[#0E8FFB]" strokeWidth={1.5} />
                 </span>
-                <h4 className="font-semibold text-gray-900">{cap.title}</h4>
+                <h3 className="font-semibold text-gray-900">{cap.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-gray-500">
                   {cap.description}
                 </p>
@@ -594,6 +608,8 @@ function Home() {
                   alt="Candidate talking with Cognexa Interviewer, Cognexa's real-time AI hiring agent"
                   loading="eager"
                   fetchPriority="low"
+                  width={1000}
+                  height={732}
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -703,7 +719,7 @@ function Home() {
       {/* Partners marquee */}
       <Reveal as="section" className="bg-gray-950 py-14">
         <h2 className="text-center text-2xl font-bold tracking-wide text-white uppercase">
-          OUR Associated Partners
+          Our Associated Partners
         </h2>
         <div className="mt-10 overflow-hidden">
           <div className="marquee-track flex w-max items-center gap-14">
@@ -726,12 +742,14 @@ function Home() {
       {/* dashboardID — Real-time, data-driven AI analytics */}
       <section id="dashboardID" className="bg-gray-50 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
-          <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
+          <div className="sticky top-16 z-10 mb-4 flex justify-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#0E8FFB]/20 bg-gray-50/95 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase shadow-md backdrop-blur-sm">
               <BarChart3 className="h-5 w-5" />
               AI Analytics
             </span>
-            <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+          </div>
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
               Real-time, data-driven AI analytics
             </h2>
           </Reveal>
@@ -744,6 +762,8 @@ function Home() {
                   alt="Real-time, data-driven AI analytics for enterprises"
                   loading="eager"
                   fetchPriority="low"
+                  width={939}
+                  height={593}
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -802,6 +822,8 @@ function Home() {
                   alt="Turn every conversation into an insight"
                   loading="eager"
                   fetchPriority="low"
+                  width={768}
+                  height={432}
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
@@ -813,12 +835,14 @@ function Home() {
       {/* rpaCard — Robotic Process Automation Features */}
       <section id="rpaCard" className="bg-white py-20 text-center">
         <div className="mx-auto max-w-[1400px] px-5">
-          <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
+          <div className="sticky top-16 z-10 mb-4 flex justify-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#0E8FFB]/20 bg-white/95 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase shadow-md backdrop-blur-sm">
               <Zap className="h-5 w-5" />
               Automation
             </span>
-            <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-bold text-gray-900 sm:text-4xl">
+          </div>
+          <Reveal>
+            <h2 className="mx-auto max-w-2xl text-3xl font-bold text-gray-900 sm:text-4xl">
               Robotic Process Automation Features
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-500">
@@ -850,6 +874,8 @@ function Home() {
                   alt="Robotic Process Automation Features"
                   loading="eager"
                   fetchPriority="low"
+                  width={1000}
+                  height={341}
                   className="mx-auto rounded-xl transition-transform duration-500"
                 />
               </div>
@@ -881,7 +907,7 @@ function Home() {
                 <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0E8FFB]/10 transition-transform duration-300 group-hover:scale-110">
                   <Icon className="h-6 w-6 text-[#0E8FFB]" strokeWidth={1.5} />
                 </span>
-                <h4 className="mb-2 font-semibold text-gray-900">{title}</h4>
+                <h3 className="mb-2 font-semibold text-gray-900">{title}</h3>
                 <p className="text-sm leading-relaxed text-gray-500">
                   {description}
                 </p>
@@ -915,7 +941,7 @@ function Home() {
           <h3 className="text-lg font-semibold text-[#0E8FFB]">
             Let's get started
           </h3>
-          <h2 className="mx-auto mt-2 max-w-2xl text-3xl font-bold text-gray-900 sm:text-4xl">
+          <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-bold text-gray-900 sm:text-4xl">
             We will help you overcome your technology challenges
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-500">
@@ -948,16 +974,6 @@ function Home() {
               Find your solutions
             </DrawOutlineButton>
           </div>
-
-          <p className="mt-10 border-t border-gray-200 pt-8 text-gray-500">
-            Stop wasting time and money on technology.{" "}
-            <a
-              href="/contacts"
-              className="font-semibold text-[#0E8FFB] underline underline-offset-4 hover:text-[#0c7ad9]"
-            >
-              Contact Us Now
-            </a>
-          </p>
         </div>
       </Reveal>
     </>

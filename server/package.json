@@ -1,0 +1,18 @@
+{
+  "name": "cognexa-test-mail-server",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local test-only email server for the contact form — not for production use.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "nodemailer": "^9.0.5"
+  }
+}

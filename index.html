@@ -57,15 +57,12 @@
       }
     </script>
 
-  <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFPS4MNW6Y"></script>
+  <!-- Google Analytics (GA4) is loaded dynamically after cookie consent, see src/lib/analytics.ts -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag("js", new Date());
-    gtag("config", "G-CFPS4MNW6Y", { send_page_view: false });
   </script>
 </head>
 

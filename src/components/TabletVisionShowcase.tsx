@@ -1,4 +1,4 @@
-import {
+﻿import {
   AlertTriangle,
   ArrowLeft,
   ArrowRight,
@@ -63,11 +63,11 @@ function CameraFeed({ analyzed }: { analyzed: boolean }) {
 
             <div className="absolute top-2 left-2 flex items-center gap-1.5 rounded bg-gray-950/70 px-2 py-1">
               <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
-              <span className="font-mono text-[9px] font-semibold text-white">
+              <span className="font-mono text-[10px] font-semibold text-white">
                 CAM 03
               </span>
             </div>
-            <div className="absolute bottom-2 left-2 rounded bg-gray-950/70 px-2 py-1 font-mono text-[9px] text-gray-300">
+            <div className="absolute bottom-2 left-2 rounded bg-gray-950/70 px-2 py-1 font-mono text-[10px] text-gray-300">
               Assembly Line A
             </div>
 
@@ -76,7 +76,7 @@ function CameraFeed({ analyzed }: { analyzed: boolean }) {
                 className="absolute border-2 border-amber-400"
                 style={{ top: "8%", left: "42%", width: "22%", height: "30%" }}
               >
-                <span className="absolute -top-5 left-0 rounded-sm bg-gray-950/85 px-1.5 py-0.5 font-mono text-[9px] whitespace-nowrap text-amber-300">
+                <span className="absolute -top-5 left-0 rounded-sm bg-gray-950/85 px-1.5 py-0.5 font-mono text-[10px] whitespace-nowrap text-amber-300">
                   no goggles 96%
                 </span>
               </div>
@@ -85,17 +85,17 @@ function CameraFeed({ analyzed }: { analyzed: boolean }) {
 
           {analyzed ? (
             <div className="mt-3 space-y-1.5 rounded-lg bg-white/5 p-2.5">
-              <p className="flex items-center gap-1 text-[9px] font-semibold text-amber-400">
+              <p className="flex items-center gap-1 text-[10px] font-semibold text-amber-400">
                 <AlertTriangle className="h-3 w-3 shrink-0" />
                 PPE non-compliance detected: goggles missing
               </p>
-              <p className="flex items-center gap-1 text-[9px] font-semibold text-emerald-400">
+              <p className="flex items-center gap-1 text-[10px] font-semibold text-emerald-400">
                 <CheckCircle2 className="h-3 w-3 shrink-0" />
                 Alert sent to site safety team
               </p>
             </div>
           ) : (
-            <div className="mt-3 flex items-center justify-between px-0.5 text-[9px] text-gray-500">
+            <div className="mt-3 flex items-center justify-between px-0.5 text-[10px] text-gray-500">
               <span>Scanning for risks...</span>
               <span className="font-mono">30 fps</span>
             </div>

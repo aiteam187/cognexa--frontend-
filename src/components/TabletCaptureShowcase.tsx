@@ -1,4 +1,4 @@
-import {
+﻿import {
   ArrowRight,
   ArrowLeft,
   CheckCircle2,
@@ -18,7 +18,7 @@ const lineItems = [
 function Confidence({ show }: { show: boolean }) {
   if (!show) return null;
   return (
-    <span className="ml-1.5 inline-block rounded-full bg-emerald-100 px-1.5 py-0.5 text-[9px] font-bold text-emerald-700">
+    <span className="ml-1.5 inline-block rounded-full bg-emerald-100 px-1.5 py-0.5 text-[10px] font-bold text-emerald-700">
       100%
     </span>
   );
@@ -84,7 +84,7 @@ function InvoiceDoc({ extracted }: { extracted: boolean }) {
             </span>
           </div>
 
-          <div className="mt-2 flex items-start justify-between text-[9px] text-gray-500">
+          <div className="mt-2 flex items-start justify-between text-[10px] text-gray-500">
             <div>
               <p className="font-semibold text-gray-700">Bill to</p>
               <p>Project Site C</p>
@@ -114,7 +114,7 @@ function InvoiceDoc({ extracted }: { extracted: boolean }) {
             {lineItems.map((item) => (
               <div
                 key={item.desc}
-                className="grid grid-cols-[1fr_28px_44px_50px] gap-1 border-b border-gray-50 px-2 py-1.5 text-[9px] text-gray-600 last:border-0"
+                className="grid grid-cols-[1fr_28px_44px_50px] gap-1 border-b border-gray-50 px-2 py-1.5 text-[10px] text-gray-600 last:border-0"
               >
                 <span className="truncate">
                   {item.desc}
@@ -130,7 +130,7 @@ function InvoiceDoc({ extracted }: { extracted: boolean }) {
           </div>
 
           <div className="mt-2 flex justify-end">
-            <div className="w-28 space-y-0.5 text-[9px] text-gray-500">
+            <div className="w-28 space-y-0.5 text-[10px] text-gray-500">
               <div className="flex justify-between">
                 <span>Subtotal</span>
                 <span>$730.00</span>
@@ -151,11 +151,11 @@ function InvoiceDoc({ extracted }: { extracted: boolean }) {
 
           {extracted ? (
             <div className="mt-2.5 space-y-1.5 rounded-lg bg-emerald-50 p-2">
-              <p className="flex items-center gap-1 text-[9px] font-semibold text-emerald-700">
+              <p className="flex items-center gap-1 text-[10px] font-semibold text-emerald-700">
                 <CheckCircle2 className="h-3 w-3 shrink-0" />
                 All fields extracted successfully
               </p>
-              <p className="flex items-center gap-1 text-[9px] font-semibold text-emerald-700">
+              <p className="flex items-center gap-1 text-[10px] font-semibold text-emerald-700">
                 <CheckCircle2 className="h-3 w-3 shrink-0" />
                 Signature verified &amp; synced to ERP
               </p>

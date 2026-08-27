@@ -224,9 +224,9 @@ function LiveDetectionDashboard() {
         {/* Alert feed */}
         <div className="border-t border-white/10 p-4 lg:border-t-0 lg:border-l">
           <div className="mb-3 flex items-center justify-between">
-            <h4 className="text-xs font-bold tracking-widest text-gray-400 uppercase">
+            <h3 className="text-xs font-bold tracking-widest text-gray-400 uppercase">
               Real-time alerts
-            </h4>
+            </h3>
             <span className="rounded-full bg-[#0E8FFB]/15 px-2 py-0.5 text-[10px] font-semibold text-[#38bdf8]">
               auto-refresh
             </span>

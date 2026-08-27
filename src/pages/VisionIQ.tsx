@@ -168,8 +168,8 @@ function VisionIQ() {
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent p-5 pt-12">
-                  <p className="text-sm font-semibold tracking-wide text-white uppercase">
-                    Smarter Detection. Faster Response. Safer Operations.
+                  <p className="text-sm font-semibold tracking-wide text-white">
+                    Smarter detection. Faster response. Safer operations.
                   </p>
                 </div>
               </div>
@@ -260,9 +260,9 @@ function VisionIQ() {
                       />
                     </div>
                     <div className="p-6 text-left">
-                      <h4 className="text-lg font-semibold text-gray-900">
+                      <h3 className="text-lg font-semibold text-gray-900">
                         {item.title}
-                      </h4>
+                      </h3>
                       <p className="mt-1 text-sm text-gray-500">
                         {item.description}
                       </p>
@@ -308,7 +308,7 @@ function VisionIQ() {
                     strokeWidth={1.5}
                   />
                 </span>
-                <h4 className="font-semibold text-gray-900">{step.title}</h4>
+                <h3 className="font-semibold text-gray-900">{step.title}</h3>
                 <p className="mt-1 text-sm text-gray-500">
                   {step.description}
                 </p>
@@ -345,6 +345,8 @@ function VisionIQ() {
                   src="/visioniq.webp"
                   loading="eager"
                   fetchPriority="low"
+                  width={1400}
+                  height={991}
                   alt="How Cognexa AI Vision IQ works: CCTV cameras feed into the AI processing engine, which detects intruders, crowds, PPE compliance, fire hazards, vehicles, and more, then analyzes and sends real-time alerts"
                   className="mx-auto rounded-xl transition-transform duration-500"
                 />
@@ -429,7 +431,7 @@ function VisionIQ() {
           <h3 className="text-lg font-semibold text-[#0E8FFB]">
             Let's get started
           </h3>
-          <h2 className="mx-auto mt-2 max-w-2xl text-3xl font-bold text-gray-900 sm:text-4xl">
+          <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-bold text-gray-900 sm:text-4xl">
             Bring AI-powered vision to your existing cameras
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-500">

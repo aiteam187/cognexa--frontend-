@@ -92,7 +92,7 @@ function Solutions() {
               lineClassName="bg-white"
               className="rounded-md bg-[#0E8FFB] px-6 py-3 font-semibold text-white uppercase shadow-md transition duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-lg"
             >
-              Schedule a demo
+              Book a Demo
             </DrawOutlineButton>
           </div>
         </div>
@@ -147,9 +147,9 @@ function Solutions() {
                     className="h-11 w-11 object-contain"
                   />
                 </span>
-                <h4 className="text-xl font-semibold text-gray-900">
+                <h3 className="text-xl font-semibold text-gray-900">
                   {card.title}
-                </h4>
+                </h3>
                 <p className="mt-2 text-base text-gray-500">
                   {card.description}
                 </p>
@@ -176,7 +176,7 @@ function Solutions() {
           <h3 className="text-lg font-semibold text-[#0E8FFB]">
             Let's get started
           </h3>
-          <h2 className="mx-auto mt-2 max-w-2xl text-3xl font-bold text-gray-900 sm:text-4xl">
+          <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-bold text-gray-900 sm:text-4xl">
             We will help you overcome your technology challenges
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-500">

@@ -250,6 +250,8 @@ function CognexaAgent() {
                   alt="Candidate talking with Cognexa Interviewer, Cognexa's real-time AI hiring agent"
                   loading="eager"
                   fetchPriority="low"
+                  width={1000}
+                  height={732}
                   className="rounded-2xl shadow-lg"
                 />
               </AIGradientBorder>
