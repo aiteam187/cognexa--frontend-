@@ -1,4 +1,4 @@
-import { Receipt, Users, BarChart3, Bot, MessageCircle, Car } from "lucide-react";
+import { Receipt, Mic, BarChart3, Bot, ScanEye, Car } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export interface HeroSolution {
@@ -18,7 +18,7 @@ export const heroSolutions: HeroSolution[] = [
   {
     title: "Vision IQ",
     description: "Smart image and video analysis",
-    icon: MessageCircle,
+    icon: ScanEye,
     href: "#visionIQ",
   },
   {
@@ -30,7 +30,7 @@ export const heroSolutions: HeroSolution[] = [
   {
     title: "Cognexa Agent",
     description: "Real-time voice AI assistant",
-    icon: Users,
+    icon: Mic,
     href: "#cognexa-agent",
   },
   {
