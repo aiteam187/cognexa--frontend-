@@ -19,6 +19,7 @@
   Receipt,
   BarChart3,
 } from "lucide-react";
+import { lazy, Suspense } from "react";
 import Hero from "../components/Hero/Hero";
 import SEO from "../components/SEO";
 import Reveal from "../components/Reveal";
@@ -26,18 +27,37 @@ import FAQAccordion from "../components/FAQAccordion";
 import { homeFaqs } from "../data/faqs";
 import { AIGradientBorder } from "../components/AIGradientBorder";
 import DrawOutlineButton from "../components/DrawOutlineButton";
-import InvoiceExtractPreview from "../components/InvoiceExtractPreview";
-import ExtractoDashboardPreview from "../components/ExtractoDashboardPreview";
-import TabletCaptureShowcase from "../components/TabletCaptureShowcase";
-import TabletVisionShowcase from "../components/TabletVisionShowcase";
-import LiveDetectionDashboard from "../components/LiveDetectionDashboard";
-import CognexaInterviewCall from "../components/CognexaInterviewCall";
-import CognexaInterviewerPreview from "../components/CognexaInterviewerPreview";
-import CognexaInterviewerDashboard from "../components/CognexaInterviewerDashboard";
-import ANPRCaptureShowcase from "../components/ANPRCaptureShowcase";
-import ANPRLiveDashboard from "../components/ANPRLiveDashboard";
 import { reasonsToPartner } from "../data/reasonsToPartner";
 import { anprImages } from "../data/anprLanes";
+
+// These are all heavy, below-the-fold "live dashboard" mockups — code-split
+// so they don't bloat the initial bundle every visitor has to download.
+const InvoiceExtractPreview = lazy(() => import("../components/InvoiceExtractPreview"));
+const ExtractoDashboardPreview = lazy(() => import("../components/ExtractoDashboardPreview"));
+const TabletCaptureShowcase = lazy(() => import("../components/TabletCaptureShowcase"));
+const TabletVisionShowcase = lazy(() => import("../components/TabletVisionShowcase"));
+const LiveDetectionDashboard = lazy(() => import("../components/LiveDetectionDashboard"));
+const CognexaInterviewCall = lazy(() => import("../components/CognexaInterviewCall"));
+const CognexaInterviewerPreview = lazy(() => import("../components/CognexaInterviewerPreview"));
+const CognexaInterviewerDashboard = lazy(() => import("../components/CognexaInterviewerDashboard"));
+const ANPRCaptureShowcase = lazy(() => import("../components/ANPRCaptureShowcase"));
+const ANPRLiveDashboard = lazy(() => import("../components/ANPRLiveDashboard"));
+
+/** Holds the preview's footprint while its chunk loads, so there's no layout jump. */
+function PreviewFallback({
+  dark = false,
+  className = "",
+}: {
+  dark?: boolean;
+  className?: string;
+}) {
+  return (
+    <div
+      className={`min-h-[320px] animate-pulse rounded-2xl ${dark ? "bg-white/5" : "bg-gray-100"} ${className}`}
+      aria-hidden
+    />
+  );
+}
 
 import interviewerHeroImg from "../assets/home/brand-voice.webp";
 
@@ -241,12 +261,16 @@ function Home() {
               delay={120}
               className="hover-lift order-1 flex-1 basis-100 md:order-2"
             >
-              <InvoiceExtractPreview />
+              <Suspense fallback={<PreviewFallback />}>
+                <InvoiceExtractPreview />
+              </Suspense>
             </Reveal>
           </div>
 
           <div className="mt-20">
-            <TabletCaptureShowcase />
+            <Suspense fallback={<PreviewFallback />}>
+              <TabletCaptureShowcase />
+            </Suspense>
           </div>
 
           <Reveal delay={100} className="mt-20 text-center">
@@ -263,7 +287,9 @@ function Home() {
             className="hover-lift mx-auto mt-10 max-w-6xl transition-all duration-500"
           >
             <AIGradientBorder className="rounded-2xl" tone="brand" duration={5}>
-              <ExtractoDashboardPreview />
+              <Suspense fallback={<PreviewFallback />}>
+                <ExtractoDashboardPreview />
+              </Suspense>
             </AIGradientBorder>
           </Reveal>
 
@@ -386,7 +412,9 @@ function Home() {
           </div>
 
           <div className="mt-20">
-            <TabletVisionShowcase />
+            <Suspense fallback={<PreviewFallback dark />}>
+              <TabletVisionShowcase />
+            </Suspense>
           </div>
 
           <Reveal delay={100} className="mt-20 text-center">
@@ -403,7 +431,9 @@ function Home() {
             className="hover-lift mx-auto mt-10 max-w-6xl transition-all duration-500"
           >
             <AIGradientBorder className="rounded-2xl" tone="brand" duration={5}>
-              <LiveDetectionDashboard />
+              <Suspense fallback={<PreviewFallback dark />}>
+                <LiveDetectionDashboard />
+              </Suspense>
             </AIGradientBorder>
           </Reveal>
 
@@ -513,7 +543,9 @@ function Home() {
           </div>
 
           <div className="mt-20 rounded-2xl bg-gray-950 px-4 py-16 sm:px-8">
-            <ANPRCaptureShowcase />
+            <Suspense fallback={<PreviewFallback dark />}>
+              <ANPRCaptureShowcase />
+            </Suspense>
           </div>
 
           <Reveal delay={100} className="mt-20 text-center">
@@ -530,7 +562,9 @@ function Home() {
             className="hover-lift mx-auto mt-10 max-w-6xl transition-all duration-500"
           >
             <AIGradientBorder className="rounded-2xl" tone="brand" duration={5}>
-              <ANPRLiveDashboard />
+              <Suspense fallback={<PreviewFallback dark />}>
+                <ANPRLiveDashboard />
+              </Suspense>
             </AIGradientBorder>
           </Reveal>
 
@@ -664,7 +698,9 @@ function Home() {
               delay={120}
               className="hover-lift order-1 flex-1 basis-100 md:order-2"
             >
-              <CognexaInterviewerPreview />
+              <Suspense fallback={<PreviewFallback />}>
+                <CognexaInterviewerPreview />
+              </Suspense>
             </Reveal>
           </div>
 
@@ -682,7 +718,9 @@ function Home() {
             className="hover-lift mx-auto mt-10 max-w-4xl transition-all duration-500"
           >
             <AIGradientBorder className="rounded-2xl" tone="brand" duration={5}>
-              <CognexaInterviewCall />
+              <Suspense fallback={<PreviewFallback />}>
+                <CognexaInterviewCall />
+              </Suspense>
             </AIGradientBorder>
           </Reveal>
 
@@ -700,7 +738,9 @@ function Home() {
             className="hover-lift mx-auto mt-10 max-w-6xl transition-all duration-500"
           >
             <AIGradientBorder className="rounded-2xl" tone="brand" duration={5}>
-              <CognexaInterviewerDashboard />
+              <Suspense fallback={<PreviewFallback />}>
+                <CognexaInterviewerDashboard />
+              </Suspense>
             </AIGradientBorder>
           </Reveal>
 
