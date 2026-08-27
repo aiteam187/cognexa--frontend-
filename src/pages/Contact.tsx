@@ -10,7 +10,12 @@ const highlights = [
   "Deploy faster with 100+ plug & play integrations",
 ];
 
-const SERVER_URL = import.meta.env.VITE_SERVER_URL ?? "http://localhost:5050";
+// In production, Azure Static Web Apps proxies /api/* to the co-located
+// Azure Function on the same origin — no CORS, no separate URL needed.
+// In local dev, hit the local test email server (see server/).
+const SEND_EMAIL_ENDPOINT = import.meta.env.PROD
+  ? "/api/send-email"
+  : `${import.meta.env.VITE_SERVER_URL ?? "http://localhost:5050"}/api/send-email`;
 
 type SubmitStatus = "idle" | "submitting" | "success" | "error";
 
@@ -39,7 +44,7 @@ function Contact() {
         ...Object.fromEntries(formData.entries()),
         fill_time_ms: Date.now() - formMountedAt.current,
       };
-      const response = await fetch(`${SERVER_URL}/api/send-email`, {
+      const response = await fetch(SEND_EMAIL_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
