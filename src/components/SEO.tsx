@@ -9,6 +9,8 @@ interface SEOProps {
   path?: string;
   /** Use title as-is instead of appending " | Cognexa". For the homepage's brand tagline. */
   exactTitle?: boolean;
+  /** Page-specific JSON-LD object (e.g. a SoftwareApplication schema for a product page). */
+  structuredData?: Record<string, unknown>;
 }
 
 const SITE_NAME = "Cognexa";
@@ -41,6 +43,7 @@ function SEO({
   image = DEFAULT_IMAGE,
   path,
   exactTitle = false,
+  structuredData,
 }: SEOProps) {
   useEffect(() => {
     const fullTitle = exactTitle ? title : `${title} | ${SITE_NAME}`;
@@ -64,6 +67,19 @@ function SEO({
     upsertMeta("name", "twitter:description", description);
     upsertMeta("name", "twitter:image", absoluteImage);
   }, [title, description, image, path, exactTitle]);
+
+  useEffect(() => {
+    if (!structuredData) return;
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [structuredData]);
 
   return null;
 }

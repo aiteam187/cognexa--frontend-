@@ -9,7 +9,7 @@ function CaseStudy() {
         title="Case Studies"
         description="See how businesses use Cognexa's AI and automation solutions to cut costs, speed up support, and delight customers."
         path="/case-study"
-        image="/case-hero.webp"
+        image="/case-hero-og.webp"
       />
       {/* Hero intro */}
       <section className="relative flex h-80 items-center justify-center overflow-hidden bg-gray-950 text-center text-white sm:h-[560px]">

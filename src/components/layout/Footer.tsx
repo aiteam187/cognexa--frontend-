@@ -56,7 +56,7 @@ function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-gray-300 transition-colors duration-200 hover:border-[#0E8FFB] hover:text-[#0E8FFB]"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-gray-300 transition-colors duration-200 hover:border-[#0E8FFB] hover:text-[#0E8FFB]"
                 >
                   <Icon className="h-4 w-4" />
                 </a>

@@ -100,6 +100,22 @@ function VisionIQ() {
         description="Turn your existing CCTV cameras into an intelligent AI-powered monitoring system. Vision IQ detects safety risks, security threats, and operational issues in real time."
         path="/vision-iq"
         image="/visionhero.webp"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "Vision IQ",
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web",
+          description:
+            "Turn your existing CCTV cameras into an intelligent AI-powered monitoring system. Vision IQ detects safety risks, security threats, and operational issues in real time.",
+          url: "https://www.cognexa.co.in/vision-iq",
+          brand: { "@type": "Brand", name: "Cognexa" },
+          offers: {
+            "@type": "Offer",
+            availability: "https://schema.org/InStock",
+            url: "https://www.cognexa.co.in/contacts",
+          },
+        }}
       />
       {/* Hero — dark, product-focused */}
       <section className="relative overflow-hidden bg-gray-950">

@@ -58,14 +58,14 @@ function CookieConsent() {
           <button
             type="button"
             onClick={handleDecline}
-            className="rounded-md border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 transition duration-200 hover:bg-gray-50"
+            className="min-h-11 rounded-md border border-gray-300 px-4 py-2.5 text-sm font-semibold text-gray-700 transition duration-200 hover:bg-gray-50"
           >
             Decline
           </button>
           <button
             type="button"
             onClick={handleAccept}
-            className="rounded-md bg-[#0E8FFB] px-4 py-2 text-sm font-semibold text-white shadow-sm transition duration-200 hover:opacity-90"
+            className="min-h-11 rounded-md bg-[#0E8FFB] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition duration-200 hover:opacity-90"
           >
             Accept
           </button>

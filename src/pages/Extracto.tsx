@@ -92,6 +92,22 @@ function Extracto() {
         description="Cognexa's Extracto reads any invoice, PDF, scan, or email attachment and turns it into clean, structured data your accounting systems can act on instantly."
         path="/extracto"
         image={invoiceScanImg}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "Extracto",
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web",
+          description:
+            "Cognexa's Extracto reads any invoice, PDF, scan, or email attachment and turns it into clean, structured data your accounting systems can act on instantly.",
+          url: "https://www.cognexa.co.in/extracto",
+          brand: { "@type": "Brand", name: "Cognexa" },
+          offers: {
+            "@type": "Offer",
+            availability: "https://schema.org/InStock",
+            url: "https://www.cognexa.co.in/contacts",
+          },
+        }}
       />
       {/* Hero — dark, product-focused */}
       <section className="relative overflow-hidden bg-gray-950">

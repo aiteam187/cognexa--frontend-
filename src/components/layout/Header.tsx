@@ -87,7 +87,7 @@ function Header() {
           </div>
 
           <button
-            className="transition-transform duration-200 hover:scale-110 md:hidden"
+            className="-m-2.5 flex h-11 w-11 items-center justify-center transition-transform duration-200 hover:scale-110 md:hidden"
             onClick={() => setMobileOpen(true)}
             aria-label="Open menu"
           >

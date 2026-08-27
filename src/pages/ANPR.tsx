@@ -80,6 +80,22 @@ function ANPR() {
         description="Cognexa's ANPR reads vehicle plates at every gate, lane, and toll point in real time, matches them against watchlists, and automates entry, exit, and access decisions."
         path="/anpr"
         image={anprImages.composite.src}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "ANPR",
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web",
+          description:
+            "Cognexa's ANPR reads vehicle plates at every gate, lane, and toll point in real time, matches them against watchlists, and automates entry, exit, and access decisions.",
+          url: "https://www.cognexa.co.in/anpr",
+          brand: { "@type": "Brand", name: "Cognexa" },
+          offers: {
+            "@type": "Offer",
+            availability: "https://schema.org/InStock",
+            url: "https://www.cognexa.co.in/contacts",
+          },
+        }}
       />
       {/* Hero — dark, product-focused */}
       <section className="relative overflow-hidden bg-gray-950">
