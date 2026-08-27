@@ -111,10 +111,10 @@ function Extracto() {
       />
       {/* Hero — dark, product-focused */}
       <section className="relative overflow-hidden bg-gray-950">
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/80 to-gray-950/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-[#0c1b33] to-gray-950" />
 
-        <div className="relative mx-auto flex max-w-[1400px] flex-wrap items-center gap-14 px-5 py-24 sm:py-28">
-          <div className="hero-heading flex-1 basis-100">
+        <div className="relative mx-auto max-w-2xl px-5 py-24 sm:py-28">
+          <div className="hero-heading text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/15 px-5 py-2 text-base font-bold tracking-wide text-[#38bdf8] uppercase">
               <FileText className="h-4 w-4" />
               Document AI
@@ -122,13 +122,13 @@ function Extracto() {
             <h1 className="mt-5 text-4xl font-bold text-white sm:text-5xl">
               Extracto
             </h1>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-300">
+            <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-gray-300">
               Cognexa's Extracto reads any invoice, PDF, scan, or email
               attachment and turns it into clean, structured data your
               accounting systems can act on instantly, no templates, no
               manual mapping.
             </p>
-            <ul className="mt-6 space-y-2.5">
+            <ul className="mx-auto mt-6 flex max-w-md flex-col items-center gap-2.5">
               <li className="flex items-start gap-2 text-gray-300">
                 <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#38bdf8]" />
                 <span>Works with PDFs, scans, photos, and email attachments</span>
@@ -142,7 +142,7 @@ function Extracto() {
                 <span>Flags mismatched totals and duplicate invoices</span>
               </li>
             </ul>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
               <DrawOutlineButton
                 href="/contacts"
                 lineClassName="bg-white"
@@ -158,24 +158,6 @@ function Extracto() {
                 How it works
               </DrawOutlineButton>
             </div>
-          </div>
-
-          <div className="hero-card flex-1 basis-100" style={{ animationDelay: "200ms" }}>
-            <AIGradientBorder className="rounded-2xl" tone="brand">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gray-900">
-                <img
-                  src={invoiceScanImg}
-                  alt="AI extracting structured data from a scanned invoice"
-                  fetchPriority="high"
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-                />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent p-5 pt-12">
-                  <p className="text-sm font-semibold tracking-wide text-white uppercase">
-                    Any Format In. Clean Data Out. Instantly.
-                  </p>
-                </div>
-              </div>
-            </AIGradientBorder>
           </div>
         </div>
       </section>

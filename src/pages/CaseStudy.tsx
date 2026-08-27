@@ -13,14 +13,7 @@ function CaseStudy() {
       />
       {/* Hero intro */}
       <section className="relative flex h-80 items-center justify-center overflow-hidden bg-gray-950 text-center text-white sm:h-[560px]">
-        <img
-          src="/case-hero.webp"
-          alt=""
-          aria-hidden
-          fetchPriority="high"
-          className="hero-banner-img absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-950/50 via-[#0c6fd0]/20 to-gray-950/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-[#0c1b33] to-gray-950" />
 
         <div className="hero-heading relative mx-auto max-w-3xl px-5">
           <span className="inline-block rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold tracking-wide uppercase backdrop-blur-sm">

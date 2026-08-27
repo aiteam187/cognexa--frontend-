@@ -48,14 +48,7 @@ function About() {
       />
       {/* Hero */}
       <section className="relative flex h-80 items-center justify-center overflow-hidden bg-gray-950 text-center text-white sm:h-[560px]">
-        <img
-          src="/aiimg1.avif"
-          alt=""
-          aria-hidden
-          fetchPriority="high"
-          className="hero-banner-img absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-950/60 via-[#0c6fd0]/30 to-gray-950/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-[#0c1b33] to-gray-950" />
 
         <div className="hero-heading relative mx-auto max-w-3xl px-5">
           <span className="inline-block rounded-full bg-white/15 px-5 py-2 text-base font-bold tracking-wide uppercase backdrop-blur-sm">
