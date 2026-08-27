@@ -1,5 +1,5 @@
 ﻿import { useRef, useState } from "react";
-import { Check, CheckCircle2, Loader2 } from "lucide-react";
+import { Check, CheckCircle2, Loader2, Mail } from "lucide-react";
 import Reveal from "../components/Reveal";
 import SEO from "../components/SEO";
 import { countries } from "../data/countries";
@@ -176,10 +176,16 @@ function Contact() {
                 onSubmit={handleSubmit}
                 className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-shadow duration-200 hover:shadow-lg sm:p-10"
               >
-                <h3 className="text-xl font-bold text-gray-900">Book a demo</h3>
+                <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold text-[#0E8FFB] uppercase">
+                  <Mail className="h-4 w-4" />
+                  Enquiry form
+                </span>
+                <h3 className="mt-4 text-xl font-bold text-gray-900">
+                  Send us your enquiry
+                </h3>
                 <p className="mt-1 text-sm text-gray-500">
-                  Discover how Cognexa can help transform your customer
-                  service game.
+                  Share a few details about your business and our team will
+                  get back to you shortly.
                 </p>
 
                 {status === "error" && (
