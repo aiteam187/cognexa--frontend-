@@ -94,7 +94,7 @@ function ANPR() {
 
         <div className="relative mx-auto flex max-w-[1400px] flex-wrap items-center gap-14 px-5 py-24 sm:py-28">
           <div className="hero-heading flex-1 basis-100">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/15 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#38bdf8] uppercase">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/15 px-5 py-2 text-base font-bold tracking-wide text-[#38bdf8] uppercase">
               <Car className="h-4 w-4" />
               Automatic Number Plate Recognition
             </span>
@@ -190,7 +190,7 @@ function ANPR() {
       <section className="border-t border-white/5 bg-gray-950 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/15 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#38bdf8] uppercase">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/15 px-5 py-2 text-base font-bold tracking-wide text-[#38bdf8] uppercase">
               Command center
             </span>
             <h2 className="mt-4 text-3xl font-bold text-white sm:text-4xl">
@@ -214,7 +214,7 @@ function ANPR() {
       <section className="bg-gray-50/60 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
               In action
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -241,7 +241,7 @@ function ANPR() {
       <section className="bg-gray-50/60 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
               The pipeline
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -270,7 +270,7 @@ function ANPR() {
                     strokeWidth={1.5}
                   />
                 </span>
-                <h4 className="font-semibold text-gray-900">{step.title}</h4>
+                <h3 className="font-semibold text-gray-900">{step.title}</h3>
                 <p className="mt-1 text-sm text-gray-500">
                   {step.description}
                 </p>
@@ -284,7 +284,7 @@ function ANPR() {
       <section id="how-it-works" className="bg-white py-20 text-center">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal>
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
               How it works
             </span>
             <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -335,7 +335,7 @@ function ANPR() {
       <section className="bg-white py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
               Beyond recognition
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -348,7 +348,7 @@ function ANPR() {
               <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-emerald-500/10">
                 <Brain className="h-7 w-7 text-emerald-600" strokeWidth={1.5} />
               </span>
-              <span className="inline-block rounded-full bg-emerald-500/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-emerald-600 uppercase">
+              <span className="inline-block rounded-full bg-emerald-500/10 px-5 py-2 text-base font-bold tracking-wide text-emerald-600 uppercase">
                 Verify
               </span>
               <h3 className="mt-4 text-2xl font-bold text-gray-900">
@@ -371,7 +371,7 @@ function ANPR() {
               <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-[#0E8FFB]/10">
                 <Ticket className="h-7 w-7 text-[#0E8FFB]" strokeWidth={1.5} />
               </span>
-              <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+              <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
                 Automate
               </span>
               <h3 className="mt-4 text-2xl font-bold text-gray-900">

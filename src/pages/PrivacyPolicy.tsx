@@ -78,8 +78,7 @@ function PrivacyPolicy() {
         <h1 className="text-center text-4xl font-bold text-gray-900">
           Privacy Policy
         </h1>
-        <p className="mt-6 font-semibold text-gray-900">Privacy Policy</p>
-        <p className="mt-1 text-base text-gray-500 italic">
+        <p className="mt-4 text-center text-sm text-gray-500 italic">
           Last Updated: 27-07-2026
         </p>
         <p className="mt-4 text-gray-600">
@@ -93,7 +92,7 @@ function PrivacyPolicy() {
 
         {sections.map((section) => (
           <div key={section.title} className="mt-8">
-            <h3 className="text-xl font-bold text-gray-900">{section.title}</h3>
+            <h2 className="text-xl font-bold text-gray-900">{section.title}</h2>
             <p className="mt-2 text-gray-600">{section.body}</p>
 
             {section.groups?.map((group) => (

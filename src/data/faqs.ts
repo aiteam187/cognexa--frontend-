@@ -30,3 +30,22 @@ export const homeFaqs: Faq[] = [
       "Reach out through the contact form or book a demo directly, and our team will walk you through pricing based on your use case and scale.",
   },
 ];
+
+export const helpFaqs: Faq[] = [
+  ...homeFaqs,
+  {
+    question: "How can I reach the Cognexa team?",
+    answer:
+      "Call us at +91 91 7557 6999 or email support@cognexa.co.in, or use the contact form to reach out and we'll get back to you.",
+  },
+  {
+    question: "What should I include when contacting support?",
+    answer:
+      "A short description of what you were trying to do, what happened instead, and which product it relates to helps us resolve things faster. Screenshots are welcome too.",
+  },
+  {
+    question: "How is my data handled?",
+    answer:
+      "See our Privacy Policy for full details on what we collect and how it's used. In short: we don't sell your data, and it's only used to respond to inquiries and improve our products.",
+  },
+];

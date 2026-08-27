@@ -104,7 +104,7 @@ function CognexaAgent() {
 
         <div className="relative mx-auto flex max-w-[1400px] flex-wrap items-center gap-14 px-5 py-24 sm:py-28">
           <div className="hero-heading flex-1 basis-100">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/15 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#38bdf8] uppercase">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/15 px-5 py-2 text-base font-bold tracking-wide text-[#38bdf8] uppercase">
               <Bot className="h-4 w-4" />
               Voice AI
             </span>
@@ -193,7 +193,7 @@ function CognexaAgent() {
       <section id="how-it-works" className="bg-white py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
               Cognexa Agent
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -215,7 +215,7 @@ function CognexaAgent() {
                 <span className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0E8FFB]/10">
                   <cap.icon className="h-6 w-6 text-[#0E8FFB]" strokeWidth={1.5} />
                 </span>
-                <h4 className="font-semibold text-gray-900">{cap.title}</h4>
+                <h3 className="font-semibold text-gray-900">{cap.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-gray-500">
                   {cap.description}
                 </p>
@@ -229,7 +229,7 @@ function CognexaAgent() {
       <section className="bg-gray-50/60 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
               A closer look
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -316,7 +316,7 @@ function CognexaAgent() {
       <section className="bg-white py-20 text-center">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal>
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
               In action
             </span>
             <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -343,7 +343,7 @@ function CognexaAgent() {
       <section className="bg-gray-50/60 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
+            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase">
               Command center
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
