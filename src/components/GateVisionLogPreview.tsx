@@ -76,13 +76,13 @@ const statusStyles: Record<Row["status"], string> = {
   Blacklisted: "bg-rose-100 text-rose-700",
 };
 
-function ANPRLogPreview() {
+function GateVisionLogPreview() {
   return (
     <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white text-left shadow-2xl">
       <div className="flex">
         <div className="hidden w-48 shrink-0 border-r border-gray-100 bg-white p-4 lg:block">
           <div className="mb-6 flex items-center gap-1.5 text-lg font-extrabold text-gray-900">
-            <span className="text-[#0E8FFB]">AN</span>PR
+            Gate<span className="text-[#0E8FFB]">Vision</span>
           </div>
           <ul className="space-y-1">
             {navItems.map((item) => (
@@ -222,4 +222,4 @@ function ANPRLogPreview() {
   );
 }
 
-export default ANPRLogPreview;
+export default GateVisionLogPreview;

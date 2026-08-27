@@ -7,12 +7,12 @@ export const homeFaqs: Faq[] = [
   {
     question: "What does Cognexa actually do?",
     answer:
-      "Cognexa builds AI automation products for businesses: Extracto for invoice data extraction, Vision IQ for camera-based monitoring, Cognexa Agent for real-time voice AI, ANPR for number plate recognition, plus analytics and RPA tooling.",
+      "Cognexa builds AI automation products for businesses: Extracto for invoice data extraction, Vision IQ for camera-based monitoring, Cognexa Agent for real-time voice AI, GateVision for smart number plate recognition, plus analytics and RPA tooling.",
   },
   {
     question: "Do I need new hardware to get started?",
     answer:
-      "No. Extracto works with your existing invoice inbox or upload folder, and Vision IQ and ANPR work with the cameras you already have, no new hardware required.",
+      "No. Extracto works with your existing invoice inbox or upload folder, and Vision IQ and GateVision work with the cameras you already have, no new hardware required.",
   },
   {
     question: "How long does it take to go live?",

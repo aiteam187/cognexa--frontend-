@@ -1,5 +1,5 @@
 import { Suspense, lazy, useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import BackToTopButton from "./components/BackToTopButton";
@@ -18,7 +18,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const HelpTopic = lazy(() => import("./pages/HelpTopic"));
 const VisionIQ = lazy(() => import("./pages/VisionIQ"));
 const Extracto = lazy(() => import("./pages/Extracto"));
-const ANPR = lazy(() => import("./pages/ANPR"));
+const GateVision = lazy(() => import("./pages/GateVision"));
 const CognexaAgent = lazy(() => import("./pages/CognexaAgent"));
 const Careers = lazy(() => import("./pages/Careers"));
 
@@ -78,7 +78,8 @@ function App() {
             <Route path="/help-topic" element={<HelpTopic />} />
             <Route path="/vision-iq" element={<VisionIQ />} />
             <Route path="/extracto" element={<Extracto />} />
-            <Route path="/anpr" element={<ANPR />} />
+            <Route path="/gate-vision" element={<GateVision />} />
+            <Route path="/anpr" element={<Navigate to="/gate-vision" replace />} />
             <Route path="/cognexa-agent" element={<CognexaAgent />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="*" element={<NotFound />} />

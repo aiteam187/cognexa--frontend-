@@ -22,10 +22,10 @@ export const heroSolutions: HeroSolution[] = [
     href: "#visionIQ",
   },
   {
-    title: "ANPR",
-    description: "Automatic number plate recognition & tracking",
+    title: "GateVision",
+    description: "Smart number plate recognition & tracking",
     icon: Car,
-    href: "#anpr",
+    href: "#gate-vision",
   },
   {
     title: "Cognexa Agent",

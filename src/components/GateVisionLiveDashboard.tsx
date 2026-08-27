@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Car, Gauge, Radio, ShieldAlert, Ticket, Wifi } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import CountUp from "./CountUp";
-import ANPRLaneScene from "./ANPRLaneScene";
-import { anprImages } from "../data/anprLanes";
+import GateVisionLaneScene from "./GateVisionLaneScene";
+import { gateVisionImages } from "../data/gateVisionLanes";
 
 interface Lane {
   camLabel: string;
@@ -18,25 +18,25 @@ const lanes: Lane[] = [
   {
     camLabel: "GATE 01",
     zone: "Camera Unit",
-    ...anprImages.cameraHW,
+    ...gateVisionImages.cameraHW,
   },
   {
     camLabel: "GATE 02",
     zone: "Main Entry Lane",
-    ...anprImages.composite,
+    ...gateVisionImages.composite,
     decision: "denied",
   },
   {
     camLabel: "GATE 03",
     zone: "Toll Plaza",
-    ...anprImages.inAction,
+    ...gateVisionImages.inAction,
     decision: "granted",
     showHud: false,
   },
   {
     camLabel: "GATE 04",
     zone: "Parking Garage",
-    ...anprImages.illustration,
+    ...gateVisionImages.illustration,
   },
 ];
 
@@ -97,7 +97,7 @@ function useClock() {
   return now;
 }
 
-function ANPRLiveDashboard() {
+function GateVisionLiveDashboard() {
   const now = useClock();
   const [alerts, setAlerts] = useState<AlertItem[]>(() =>
     alertPool.slice(0, 4).map((a, i) => ({
@@ -130,7 +130,7 @@ function ANPRLiveDashboard() {
             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-red-500" />
           </span>
           <span className="text-sm font-bold tracking-widest text-white uppercase">
-            ANPR <span className="text-[#38bdf8]">Live</span>
+            GateVision <span className="text-[#38bdf8]">Live</span>
           </span>
         </div>
         <div className="flex items-center gap-4 text-xs text-gray-400">
@@ -152,7 +152,7 @@ function ANPRLiveDashboard() {
               key={lane.camLabel}
               className="dash-feed group relative aspect-video overflow-hidden rounded-lg bg-gray-900"
             >
-              <ANPRLaneScene
+              <GateVisionLaneScene
                 src={lane.src}
                 alt={lane.alt}
                 camLabel={lane.camLabel}
@@ -220,4 +220,4 @@ function ANPRLiveDashboard() {
   );
 }
 
-export default ANPRLiveDashboard;
+export default GateVisionLiveDashboard;

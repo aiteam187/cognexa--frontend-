@@ -28,7 +28,7 @@ import { homeFaqs } from "../data/faqs";
 import { AIGradientBorder } from "../components/AIGradientBorder";
 import DrawOutlineButton from "../components/DrawOutlineButton";
 import { reasonsToPartner } from "../data/reasonsToPartner";
-import { anprImages } from "../data/anprLanes";
+import { gateVisionImages } from "../data/gateVisionLanes";
 
 // These are all heavy, below-the-fold "live dashboard" mockups — code-split
 // so they don't bloat the initial bundle every visitor has to download.
@@ -40,8 +40,8 @@ const LiveDetectionDashboard = lazy(() => import("../components/LiveDetectionDas
 const CognexaInterviewCall = lazy(() => import("../components/CognexaInterviewCall"));
 const CognexaInterviewerPreview = lazy(() => import("../components/CognexaInterviewerPreview"));
 const CognexaInterviewerDashboard = lazy(() => import("../components/CognexaInterviewerDashboard"));
-const ANPRCaptureShowcase = lazy(() => import("../components/ANPRCaptureShowcase"));
-const ANPRLiveDashboard = lazy(() => import("../components/ANPRLiveDashboard"));
+const GateVisionCaptureShowcase = lazy(() => import("../components/GateVisionCaptureShowcase"));
+const GateVisionLiveDashboard = lazy(() => import("../components/GateVisionLiveDashboard"));
 
 /** Holds the preview's footprint while its chunk loads, so there's no layout jump. */
 function PreviewFallback({
@@ -449,22 +449,22 @@ function Home() {
         </div>
       </section>
 
-      {/* anpr — Automatic number plate recognition for gates, lanes & toll points */}
-      <section id="anpr" className="bg-gray-50 py-20">
+      {/* gate-vision — Smart number plate recognition for gates, lanes & toll points */}
+      <section id="gate-vision" className="bg-gray-50 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <div className="sticky top-16 z-10 mb-4 flex justify-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#0E8FFB]/20 bg-gray-50/95 px-5 py-2 text-base font-bold tracking-wide text-[#0E8FFB] uppercase shadow-md backdrop-blur-sm">
               <Car className="h-5 w-5" />
-              ANPR
+              GateVision
             </span>
           </div>
           <Reveal className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-              Automatic number plate recognition for every gate and lane
+              Smart number plate recognition for every gate and lane
             </h2>
             <p className="mt-4 text-gray-500">
-              ANPR reads vehicle plates at entry, exit, and toll points in
-              real time, matches them against watchlists, and automates
+              GateVision reads vehicle plates at entry, exit, and toll points
+              in real time, matches them against watchlists, and automates
               access decisions before incidents or bottlenecks build up.
             </p>
           </Reveal>
@@ -473,8 +473,8 @@ function Home() {
             <Reveal className="hover-lift flex-1 basis-100">
               <AIGradientBorder className="rounded-2xl" tone="brand">
                 <img
-                  src={anprImages.cameraHW.src}
-                  alt={anprImages.cameraHW.alt}
+                  src={gateVisionImages.cameraHW.src}
+                  alt={gateVisionImages.cameraHW.alt}
                   loading="eager"
                   fetchPriority="low"
                   className="aspect-[4/3] w-full rounded-2xl object-cover shadow-lg transition-transform duration-700 hover:scale-105"
@@ -486,9 +486,9 @@ function Home() {
                 Works with the cameras you already have at the gate
               </h3>
               <p className="mt-3 text-gray-500">
-                No new hardware required. Point ANPR at your existing entry,
-                exit, or toll lane cameras and it starts reading plates
-                immediately, in any light or weather.
+                No new hardware required. Point GateVision at your existing
+                entry, exit, or toll lane cameras and it starts reading
+                plates immediately, in any light or weather.
               </p>
               <ul className="mt-5 space-y-2.5">
                 <CheckItem>Works with your existing lane & toll cameras</CheckItem>
@@ -532,8 +532,8 @@ function Home() {
             >
               <AIGradientBorder className="rounded-2xl" tone="brand">
                 <img
-                  src={anprImages.inAction.src}
-                  alt={anprImages.inAction.alt}
+                  src={gateVisionImages.inAction.src}
+                  alt={gateVisionImages.inAction.alt}
                   loading="eager"
                   fetchPriority="low"
                   className="block h-auto w-full rounded-2xl object-cover shadow-lg transition-transform duration-700 hover:scale-105"
@@ -544,7 +544,7 @@ function Home() {
 
           <div className="mt-20 rounded-2xl bg-gray-950 px-4 py-16 sm:px-8">
             <Suspense fallback={<PreviewFallback dark />}>
-              <ANPRCaptureShowcase />
+              <GateVisionCaptureShowcase />
             </Suspense>
           </div>
 
@@ -563,18 +563,18 @@ function Home() {
           >
             <AIGradientBorder className="rounded-2xl" tone="brand" duration={5}>
               <Suspense fallback={<PreviewFallback dark />}>
-                <ANPRLiveDashboard />
+                <GateVisionLiveDashboard />
               </Suspense>
             </AIGradientBorder>
           </Reveal>
 
           <div className="mt-14 text-center">
             <DrawOutlineButton
-              href="/anpr"
+              href="/gate-vision"
               lineClassName="bg-[#0E8FFB]"
               className="rounded-md border border-[#0E8FFB]/30 px-6 py-3 font-semibold text-[#0E8FFB] transition duration-200 hover:-translate-y-0.5 hover:bg-[#0E8FFB]/10"
             >
-              Explore ANPR
+              Explore GateVision
             </DrawOutlineButton>
           </div>
         </div>

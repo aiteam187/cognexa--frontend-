@@ -7,7 +7,7 @@ import DrawOutlineButton from "../components/DrawOutlineButton";
 const popularLinks = [
   { label: "Extracto", to: "/extracto" },
   { label: "Vision IQ", to: "/vision-iq" },
-  { label: "ANPR", to: "/anpr" },
+  { label: "GateVision", to: "/gate-vision" },
   { label: "Cognexa Agent", to: "/cognexa-agent" },
   { label: "Solutions", to: "/solution" },
   { label: "Contact Us", to: "/contacts" },

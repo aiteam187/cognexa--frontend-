@@ -14,11 +14,11 @@ import Reveal from "../components/Reveal";
 import { AIGradientBorder } from "../components/AIGradientBorder";
 import DrawOutlineButton from "../components/DrawOutlineButton";
 import SEO from "../components/SEO";
-import ANPRCaptureShowcase from "../components/ANPRCaptureShowcase";
-import ANPRLiveDashboard from "../components/ANPRLiveDashboard";
-import ANPRLogPreview from "../components/ANPRLogPreview";
+import GateVisionCaptureShowcase from "../components/GateVisionCaptureShowcase";
+import GateVisionLiveDashboard from "../components/GateVisionLiveDashboard";
+import GateVisionLogPreview from "../components/GateVisionLogPreview";
 import CountUp from "../components/CountUp";
-import { anprImages } from "../data/anprLanes";
+import { gateVisionImages } from "../data/gateVisionLanes";
 
 function CheckItem({ children }: { children: React.ReactNode }) {
   return (
@@ -72,23 +72,23 @@ const flow = [
   { icon: Bell, label: "Dashboard & alerts" },
 ];
 
-function ANPR() {
+function GateVision() {
   return (
     <>
       <SEO
-        title="ANPR — Automatic Number Plate Recognition"
-        description="Cognexa's ANPR reads vehicle plates at every gate, lane, and toll point in real time, matches them against watchlists, and automates entry, exit, and access decisions."
-        path="/anpr"
-        image={anprImages.composite.src}
+        title="GateVision — Smart Number Plate Recognition"
+        description="Cognexa's GateVision reads vehicle plates at every gate, lane, and toll point in real time, matches them against watchlists, and automates entry, exit, and access decisions."
+        path="/gate-vision"
+        image={gateVisionImages.composite.src}
         structuredData={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "ANPR",
+          name: "GateVision",
           applicationCategory: "BusinessApplication",
           operatingSystem: "Web",
           description:
-            "Cognexa's ANPR reads vehicle plates at every gate, lane, and toll point in real time, matches them against watchlists, and automates entry, exit, and access decisions.",
-          url: "https://www.cognexa.co.in/anpr",
+            "Cognexa's GateVision reads vehicle plates at every gate, lane, and toll point in real time, matches them against watchlists, and automates entry, exit, and access decisions.",
+          url: "https://www.cognexa.co.in/gate-vision",
           brand: { "@type": "Brand", name: "Cognexa" },
           offers: {
             "@type": "Offer",
@@ -100,7 +100,7 @@ function ANPR() {
       {/* Hero — dark, product-focused */}
       <section className="relative overflow-hidden bg-gray-950">
         <img
-          src={anprImages.composite.src}
+          src={gateVisionImages.composite.src}
           alt=""
           aria-hidden
           fetchPriority="high"
@@ -112,16 +112,16 @@ function ANPR() {
           <div className="hero-heading flex-1 basis-100">
             <span className="inline-flex items-center gap-2 rounded-full bg-[#0E8FFB]/15 px-5 py-2 text-base font-bold tracking-wide text-[#38bdf8] uppercase">
               <Car className="h-4 w-4" />
-              Automatic Number Plate Recognition
+              Smart Number Plate Recognition
             </span>
             <h1 className="mt-5 text-4xl font-bold text-white sm:text-5xl">
-              <span className="text-[#0E8FFB]">ANPR</span>
+              <span className="text-[#0E8FFB]">GateVision</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-300">
-              Cognexa's ANPR reads vehicle plates at every gate, lane, and toll
-              point in real time, matches them against watchlists, and
-              automates entry, exit, and access decisions, no manual logging
-              required.
+              Cognexa's GateVision reads vehicle plates at every gate, lane,
+              and toll point in real time, matches them against watchlists,
+              and automates entry, exit, and access decisions, no manual
+              logging required.
             </p>
             <ul className="mt-6 space-y-2.5">
               <li className="flex items-start gap-2 text-gray-300">
@@ -159,8 +159,8 @@ function ANPR() {
             <AIGradientBorder className="rounded-2xl" tone="brand">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gray-900">
                 <img
-                  src={anprImages.composite.src}
-                  alt={anprImages.composite.alt}
+                  src={gateVisionImages.composite.src}
+                  alt={gateVisionImages.composite.alt}
                   fetchPriority="high"
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                 />
@@ -198,7 +198,7 @@ function ANPR() {
       {/* Lane showcase — vehicle approach to gate decision */}
       <section className="bg-gray-950 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
-          <ANPRCaptureShowcase />
+          <GateVisionCaptureShowcase />
         </div>
       </section>
 
@@ -220,13 +220,13 @@ function ANPR() {
 
           <Reveal delay={150} className="mx-auto mt-12 max-w-6xl">
             <AIGradientBorder className="rounded-2xl" tone="brand" duration={5}>
-              <ANPRLiveDashboard />
+              <GateVisionLiveDashboard />
             </AIGradientBorder>
           </Reveal>
         </div>
       </section>
 
-      {/* ANPR in action — scan log */}
+      {/* GateVision in action — scan log */}
       <section className="bg-gray-50/60 py-20">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
@@ -234,7 +234,7 @@ function ANPR() {
               In action
             </span>
             <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
-              See ANPR read and match plates in real time
+              See GateVision read and match plates in real time
             </h2>
             <p className="mt-4 text-gray-500">
               Every scan logged automatically: plate number, vehicle, gate,
@@ -247,7 +247,7 @@ function ANPR() {
             className="hover-lift mx-auto mt-12 max-w-6xl transition-all duration-500"
           >
             <AIGradientBorder className="rounded-2xl" tone="brand" duration={5}>
-              <ANPRLogPreview />
+              <GateVisionLogPreview />
             </AIGradientBorder>
           </Reveal>
         </div>
@@ -296,7 +296,7 @@ function ANPR() {
         </div>
       </section>
 
-      {/* How ANPR works — full flow diagram */}
+      {/* How GateVision works — full flow diagram */}
       <section id="how-it-works" className="bg-white py-20 text-center">
         <div className="mx-auto max-w-[1400px] px-5">
           <Reveal>
@@ -462,4 +462,4 @@ function ANPR() {
   );
 }
 
-export default ANPR;
+export default GateVision;

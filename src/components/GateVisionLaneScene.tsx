@@ -7,7 +7,7 @@ interface Box {
   height: string;
 }
 
-interface ANPRLaneSceneProps {
+interface GateVisionLaneSceneProps {
   src: string;
   alt: string;
   camLabel: string;
@@ -28,7 +28,7 @@ const decisionStyles = {
   denied: "border-red-500/50 bg-gray-950/90 text-red-400",
 };
 
-function ANPRLaneScene({
+function GateVisionLaneScene({
   src,
   alt,
   camLabel,
@@ -40,7 +40,7 @@ function ANPRLaneScene({
   decision,
   showHud = true,
   className = "",
-}: ANPRLaneSceneProps) {
+}: GateVisionLaneSceneProps) {
   return (
     <div className={`relative h-full w-full overflow-hidden bg-gray-900 ${className}`}>
       <img
@@ -99,4 +99,4 @@ function ANPRLaneScene({
   );
 }
 
-export default ANPRLaneScene;
+export default GateVisionLaneScene;

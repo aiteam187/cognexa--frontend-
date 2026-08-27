@@ -7,8 +7,8 @@ import {
   Share2,
 } from "lucide-react";
 import Reveal from "./Reveal";
-import ANPRLaneScene from "./ANPRLaneScene";
-import { anprImages } from "../data/anprLanes";
+import GateVisionLaneScene from "./GateVisionLaneScene";
+import { gateVisionImages } from "../data/gateVisionLanes";
 
 function LaneFeedCard({
   tab,
@@ -62,7 +62,7 @@ function LaneFeedCard({
 
         <div className="p-3">
           <div className="relative aspect-video overflow-hidden rounded-lg bg-gray-800">
-            <ANPRLaneScene
+            <GateVisionLaneScene
               src={src}
               alt={alt}
               camLabel="GATE 02"
@@ -83,7 +83,7 @@ function LaneFeedCard({
   );
 }
 
-function ANPRCaptureShowcase() {
+function GateVisionCaptureShowcase() {
   return (
     <div>
       <Reveal className="mx-auto max-w-2xl text-center">
@@ -95,9 +95,9 @@ function ANPRCaptureShowcase() {
           From vehicle approach to gate decision, instantly
         </h2>
         <p className="mt-4 text-gray-400">
-          Any entry, exit, or toll lane becomes a 24x7 checkpoint. ANPR reads
-          the plate and decides what happens next, before the vehicle reaches
-          the barrier.
+          Any entry, exit, or toll lane becomes a 24x7 checkpoint. GateVision
+          reads the plate and decides what happens next, before the vehicle
+          reaches the barrier.
         </p>
       </Reveal>
 
@@ -111,8 +111,8 @@ function ANPRCaptureShowcase() {
           <div className="h-[340px]">
             <LaneFeedCard
               tab="hardware"
-              src={anprImages.cameraHW.src}
-              alt={anprImages.cameraHW.alt}
+              src={gateVisionImages.cameraHW.src}
+              alt={gateVisionImages.cameraHW.alt}
               showHud
               note="Mounted at the lane, watching every vehicle that passes"
             />
@@ -131,8 +131,8 @@ function ANPRCaptureShowcase() {
           <div className="h-[340px]">
             <LaneFeedCard
               tab="result"
-              src={anprImages.inAction.src}
-              alt={anprImages.inAction.alt}
+              src={gateVisionImages.inAction.src}
+              alt={gateVisionImages.inAction.alt}
               showHud={false}
               note="Plate matched and barrier signal sent, automatically"
             />
@@ -143,4 +143,4 @@ function ANPRCaptureShowcase() {
   );
 }
 
-export default ANPRCaptureShowcase;
+export default GateVisionCaptureShowcase;
