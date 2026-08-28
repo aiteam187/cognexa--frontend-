@@ -10,6 +10,11 @@
   to = "/.netlify/functions/send-email"
   status = 200
 
+[[redirects]]
+  from = "/api/send-application"
+  to = "/.netlify/functions/send-application"
+  status = 200
+
 # Everything else that isn't a real file falls back to the SPA shell,
 # so client-side routing (react-router) handles the URL.
 [[redirects]]

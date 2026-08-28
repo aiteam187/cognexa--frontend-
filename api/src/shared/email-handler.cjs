@@ -109,6 +109,100 @@ async function sendDemoRequestEmail(fields) {
   });
 }
 
+// --- Careers / job application form -----------------------------------
+
+const APPLICATION_REQUIRED_FIELDS = [
+  "full_name",
+  "email",
+  "resume_base64",
+  "resume_filename",
+];
+
+const ALLOWED_RESUME_TYPES = new Set([
+  "application/pdf",
+  "application/msword",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+]);
+const MAX_RESUME_BYTES = 4 * 1024 * 1024; // 4MB — stays under Netlify Functions' 6MB request-body cap once base64-encoded.
+
+function validateApplicationFields(fields) {
+  const missing = APPLICATION_REQUIRED_FIELDS.some((key) => !fields?.[key]);
+  return missing ? { ok: false, error: "Missing required fields" } : { ok: true };
+}
+
+function buildApplicationEmail(fields) {
+  const { full_name, email, phone, role_interest, message } = fields;
+
+  const rows = {
+    "Full name": full_name,
+    Email: email,
+    Phone: phone,
+    "Role of interest": role_interest,
+  };
+
+  const html = `
+    <h2>New job application from cognexa.co.in/careers</h2>
+    <table cellpadding="6" style="border-collapse:collapse">
+      ${Object.entries(rows)
+        .filter(([, v]) => v)
+        .map(
+          ([label, value]) =>
+            `<tr><td style="font-weight:600">${escapeHtml(label)}</td><td>${escapeHtml(value)}</td></tr>`,
+        )
+        .join("")}
+    </table>
+    ${message ? `<p><strong>Message:</strong><br>${escapeHtml(message).replace(/\n/g, "<br>")}</p>` : ""}
+  `;
+
+  return {
+    subject: `New job application — ${full_name}`,
+    html,
+  };
+}
+
+function decodeResumeAttachment(fields) {
+  const { resume_base64, resume_filename, resume_mimetype } = fields;
+
+  if (resume_mimetype && !ALLOWED_RESUME_TYPES.has(resume_mimetype)) {
+    return { ok: false, error: "Resume must be a PDF or Word document" };
+  }
+
+  let buffer;
+  try {
+    buffer = Buffer.from(resume_base64, "base64");
+  } catch {
+    return { ok: false, error: "Invalid resume file data" };
+  }
+
+  if (buffer.length === 0 || buffer.length > MAX_RESUME_BYTES) {
+    return { ok: false, error: "Resume must be under 4MB" };
+  }
+
+  return {
+    ok: true,
+    attachment: { filename: resume_filename, content: buffer, contentType: resume_mimetype },
+  };
+}
+
+// Caller should check decodeResumeAttachment(fields).ok BEFORE calling this
+// (as a 400-worthy validation step, same as validateApplicationFields) —
+// this only handles the actual send.
+async function sendApplicationEmail(fields, attachment) {
+  const transporter = getTransporter();
+  const gmailUser = process.env.GMAIL_USER;
+  const notifyTo = process.env.NOTIFY_TO || gmailUser;
+  const { subject, html } = buildApplicationEmail(fields);
+
+  await transporter.sendMail({
+    from: `"Cognexa Website" <${gmailUser}>`,
+    to: notifyTo,
+    replyTo: fields.email,
+    subject,
+    html,
+    attachments: [attachment],
+  });
+}
+
 module.exports = {
   escapeHtml,
   isHoneypotFilled,
@@ -116,4 +210,8 @@ module.exports = {
   buildDemoRequestEmail,
   getTransporter,
   sendDemoRequestEmail,
+  validateApplicationFields,
+  buildApplicationEmail,
+  decodeResumeAttachment,
+  sendApplicationEmail,
 };

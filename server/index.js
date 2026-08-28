@@ -6,6 +6,9 @@ import {
   isHoneypotFilled,
   validateFields,
   sendDemoRequestEmail,
+  validateApplicationFields,
+  decodeResumeAttachment,
+  sendApplicationEmail,
 } from "../api/src/shared/email-handler.cjs";
 
 const PORT = process.env.PORT || 5050;
@@ -21,7 +24,9 @@ try {
 
 const app = express();
 app.use(cors());
-app.use(express.json());
+// Resume attachments arrive base64-encoded in the JSON body, so the
+// default ~100kb express.json() limit is far too small.
+app.use(express.json({ limit: "8mb" }));
 
 app.post("/api/send-email", async (req, res) => {
   const fields = req.body ?? {};
@@ -41,6 +46,33 @@ app.post("/api/send-email", async (req, res) => {
     res.status(200).json({ ok: true });
   } catch (err) {
     console.error("Failed to send email:", err);
+    res.status(500).json({ ok: false, error: "Failed to send email" });
+  }
+});
+
+app.post("/api/send-application", async (req, res) => {
+  const fields = req.body ?? {};
+
+  if (isHoneypotFilled(fields)) {
+    // Silently pretend success so bots get no signal.
+    return res.status(200).json({ ok: true });
+  }
+
+  const validation = validateApplicationFields(fields);
+  if (!validation.ok) {
+    return res.status(400).json({ ok: false, error: validation.error });
+  }
+
+  const decoded = decodeResumeAttachment(fields);
+  if (!decoded.ok) {
+    return res.status(400).json({ ok: false, error: decoded.error });
+  }
+
+  try {
+    await sendApplicationEmail(fields, decoded.attachment);
+    res.status(200).json({ ok: true });
+  } catch (err) {
+    console.error("Failed to send application email:", err);
     res.status(500).json({ ok: false, error: "Failed to send email" });
   }
 });
