@@ -1,25 +1,17 @@
 ﻿import {
   Check,
   Zap,
-  Plug,
-  ShieldCheck,
   ScanEye,
-  Bell,
-  Target,
   Mic,
   CalendarCheck,
-  Star,
   Bot,
   TrendingUp,
   Headset,
   AlarmClock,
   Car,
-  Database,
-  Ticket,
   Receipt,
   BarChart3,
 } from "lucide-react";
-import { lazy, Suspense } from "react";
 import Hero from "../components/Hero/Hero";
 import SEO from "../components/SEO";
 import Reveal from "../components/Reveal";
@@ -29,37 +21,6 @@ import { AIGradientBorder } from "../components/AIGradientBorder";
 import DrawOutlineButton from "../components/DrawOutlineButton";
 import { reasonsToPartner } from "../data/reasonsToPartner";
 import { gateVisionImages } from "../data/gateVisionLanes";
-
-// These are all heavy, below-the-fold "live dashboard" mockups — code-split
-// so they don't bloat the initial bundle every visitor has to download.
-const InvoiceExtractPreview = lazy(() => import("../components/InvoiceExtractPreview"));
-const ExtractoDashboardPreview = lazy(() => import("../components/ExtractoDashboardPreview"));
-const TabletCaptureShowcase = lazy(() => import("../components/TabletCaptureShowcase"));
-const TabletVisionShowcase = lazy(() => import("../components/TabletVisionShowcase"));
-const LiveDetectionDashboard = lazy(() => import("../components/LiveDetectionDashboard"));
-const CognexaInterviewCall = lazy(() => import("../components/CognexaInterviewCall"));
-const CognexaInterviewerPreview = lazy(() => import("../components/CognexaInterviewerPreview"));
-const CognexaInterviewerDashboard = lazy(() => import("../components/CognexaInterviewerDashboard"));
-const GateVisionCaptureShowcase = lazy(() => import("../components/GateVisionCaptureShowcase"));
-const GateVisionLiveDashboard = lazy(() => import("../components/GateVisionLiveDashboard"));
-
-/** Holds the preview's footprint while its chunk loads, so there's no layout jump. */
-function PreviewFallback({
-  dark = false,
-  className = "",
-}: {
-  dark?: boolean;
-  className?: string;
-}) {
-  return (
-    <div
-      className={`min-h-[320px] animate-pulse rounded-2xl ${dark ? "bg-white/5" : "bg-gray-100"} ${className}`}
-      aria-hidden
-    />
-  );
-}
-
-import interviewerHeroImg from "../assets/home/brand-voice.webp";
 
 import invoiceScanImg from "../assets/extracto/invoice-scan.webp";
 import analyticsImg from "../assets/home/live/analytics.webp";
@@ -110,50 +71,6 @@ function CheckItem({ children }: { children: React.ReactNode }) {
     <li className="flex items-start gap-2 text-gray-600">
       <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#0E8FFB]" />
       <span>{children}</span>
-    </li>
-  );
-}
-
-function FeaturePoint({
-  icon: Icon,
-  title,
-  description,
-}: {
-  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
-  title: string;
-  description: string;
-}) {
-  return (
-    <li className="group flex items-start gap-3.5 rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition duration-200 hover:border-[#0E8FFB]/30 hover:shadow-md">
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#0E8FFB]/10 transition-transform duration-300 group-hover:scale-110">
-        <Icon className="h-5 w-5 text-[#0E8FFB]" strokeWidth={2} />
-      </span>
-      <div>
-        <h4 className="font-semibold text-gray-900">{title}</h4>
-        <p className="mt-0.5 text-sm text-gray-500">{description}</p>
-      </div>
-    </li>
-  );
-}
-
-function FeaturePointDark({
-  icon: Icon,
-  title,
-  description,
-}: {
-  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
-  title: string;
-  description: string;
-}) {
-  return (
-    <li className="group flex items-start gap-3.5 rounded-xl border border-white/10 bg-white/5 p-4 transition duration-200 hover:border-[#38bdf8]/30 hover:bg-white/10">
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#0E8FFB]/15 transition-transform duration-300 group-hover:scale-110">
-        <Icon className="h-5 w-5 text-[#38bdf8]" strokeWidth={2} />
-      </span>
-      <div>
-        <h4 className="font-semibold text-white">{title}</h4>
-        <p className="mt-0.5 text-sm text-gray-400">{description}</p>
-      </div>
     </li>
   );
 }
@@ -228,71 +145,6 @@ function Home() {
             </Reveal>
           </div>
 
-          <div className="mt-16 flex flex-wrap items-center gap-14">
-            <Reveal className="order-2 flex-1 basis-100 md:order-1">
-              <h3 className="text-2xl font-bold text-gray-900">
-                Go live in days with zero manual setup.
-              </h3>
-              <p className="mt-3 text-gray-500">
-                Point Extracto at an inbox or upload folder and it starts
-                reading invoices immediately. Sync straight into your
-                accounting, ERP, or procurement system with ready-to-use
-                integrations.
-              </p>
-              <ul className="mt-6 space-y-3">
-                <FeaturePoint
-                  icon={Zap}
-                  title="No-code extraction"
-                  description="Start processing invoices in minutes, no engineering required."
-                />
-                <FeaturePoint
-                  icon={Plug}
-                  title="One-click integrations"
-                  description="Sync straight into your accounting, ERP, or procurement system."
-                />
-                <FeaturePoint
-                  icon={ShieldCheck}
-                  title="Built-in validation"
-                  description="Automatically flags missing PO numbers and total mismatches."
-                />
-              </ul>
-            </Reveal>
-            <Reveal
-              delay={120}
-              className="hover-lift order-1 flex-1 basis-100 md:order-2"
-            >
-              <Suspense fallback={<PreviewFallback />}>
-                <InvoiceExtractPreview />
-              </Suspense>
-            </Reveal>
-          </div>
-
-          <div className="mt-20">
-            <Suspense fallback={<PreviewFallback />}>
-              <TabletCaptureShowcase />
-            </Suspense>
-          </div>
-
-          <Reveal delay={100} className="mt-20 text-center">
-            <h3 className="text-2xl font-bold text-gray-900">
-              One dashboard for every gate pass and invoice
-            </h3>
-            <p className="mx-auto mt-3 max-w-2xl text-gray-500">
-              Track inward and outward documents by site, vendor, and status
-              as Extracto processes them, no spreadsheets required.
-            </p>
-          </Reveal>
-          <Reveal
-            delay={150}
-            className="hover-lift mx-auto mt-10 max-w-6xl transition-all duration-500"
-          >
-            <AIGradientBorder className="rounded-2xl" tone="brand" duration={5}>
-              <Suspense fallback={<PreviewFallback />}>
-                <ExtractoDashboardPreview />
-              </Suspense>
-            </AIGradientBorder>
-          </Reveal>
-
           <div className="mt-14 text-center">
             <DrawOutlineButton
               href="/extracto"
@@ -365,78 +217,6 @@ function Home() {
             </Reveal>
           </div>
 
-          <div className="mt-16 flex flex-wrap items-center gap-14">
-            <Reveal className="order-2 flex-1 basis-100 md:order-1">
-              <h3 className="text-2xl font-bold text-white">
-                From detection to action in seconds
-              </h3>
-              <p className="mt-3 text-gray-400">
-                Every frame is analyzed, scored, and routed automatically, so
-                the right person finds out the moment something needs
-                attention.
-              </p>
-              <ul className="mt-6 space-y-3">
-                <FeaturePointDark
-                  icon={Target}
-                  title="50+ detection models"
-                  description="From PPE compliance to fire and intrusion, out of the box."
-                />
-                <FeaturePointDark
-                  icon={Bell}
-                  title="Instant multi-channel alerts"
-                  description="Notify the right team the moment a risk is detected."
-                />
-                <FeaturePointDark
-                  icon={ShieldCheck}
-                  title="Risk scoring & prioritization"
-                  description="Cuts through noise so teams act on what matters most."
-                />
-              </ul>
-            </Reveal>
-            <Reveal
-              delay={120}
-              className="hover-lift order-1 flex-1 basis-100 md:order-2"
-            >
-              <AIGradientBorder className="rounded-2xl" tone="brand">
-                <img
-                  src="/det3.webp"
-                  alt="Vision IQ verifying PPE compliance on a work site"
-                  loading="eager"
-                  fetchPriority="low"
-                  width={1000}
-                  height={563}
-                  className="rounded-2xl shadow-lg"
-                />
-              </AIGradientBorder>
-            </Reveal>
-          </div>
-
-          <div className="mt-20">
-            <Suspense fallback={<PreviewFallback dark />}>
-              <TabletVisionShowcase />
-            </Suspense>
-          </div>
-
-          <Reveal delay={100} className="mt-20 text-center">
-            <h3 className="text-2xl font-bold text-white">
-              Your live monitoring dashboard
-            </h3>
-            <p className="mx-auto mt-3 max-w-2xl text-gray-400">
-              Every camera, every detection, every alert, on one screen,
-              updating in real time.
-            </p>
-          </Reveal>
-          <Reveal
-            delay={150}
-            className="hover-lift mx-auto mt-10 max-w-6xl transition-all duration-500"
-          >
-            <AIGradientBorder className="rounded-2xl" tone="brand" duration={5}>
-              <Suspense fallback={<PreviewFallback dark />}>
-                <LiveDetectionDashboard />
-              </Suspense>
-            </AIGradientBorder>
-          </Reveal>
-
           <div className="mt-14 text-center">
             <DrawOutlineButton
               href="/vision-iq"
@@ -498,76 +278,6 @@ function Home() {
             </Reveal>
           </div>
 
-          <div className="mt-16 flex flex-wrap items-center gap-14">
-            <Reveal className="order-2 flex-1 basis-100 md:order-1">
-              <h3 className="text-2xl font-bold text-gray-900">
-                From plate read to gate decision in seconds
-              </h3>
-              <p className="mt-3 text-gray-500">
-                Every plate is read, matched, and acted on automatically, so
-                barriers open for authorized vehicles and your team is
-                alerted the moment a watchlist match comes through.
-              </p>
-              <ul className="mt-6 space-y-3">
-                <FeaturePoint
-                  icon={Database}
-                  title="Watchlist matching"
-                  description="Checks every plate against blacklists and whitelists in real time."
-                />
-                <FeaturePoint
-                  icon={ShieldCheck}
-                  title="Automatic barrier control"
-                  description="Opens gates for authorized vehicles with no manual check required."
-                />
-                <FeaturePoint
-                  icon={Ticket}
-                  title="Visitor pass automation"
-                  description="Generates visitor passes and logs entries as vehicles arrive."
-                />
-              </ul>
-            </Reveal>
-            <Reveal
-              delay={120}
-              className="hover-lift order-1 flex-1 basis-100 md:order-2"
-            >
-              <AIGradientBorder className="rounded-2xl" tone="brand">
-                <img
-                  src={gateVisionImages.inAction.src}
-                  alt={gateVisionImages.inAction.alt}
-                  loading="eager"
-                  fetchPriority="low"
-                  className="block h-auto w-full rounded-2xl object-cover shadow-lg transition-transform duration-700 hover:scale-105"
-                />
-              </AIGradientBorder>
-            </Reveal>
-          </div>
-
-          <div className="mt-20 rounded-2xl bg-gray-950 px-4 py-16 sm:px-8">
-            <Suspense fallback={<PreviewFallback dark />}>
-              <GateVisionCaptureShowcase />
-            </Suspense>
-          </div>
-
-          <Reveal delay={100} className="mt-20 text-center">
-            <h3 className="text-2xl font-bold text-gray-900">
-              Your live gate &amp; lane dashboard
-            </h3>
-            <p className="mx-auto mt-3 max-w-2xl text-gray-500">
-              Every lane, every plate, every decision, on one screen, updating
-              in real time.
-            </p>
-          </Reveal>
-          <Reveal
-            delay={150}
-            className="hover-lift mx-auto mt-10 max-w-6xl transition-all duration-500"
-          >
-            <AIGradientBorder className="rounded-2xl" tone="brand" duration={5}>
-              <Suspense fallback={<PreviewFallback dark />}>
-                <GateVisionLiveDashboard />
-              </Suspense>
-            </AIGradientBorder>
-          </Reveal>
-
           <div className="mt-14 text-center">
             <DrawOutlineButton
               href="/gate-vision"
@@ -619,130 +329,6 @@ function Home() {
               </Reveal>
             ))}
           </ul>
-
-          <Reveal delay={100} className="mx-auto mt-20 max-w-2xl text-center">
-            <span className="inline-block rounded-full bg-[#0E8FFB]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#0E8FFB] uppercase">
-              A closer look
-            </span>
-            <h3 className="mt-4 text-2xl font-bold text-gray-900">
-              One capability in detail: real-time interviews
-            </h3>
-            <p className="mt-3 text-gray-500">
-              Every conversation Cognexa Agent runs works the same way, live
-              and natural. Here's what that looks like for interviews, one of
-              its five capabilities.
-            </p>
-          </Reveal>
-
-          <div className="mt-16 flex flex-wrap items-center gap-14">
-            <Reveal className="hover-lift flex-1 basis-100">
-              <AIGradientBorder className="rounded-2xl" tone="brand">
-                <img
-                  src={interviewerHeroImg}
-                  alt="Candidate talking with Cognexa Interviewer, Cognexa's real-time AI hiring agent"
-                  loading="eager"
-                  fetchPriority="low"
-                  width={1000}
-                  height={732}
-                  className="rounded-2xl shadow-lg"
-                />
-              </AIGradientBorder>
-            </Reveal>
-            <Reveal delay={120} className="flex-1 basis-100">
-              <h3 className="text-2xl font-bold text-gray-900">
-                Interviews candidates in real time, not just chat.
-              </h3>
-              <p className="mt-3 text-gray-500">
-                Cognexa Interviewer holds a natural, spoken conversation with
-                each candidate the same day they apply, asking follow-up
-                questions and responding the way an experienced interviewer
-                would.
-              </p>
-              <ul className="mt-5 space-y-2.5">
-                <CheckItem>Conducts real-time voice interviews, not scripted forms</CheckItem>
-                <CheckItem>Scores and shortlists candidates automatically</CheckItem>
-                <CheckItem>Available 24x7, no scheduling delays</CheckItem>
-              </ul>
-            </Reveal>
-          </div>
-
-          <div className="mt-16 flex flex-wrap items-center gap-14">
-            <Reveal className="order-2 flex-1 basis-100 md:order-1">
-              <h3 className="text-2xl font-bold text-gray-900">
-                Meetings booked without the back-and-forth.
-              </h3>
-              <p className="mt-3 text-gray-500">
-                The moment a candidate is a fit, Cognexa Interviewer finds a
-                slot that works for both sides and sends the calendar invite,
-                no email thread required.
-              </p>
-              <ul className="mt-6 space-y-3">
-                <FeaturePoint
-                  icon={Mic}
-                  title="Real-time voice interviews"
-                  description="Speaks and listens naturally, like talking to a real interviewer."
-                />
-                <FeaturePoint
-                  icon={CalendarCheck}
-                  title="Automatic meeting scheduling"
-                  description="Finds a slot, books it, and syncs invites to every calendar."
-                />
-                <FeaturePoint
-                  icon={Star}
-                  title="Candidate scoring & shortlisting"
-                  description="Ranks candidates so recruiters focus on the strongest fits first."
-                />
-              </ul>
-            </Reveal>
-            <Reveal
-              delay={120}
-              className="hover-lift order-1 flex-1 basis-100 md:order-2"
-            >
-              <Suspense fallback={<PreviewFallback />}>
-                <CognexaInterviewerPreview />
-              </Suspense>
-            </Reveal>
-          </div>
-
-          <Reveal delay={100} className="mx-auto mt-20 max-w-2xl text-center">
-            <h3 className="text-2xl font-bold text-gray-900">
-              Watch a real-time interview in progress
-            </h3>
-            <p className="mt-3 text-gray-500">
-              This is what a live conversation with Cognexa Interviewer looks
-              like, questions, answers, and scheduling, all in real time.
-            </p>
-          </Reveal>
-          <Reveal
-            delay={150}
-            className="hover-lift mx-auto mt-10 max-w-4xl transition-all duration-500"
-          >
-            <AIGradientBorder className="rounded-2xl" tone="brand" duration={5}>
-              <Suspense fallback={<PreviewFallback />}>
-                <CognexaInterviewCall />
-              </Suspense>
-            </AIGradientBorder>
-          </Reveal>
-
-          <Reveal delay={100} className="mt-20 text-center">
-            <h3 className="text-2xl font-bold text-gray-900">
-              One dashboard for every candidate
-            </h3>
-            <p className="mx-auto mt-3 max-w-2xl text-gray-500">
-              Track every interview, scheduling, and shortlist across roles,
-              all in one place.
-            </p>
-          </Reveal>
-          <Reveal
-            delay={150}
-            className="hover-lift mx-auto mt-10 max-w-6xl transition-all duration-500"
-          >
-            <AIGradientBorder className="rounded-2xl" tone="brand" duration={5}>
-              <Suspense fallback={<PreviewFallback />}>
-                <CognexaInterviewerDashboard />
-              </Suspense>
-            </AIGradientBorder>
-          </Reveal>
 
           <div className="mt-14 text-center">
             <DrawOutlineButton
